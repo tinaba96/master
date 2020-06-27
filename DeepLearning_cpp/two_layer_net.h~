@@ -1,0 +1,16 @@
+
+
+
+
+class TwoLayerNet{
+private:
+	int input_size;
+	int hidden_size;
+	int output_size;
+
+
+public:
+
+	TwoLayerNet(int paramb1, int 
+
+

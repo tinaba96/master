@@ -1,0 +1,46 @@
+class  Convolution1D{
+
+	float forward(float* in, float* out, int datasize, float* kernel, int kernelsize)
+	{
+		//kernelsize = 26*4*320
+		//datasize = 4000
+		int batch = 1000;
+		int batchk = 26;
+
+
+		for(int nk = 0; nk < 320; ++nk)
+		{
+
+			for(int i = 0; i < batch-kernelsize; ++i) //-975
+			{
+				out[i] = 0;
+
+				
+				for(int t =0; t < datasize/batch; ++t) //-4
+				{
+					int start = t*batch
+					int startk = t*batchk
+					for(int j = i, int k = 0; k < kernelsize; ++j, ++k)
+					{
+						out[nk+i] += in[start+j] * kernel[startk*k];
+					}
+				}
+			}
+		
+		}
+		return out;
+	}
+
+	float backward(float* out, float* t)
+	{
+		
+
+
+	}
+
+
+}
+
+
+
+

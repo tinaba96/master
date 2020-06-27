@@ -1,0 +1,12 @@
+
+
+
+class relu(int x)
+{
+	int max = 0;
+	if (max < x) max = x;
+	return max;
+}
+
+
+

@@ -1,0 +1,22 @@
+
+
+class  Convolution1D(float* in, float* out, int datasize, float* kernel, int kernelsize)
+{
+	//kernelsize = 26
+	//datasize = 4000
+	for(int i = kernel-1; i < datasize; ++i)
+	{
+		out[i] = 0;
+
+		for(int j = i, int k = 0; k < kernelsize; --j, ++k)
+		{
+			out[i] += in[j] * kernel[k];
+		}
+	}
+
+
+
+
+
+
+
