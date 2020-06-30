@@ -138,8 +138,8 @@ public:
 			for(int i = 0; i < kernelsize; ++i)
 			{
 				float dx += dout[i] * kernel[i]
-				dw[j] = in[j] * dout[i]
-				db[i] = dout[i]
+				dw[j] += in[j] * dout[i]
+				db[i] += dout[i]
 				
 			}
 		}
@@ -199,18 +199,44 @@ public:
 
 	float backward(float dout, int outsize, int kernelsize)
 	{
-		for (int j = 0; j < insize; ++j) //-4000
+		for (int j = 0; j < insize; ++j) //-1000
 		{
-			int start = t*batch
-			int startk = t*batchk
-			for(int k = 0 int i = 0; k < kernelsize; ++i, ++k)
-			{
-				float dx[j] += dout[start+i] * kernel[start+k];
-				dw[j] = in[j] * dout[i];
-				db[i] = dout[i];
-			}
-		}	
 
+			int padding = 50;
+			dout = float(25) + dout + float(25);
+			int batch = 320;
+			int st = j*1000;
+
+
+			//float dout[1025]
+			//kernelsize = 26*4*320
+			for(int t = 0; t < 320; ++t)//320 
+			{
+				int start = t*bacth
+				int startk = t*kernelsize;
+				for(int k = 0 int i = 0; k < kernelsize; ++i, ++k) //26
+				{
+					for(int c = 0; c < 4, ++c)
+					{
+						int start = t*bacth
+						int startk = t*kernelsize;
+						float dx[j+c] += dout[start+i+c] * kernel[26*4*320-startk+k+c];
+					}
+				}
+			}
+		}
+
+		//dout = 975*320
+		//in = 4000
+		for(int j = 0; j < 4000; ++j)
+		{
+			for(int i = 0; i < kernelsize; ++i)
+			{
+				dw[j] += in[j] * dout[i]
+				db[i] += dout[i]
+			}
+		}
+	}	
 		return dx;
 
 	}
