@@ -1,65 +1,80 @@
+#include <math.h>
+#include <stdio.h>
+
+
+
+
 
 class sigmoid{
 public:
+	/*
 	sigmoid(float* in)
 	{
 		float* in 
 		float* out 
 	}
+	*/
 	
-	float forward(float* in, int insize)
+	//void forward(float* in, int insize)
+	void forward(float* in, float* out)
 	{
-		for(int i = 0; i < insize; ++i)
+		for(int i = 0; i < 919; ++i) //insize
 		{
 
 		out[i] = 1/(exp(-in[i]));
 
 		}
-		return out;
+		//return out;
 	}
 
 
-	float backward(float* dout, float* out, int outsize)
+	/*
+	void backward(float* dout, float* out, int outsize)
 	{
 		for(int o = 0; o < outsize; ++o)
 		{
 			float dx[i] = dout[i] * (float(1) - out[o]) * out[o];
 
 		}
-		return dx;
+		//return dx;
 	}
-}
+	*/
+};
 
 
 
 class relu{
-	float forward(float* in, float* out, int insize)
+public:
+	//void forward(float* in, float* out, int insize)
+	void forward(float* in, float* out)
 	{
-		for(int i = 0; i < insize; ++i)
+		for(int i = 0; i < 320*975; ++i) //insize
 		{
 			out[i] = std::max(float(0), in[i]);
 		}
 	}
 
-	float backward(float* dout, float* out, int outsize)
+	/*
+	void backward(float* dout, float* out, int outsize)
 	{
 		for(int o = 0; o < outsize; ++o)
 		{
 			float dx[o] = dout[o] * ( out[o] > float(0) ? float(1) : float(0));
 		}
 	}
-}
+	*/
+};
 
-
+/*
 class dropout{
 
 
 	dropout(float ratio, bool mask){
-		float ratio = ratio
-		bool mask = mask
+		float ratio = ratio;
+		bool mask = mask;
 	}
 
-	float forward(float* in, float* out; int insize; bool train_flg)
+	void forward(float* in, float* out; int insize; bool train_flg)
 	{
 		if(train_flg){
 			for(int i = 0; i < insize; ++i)
@@ -67,40 +82,45 @@ class dropout{
 				num = (float)rand()/RAND_MAX;
 
 				if(num > ratio){
-					mask[i] = true
+					mask[i] = true;
 				}else{
-					mask[i] = false
+					mask[i] = false;
 				}
-				out[i] = in[i] * mask[i]
+				out[i] = in[i] * mask[i];
 			}
 		}else{
 			for(int i = 0; i < insize; ++i)
 			{
 
-				out[i] = in[i] * (float(1) - ratio)
+				out[i] = in[i] * (float(1) - ratio);
 			}
 
 		}
-		return out
+		//return out
 
 
-	float backward(float* dout, int outsize)
+
+	void backward(float* dout, int outsize)
 	{
 		for(int o = 0; o < outsize; ++o){
 
-			dout[i] = dout[i] * mask[i]
+			dout[i] = dout[i] * mask[i];
 
 		}
-		return dout
+		//return dout
 
 	}
+	
 
 }
+}
+*/
 
 
 
 
 class fullc{
+/*
 private:
 	float* w;
 	float* b;
@@ -113,46 +133,54 @@ public:
 		float* b = b;
 		float* dw = 0;
 		float* db = 0;
+	}
+*/
+public:
 
-
-	float forward(float* in, float* out, int insize, int kernelsize)
+	//void forward(float* in, float* out, int insize, int kernelsize)
+	//void forward(float in, float out, float kernel, float b)
+	void forward(float* in, float* out, float* kernel, float* b)
 	{
 	
-		for(int i = 0; i < kernelsize; ++i)
+		for(int i = 0; i < 919; ++i) //outsize
 		{	
-			for(int j = 0; j < insize; ++j)
+			for(int j = 0; j < 75*320; ++j) //insize
 			{
 
-				out[i] += in[j] * kernel[j] + b;
+				out[i] += in[j] * kernel[j] + b[i];
 			}
 		}
-		return out
+		//return out
 
 	}
 
-	float backward(float dout, int kernelsize)
+	/*
+	void backward(float dout, int kernelsize)
 	{
 
 		for (int j = 0; j < insize; ++j)
 		{
 			for(int i = 0; i < kernelsize; ++i)
 			{
-				float dx += dout[i] * kernel[i]
-				dw[j] += in[j] * dout[i]
-				db[i] += dout[i]
+				float dx += dout[i] * kernel[i];
+				dw[j] += in[j] * dout[i];
+				db[i] += dout[i];
 				
 			}
 		}
-		return dx
+		//return dx
 
 
 	}
+	*/
 
-}
+
+};
 
 
 
 class  conv1d{
+/*
 private:
 	float* w;
 	float* b;
@@ -165,9 +193,11 @@ public:
 		float* b = b;
 		float* dw = 0;
 		float* db = 0;
+*/
+public:
 
-
-	float forward(float* in, float* out, int datasize, float* kernel, int kernelsize)
+	//void forward(float* in, float* out, int datasize, float* kernel, int kernelsize)
+	void forward(float* in, float* out, float* kernel, float* b)
 	{
 		//kernelsize = 26*4*320
 		//datasize = 4000
@@ -178,26 +208,29 @@ public:
 		for(int nk = 0; nk < 320; ++nk)
 		{
 
-			for(int i = 0; i < batch-kernelsize; ++i) //-975
+			for(int i = 0; i < 975; ++i) // batch-kernelsize
 			{
 				out[i] = 0;
 
 				
-				for(int t =0; t < datasize/batch; ++t) //-4
+				for(int t =0; t < 4; ++t) // datasize/batch
 				{
-					int start = t*batch
-					int startk = t*batchk
-					for(int j = i, int k = 0; k < kernelsize; ++j, ++k)
+					int start = t*batch;
+					int startk = t*batchk;
+					int k;
+					int j;
+					for(j = i, k = 0; k < 26; ++j, ++k) //kernelsize
 					{
-						out[nk+i] += in[start+j] * kernel[startk+k] + b[i]
+						out[nk+i] += in[start+j] * kernel[startk+k] + b[i];
 					}
 				}
 			}
 		}
-		return out;
+		//return out;
 	}
 
-	float backward(float dout, int outsize, int kernelsize)
+	/*
+	void backward(float dout, int outsize, int kernelsize)
 	{
 		for (int j = 0; j < insize; ++j) //-1000
 		{
@@ -218,7 +251,7 @@ public:
 				{
 					for(int c = 0; c < 4, ++c)
 					{
-						int start = t*bacth
+						int start = t*bacth;
 						int startk = t*kernelsize;
 						float dx[j+c] += dout[start+i+c] * kernel[26*4*320-startk+k+c];
 					}
@@ -232,55 +265,64 @@ public:
 		{
 			for(int i = 0; i < kernelsize; ++i)
 			{
-				dw[j] += in[j] * dout[i]
-				db[i] += dout[i]
+				dw[j] += in[j] * dout[i];
 			}
 		}
+		for(int o = 0; o < 975*320; ++o)
+		{
+				db[i] += dout[i];
+		}
 	}	
-		return dx;
+	*/
+		//return dx;
 
-	}
+	
 
-}
-
-
+};
 
 
-class pooling{
-	float forward(float* in, float* out, int kernelsize,) //kernelsize = 13
+
+
+class mpool{
+public:
+	//void forward(float* in, float* out, int kernelsize,) //kernelsize = 13
+	void forward(float* in, float* out, float* kernel) //kernelsize = 13
 	{
+		int max[75] = {-1};
 		//975->75 
-		for(int i = 0; sizeof(in)/kenelsize; ++i) //75
+		for(int i = 1; i < 75; ++i) //sizeof(in)/kernelsize
 		{
 			int start = 13*i;
-			int max[75] = -1;
 			out[i] = 0;
-			for(int k = 0; k < kenelsize; ++k) //-13
+			for(int k = 0; k < 13; ++k) // krnelsize
 			{
 				if(in[start+k] > out[i])
 				{
-					out[i] = in[start+k]
-					max[i] = start+k
+					out[i] = in[start+k];
+					max[i] = start+k;
 				}
 			}
 		}
-		return out;
+		//return out;
 	}
 
-	float backward(float dout, int insize)
+	/*
+	void backward(float dout, int insize)
 	{
 		for(int i = 0; i < insize; ++i) //975
 		{
 			if(max[i] != -1)
 			{
-				dout[i] = dout[i]
+				dout[i] = dout[i];
 			}else{
-				dout[i] = 0	
+				dout[i] = 0:
 			}
 		}
-		return out
+		//return out
 
 	}
+	*/
+};
 
 
 
