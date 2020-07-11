@@ -1,1 +1,1 @@
-# master
+master research at JAIST
