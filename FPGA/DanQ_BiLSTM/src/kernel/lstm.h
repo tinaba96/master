@@ -77,9 +77,6 @@ public:
 			o[i] += bo[i];
 		}	
 
-
-	
-
 		for(int k = 0; k < 320; k++)
 		{
 			f[k] = 1.0/(1.0+exp(-f[k]));  // sigmoid
@@ -163,7 +160,7 @@ public:
 			ds[j] = dc_next[j] + dh_next[j]*o[j]*(1-tanh_c_next[j]*tanh_c_next[j]);
 			
 
-			dc_next[j] = ds[j]*f[j]; 
+			dc_next[j] = ds[j]*f[j];  //here
 
 
 			di[j] = ds[j]*g[j];
@@ -189,22 +186,22 @@ public:
 			for(int k = 0; k < 320; k++)
 			{
 
-				gradswxf[320*j+k] += h_prev[j]*df[k];
-				gradswxg[320*j+k] += h_prev[j]*dg[k];
-				gradswxi[320*j+k] += h_prev[j]*di[k];
-				gradswxo[320*j+k] += h_prev[j]*do_[k];
+				gradswxf[320*j+k] += h_prev[j]*df[k]; //here
+				gradswxg[320*j+k] += h_prev[j]*dg[k]; //here
+				gradswxi[320*j+k] += h_prev[j]*di[k]; //here
+				gradswxo[320*j+k] += h_prev[j]*do_[k]; //here
 
-				gradswhf[320*j+k] += x[j]*df[k];
-				gradswhg[320*j+k] += x[j]*dg[k];
-				gradswhi[320*j+k] += x[j]*di[k];
-				gradswho[320*j+k] += x[j]*do_[k];
+				gradswhf[320*j+k] += x[j]*df[k]; //here
+				gradswhg[320*j+k] += x[j]*dg[k]; //here
+				gradswhi[320*j+k] += x[j]*di[k]; //here
+				gradswho[320*j+k] += x[j]*do_[k]; //here
 				
 			}
 
-			gradsbf[j] += df[j];
-			gradsbg[j] += dg[j];
-			gradsbi[j] += di[j];
-			gradsbo[j] += do_[j];
+			gradsbf[j] += df[j]; //here
+			gradsbg[j] += dg[j]; //here
+			gradsbi[j] += di[j]; //here
+			gradsbo[j] += do_[j]; //here
 
 		}
 
@@ -226,7 +223,6 @@ public:
 				dout[320*t+i] += do_[i]*wxo[320*i+k];
 				dout[320*t+i] += dg[i]*wxg[320*i+k];
 
-
 				//dh_prev = dh_next -> dh
 				
 				dh[i] += di[i]*whi[320*i+k];
@@ -237,14 +233,8 @@ public:
 
 				dh[i] += dg[i]*whg[320*i+k];
 
-			
 			}
-
-				
 		} //320
-
-		
-
 	} //backward	
 
 };
@@ -257,11 +247,8 @@ public:
 
 	float hs[75*640];  //final output
 
-
-
 	LSTM lstm[75];
 	LSTM lstm2[75];
-
 
 	//void forward(float* xs, float* hs)
 	void forward(float* xs, float* hs, float* wxf, float* wxg, float* wxi, float* wxo, float* whf, float* whg, float* whi, float* who, float* bf, float* bg, float* bi, float* bo, float* wxf2, float* wxg2, float* wxi2, float* wxo2, float* whf2, float* whg2, float* whi2, float* who2, float* bf2, float* bg2, float* bi2, float* bo2)
@@ -277,8 +264,6 @@ public:
 
 		for(int t = 0; t < 75; t++)
 		{
-
-
 			float in[320];
 			for(int s = 0; s < 320; s++)
 			{
@@ -293,8 +278,6 @@ public:
 			{
 				hs[(2*t)*320+s] = h_next[s];
 			}
-
-
 		}//75
 
 
@@ -321,18 +304,12 @@ public:
 				//hs[t*320+i] = h[i]
 				hs[(2*(74-t)+1)*320+s] = h_next[s];
 			}
-
-
 		}//75
-
-
 	}
 
 	//void backward(float* dhs, float* dout)
 	void backward(float* dout, float* wxf, float* wxg, float* wxi, float* wxo, float* whf, float* whg, float* whi, float* who, float* gradswxf, float* gradswxg, float* gradswxi, float* gradswxo, float* gradswhf, float* gradswhg, float* gradswhi, float* gradswho, float* gradsbf, float* gradsbg, float* gradsbi, float* gradsbo, float* wxf2, float* wxg2, float* wxi2, float* wxo2, float* whf2, float* whg2, float* whi2, float* who2, float* gradswxf2, float* gradswxg2, float* gradswxi2, float* gradswxo2, float* gradswhf2, float* gradswhg2, float* gradswhi2, float* gradswho2, float* gradsbf2, float* gradsbg2, float* gradsbi2, float* gradsbo2)
 	{
-
-
 		//dout = dhs
 	
 		float dh[320];  //dh_prev
@@ -361,12 +338,9 @@ public:
 				
 			}
 
-
 			//hs+dh=dout
 			lstm[74-t].backward(74-t, dout, dh, hsdh, dc, wxf, wxg, wxi, wxo, whf, whg, whi, who, gradswxf, gradswxg, gradswxi, gradswxo, gradswhf, gradswhg, gradswhi, gradswho, gradsbf, gradsbg, gradsbi, gradsbo);
 
-
-			
 		}
 
 		for(int s = 0; s < 320; s++)
@@ -374,9 +348,6 @@ public:
 			dh[s] = 0;
 			dc[s] = 0;
 		}
-
-
-
 
 		for(int t = 0; t < 75; t++)
 		{
@@ -393,10 +364,6 @@ public:
 
 
 		} //75
-
-		
-
-
 	} //backward
 };
 
