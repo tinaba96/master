@@ -5,71 +5,13 @@
 //#include <algorithm>
 
 #include "loss.h"
-#include "layers.h"
+//#include "layers.h"
 #include "optimizer.h"
 #include "cnn.h"
 
 
 
 //#define BUFFER_SIZE 1024
-
-
-/*
-class cnn 
-{
-public: 
-	float paramsw1[26*4*320];
-	float paramsb1[975*320];
-	float gradsw1[26*4*320];
-	float gradsb1[975*320];
-	cnn()
-	{
-
-
-	for(int i = 0; i < 26*4*320; ++i)
-	{
-		paramsw1[i] = 2;
-		gradsw1[i] = 0;
-	}
-
-	for(int i = 0; i < 975*320; ++i)
-	{
-		paramsb1[i] = 2;
-		gradsb1[i] = 0;
-	}
-	}
-
-	conv1d a;
-	relu b;
-	mpool c;
-
-	//void predict(float* x, float* y, float* paramsw1, float* paramsb1)
-	void predict(float *x, float *y)
-	{
-		a.forward(x, y, paramsw1, paramsb1);
-		b.forward(y);
-		c.forward(y);
-		//d.forward(y,x);
-		//e.forward(x, y); // relu2
-		//f.forward(y, x, paramsw3, paramsb3); //full-connected
-		//g.forward(x, y);
-	}
-
-	//void gradient(float* dout, float* gradsw1, float* gradsb1)
-	void gradient(float *dout)
-	{
-		//g.backward(dout, y); //sigmoid
-		//f.backward(dout, paramsw3, gradsw3, gradsb3); //full_connected2
-		//e.backward(dout); //relu2
-		//d.backward(dout, paramsw2, gradsw2, gradsb2); //full_connected
-		c.backward(dout); //maxpooling
-		b.backward(dout); //relu
-		a.backward(dout, gradsw1, gradsb1); //convolution
-
-
-*/
-
-
 
 
 
@@ -95,45 +37,24 @@ void kerneldl(
 	#pragma HLS INTERFACE s_axilite port=return bundle=control
 			
 	
-	//printf("%d", model);
 
 	#ifndef __SYNTHESIS__
 	    //printf("checking in kernel");
 	#endif
 
 	
-	//float paramsw1[26*4*320];
-	//float paramsb1[975*320];
-	//float gradsw1[26*4*320];
-	//float gradsb1[975*320];
-
-
-	for(int i = 0; i < 4000; ++i)
-	{
-		//printf("%f", datax[i]);					
-		//printf("%d", model);					
-	}
-		
-
-
 	cnn z = cnn();
-	//cnn z;
-	//rmsprop opt = rmsprop();
 	rmsprop opt;
-	//conv1d a = conv1d();
-	//relu b = relu();
-	//mpool c = mpool();
 
 
 
 	switch (model){
 		case 1:{
-			//printf("check in kernel F ");
+			// Forward process for LSTM
 			float bufferx[4000];
 			for(int i = 0; i<4000; ++i)
 			{
 				bufferx[i] = datax[i];
-				//printf("%d", bufferx[i]);					
 			}
 			float buffery[320*975];
 			for(int i = 0; i<975*320; ++i)
@@ -142,45 +63,97 @@ void kerneldl(
 			}
 
 			z.predict(bufferx, buffery); //forward
-			//z.predict(bufferx, buffery, paramsw1, paramsb1); //forward
 			for(int i = 0; i<75*320; ++i)
 			{
 				datay[i] = buffery[i];
-				//printf("%d", datay[i]);					
 			}
 			break;
 		}
 
 		case 2:{
-			//printf("check in kernel B ");
+			// Backward process for LSTM
 			float h1[26*4*320];
 			float h2[975*320];
-			for(int i = 0; i < 75*320; ++i) 
-			{
-				//printf("%f : %d\n", dout[i], i);					
-				//printf("%f : %d\n", dout[975*319+i], i);					
-			}
 			float bufferd[320*75];
 			for(int i = 0; i<75*320; ++i)
 			{
 				bufferd[i] = dout[i];
 			}
 
-			//z.gradient(bufferd, gradsw1, gradsb1); //backward
 			z.gradient(bufferd); //backward
 
-			opt.update(z.paramsw1, z.gradsw1, h1, 26*4*320);
 
-			for(int i = 0; i < 33280; ++i)
+
+			opt.update(z.wxf, z.gradswxf, z.h_wxf, 320*320);
+			opt.update(z.wxg, z.gradswxg, z.h_wxg, 320*320);
+			opt.update(z.wxi, z.gradswxi, z.h_wxi, 320*320);
+			opt.update(z.wxo, z.gradswxo, z.h_wxo, 320*320);
+
+
+			opt.update(z.whf, z.gradswhf, z.h_whf, 320*320);
+			opt.update(z.whg, z.gradswhg, z.h_whg, 320*320);
+			opt.update(z.whi, z.gradswhi, z.h_whi, 320*320);
+			opt.update(z.who, z.gradswho, z.h_who, 320*320);
+
+			opt.update(z.bf, z.gradsbf, z.h_bf, 320);
+			opt.update(z.bg, z.gradsbg, z.h_bg, 320);
+			opt.update(z.bi, z.gradsbi, z.h_bi, 320);
+			opt.update(z.bo, z.gradsbo, z.h_bo, 320);
+
+
+			opt.update(z.wxf2, z.gradswxf2, z.h_wxf2, 320*320);
+			opt.update(z.wxg2, z.gradswxg2, z.h_wxg2, 320*320);
+			opt.update(z.wxi2, z.gradswxi2, z.h_wxi2, 320*320);
+			opt.update(z.wxo2, z.gradswxo2, z.h_wxo2, 320*320);
+
+			opt.update(z.whf2, z.gradswhf2, z.h_whf2, 320*320);
+			opt.update(z.whg2, z.gradswhg2, z.h_whg2, 320*320);
+			opt.update(z.whi2, z.gradswhi2, z.h_whi2, 320*320);
+			opt.update(z.who2, z.gradswho2, z.h_who2, 320*320);
+
+			opt.update(z.bf2, z.gradsbf2, z.h_bf2, 320);
+			opt.update(z.bg2, z.gradsbg2, z.h_bg2, 320);
+			opt.update(z.bi2, z.gradsbi2, z.h_bi2, 320);
+			opt.update(z.bo2, z.gradsbo2, z.h_bo2, 320);
+
+
+
+			for(int i = 0; i < 320*320; ++i)
 			{
-				z.gradsw1[i] = 0;
+				z.gradswxf[i] = 0;
+				z.gradswxg[i] = 0;
+				z.gradswxi[i] = 0;
+				z.gradswxo[i] = 0;
+				z.gradswhf[i] = 0;
+				z.gradswhg[i] = 0;
+				z.gradswhi[i] = 0;
+				z.gradswho[i] = 0;
+				z.gradswxf2[i] = 0;
+				z.gradswxg2[i] = 0;
+				z.gradswxi2[i] = 0;
+				z.gradswxo2[i] = 0;
+				z.gradswhf2[i] = 0;
+				z.gradswhg2[i] = 0;
+				z.gradswhi2[i] = 0;
+				z.gradswho2[i] = 0;
 			}
 
-			opt.update(z.paramsb1, z.gradsb1, h2, 975*320);
-			for(int i = 0; i < 975*320; ++i)
+			for(int i = 0; i < 320; ++i)
 			{
-				z.gradsb1[i] = 0;
+				z.gradsbf[i] = 0;
+				z.gradsbg[i] = 0;
+				z.gradsbi[i] = 0;
+				z.gradsbo[i] = 0;
+				z.gradsbf2[i] = 0;
+				z.gradsbg2[i] = 0;
+				z.gradsbi2[i] = 0;
+				z.gradsbo2[i] = 0;
+
 			}
+
+
+
+
 			break;
 		}
 	}
