@@ -19,7 +19,19 @@ A = cell(40,1);
 
 for t = 1:40
     if(mod(t,4) == 1);
-        A{t} = (0);
+        A{t} = NamedNode('one', 0);
+    end
+    
+    if(mod(t,4) == 2);
+        A{t} = NamedNode('two', 0);
+    end
+    
+    if(mod(t,4) == 1);
+        A{t} = NamedNode('three', 0);
+    end
+    
+    if(mod(t,4) == 1);
+        A{t} = NamedNode('four', 0);
     end
 end
 
@@ -71,9 +83,6 @@ if(code([1, 2]) == [1,1] );
 end
 
 
-C{1} = NamedNode('one', 0)
-C{2} = NamedNode('one', 0)
-C{3} = NamedNode('one', 0)
 
 
 
@@ -343,12 +352,61 @@ end
 
 
 function backward = Viterbi(code)
+    output = zeros(1, 80);
     for t = 1:40:
         
 
         B = min(A{37}.Data, A{38}.Data, A{39}.Data, A{40}.Data)
+        right = B.Name
         B = B.prev
-        out = B.Name
+        left = B.Name
+        
+        if(right == 'one'):
+            if(left == 'one'):
+                output(1, 2*t) = 0
+                output(1, 2*t-1) = 0
+            end
+            if(left == 'three')
+                output(1, 2*t) = 1
+                output(1, 2*t-1) = 1
+               
+            end
+        
+        end
+        if(right == 'two'):
+            if(left == 'one'):
+                output(1, 2*t) = 1
+                output(1, 2*t-1) = 1
+            
+            end
+            if(left == 'three')
+                output(1, 2*t) = 0
+                output(1, 2*t-1) = 0
+            end
+        
+        end
+        if(right == 'three'):
+            if(left == 'two'):
+                output(1, 2*t) = 0
+                output(1, 2*t-1) = 1
+            
+            end
+            if(left == 'four')
+                output(1, 2*t) = 1
+                output(1, 2*t-1) = 0
+            end
+        
+        end
+        if(right == 'four'):
+            if(left == 'two'):
+                output(1, 2*t) = 0
+                output(1, 2*t-1) = 0
+            end
+            if(left == 'four')
+                output(1, 2*t) = 0
+                output(1, 2*t-1) = 1
+            end        
+        end
         
     
         
