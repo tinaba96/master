@@ -1,0 +1,62 @@
+Attempting to get a license: ap_opencl
+INFO: [XOCC 17-1540] The version limit for your license is '2020.04' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Feature available: ap_opencl
+INFO: [XOCC 60-1306] Additional information associated with this xocc compile can be found at:
+	Reports: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/reports/kerneldl.hw_emu.xilinx_u200_xdma_201830_2
+	Log files: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/logs/kerneldl.hw_emu.xilinx_u200_xdma_201830_2
+INFO: [XOCC 60-585] Compiling for hardware emulation target
+INFO: [XOCC 60-1316] Initiating connection to rulecheck server, at Fri Oct 23 11:07:16 2020
+INFO: [XOCC 60-1315] Creating rulecheck session with output '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/reports/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/xocc_compile_kerneldl.hw_emu.xilinx_u200_xdma_201830_2_guidance.html', at Fri Oct 23 11:07:17 2020
+INFO: [XOCC 60-895]   Target platform: /tools/Xilinx/SDx/2019.1/platforms/xilinx_u200_xdma_201830_2/xilinx_u200_xdma_201830_2.xpfm
+INFO: [XOCC 60-423]   Target device: xilinx_u200_xdma_201830_2
+INFO: [XOCC 60-242] Creating kernel: 'kerneldl'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: kerneldl Log file: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/vivado_hls.log :
+INFO: [XOCC 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 1'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 2'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 1'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 10, Depth = 17.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 2'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 1'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 2.1'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 7, Depth = 16.
+INFO: [XOCC 204-61] Pipelining function '__hls_fptosi_float_i32'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 1'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 2'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 107, Depth = 111.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 1'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 2'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 7'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 8'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 9'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 99.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 10'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 11'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 99.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 12'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 3'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 4'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 5'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [XOCC 204-61] Pipelining loop 'Loop 6'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [XOCC 60-594] Finished kernel compilation
+INFO: [XOCC 60-244] Generating system estimate report...
+INFO: [XOCC 60-1092] Generated system estimate report: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/reports/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/system_estimate_kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xtxt
+INFO: [XOCC 60-586] Created xclbin/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo
+INFO: [XOCC 60-791] Total elapsed time: 0h 1m 30s
