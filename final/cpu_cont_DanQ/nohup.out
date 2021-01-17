@@ -1,0 +1,21 @@
+main.cpp: In function ‘int main()’:
+main.cpp:359:37: error: no match for ‘operator=’ (operand types are ‘std::chrono::_V2::system_clock::time_point’ {aka ‘std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >’} and ‘std::chrono::_V2::system_clock’)
+   start = std::chrono::system_clock()::now();
+                                     ^
+In file included from main.cpp:10:
+/usr/include/c++/8/chrono:616:14: note: candidate: ‘std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >& std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::operator=(const std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)’
+       struct time_point
+              ^~~~~~~~~~
+/usr/include/c++/8/chrono:616:14: note:   no known conversion for argument 1 from ‘std::chrono::_V2::system_clock’ to ‘const std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&’
+/usr/include/c++/8/chrono:616:14: note: candidate: ‘std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >& std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::operator=(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&&)’
+/usr/include/c++/8/chrono:616:14: note:   no known conversion for argument 1 from ‘std::chrono::_V2::system_clock’ to ‘std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&&’
+main.cpp:890:35: error: no match for ‘operator=’ (operand types are ‘std::chrono::_V2::system_clock::time_point’ {aka ‘std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >’} and ‘std::chrono::_V2::system_clock’)
+   end = std::chrono::system_clock()::now();
+                                   ^
+In file included from main.cpp:10:
+/usr/include/c++/8/chrono:616:14: note: candidate: ‘std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >& std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::operator=(const std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&)’
+       struct time_point
+              ^~~~~~~~~~
+/usr/include/c++/8/chrono:616:14: note:   no known conversion for argument 1 from ‘std::chrono::_V2::system_clock’ to ‘const std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&’
+/usr/include/c++/8/chrono:616:14: note: candidate: ‘std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >& std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::operator=(std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&&)’
+/usr/include/c++/8/chrono:616:14: note:   no known conversion for argument 1 from ‘std::chrono::_V2::system_clock’ to ‘std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&&’
