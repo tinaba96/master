@@ -1,0 +1,102 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../prj.srcs/sources_1/bd/emu/ipshared/ec67/hdl" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_dma_pcie_aclk_0/sim/emu_dma_pcie_aclk_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ipshared/eb46/hdl/sim_aximm_master_v1_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_xdma_dummy_0/sim/emu_xdma_dummy_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_kernel_clk_0/sim/emu_kernel_clk_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_kernel2_clk_0/sim/emu_kernel2_clk_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_axi_lite_control_clk_0/sim/emu_axi_lite_control_clk_0.v" \
+
+sv xil_defaultlib  --include "../../../../prj.srcs/sources_1/bd/emu/ipshared/ec67/hdl" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_sdaccel_generic_pcie_0_0/sim/emu_sdaccel_generic_pcie_0_0.sv" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_systemc_synchronizer_0_0/sim/emu_systemc_synchronizer_0_0.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.srcs/sources_1/bd/emu/ipshared/ec67/hdl" \
+"../../../../prj.ip_user_files/bd/emu/ipshared/efc9/hdl/sim_axilite_slave_v1_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_to_delete_kernel_ctrl_0/sim/emu_to_delete_kernel_ctrl_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_ddr0_ui_clk_0/sim/emu_ddr0_ui_clk_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_ddr1_ui_clk_0/sim/emu_ddr1_ui_clk_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_ddr2_ui_clk_0/sim/emu_ddr2_ui_clk_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_ddr3_ui_clk_0/sim/emu_ddr3_ui_clk_0.v" \
+"../../../../prj.ip_user_files/bd/emu/sim/emu.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_xbar_0/sim/emu_xbar_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_xbar_2/sim/emu_xbar_2.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_xbar_1/sim/emu_xbar_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_backward.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_backward_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_backward_1_di_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_backward_1_x_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_exp_generic_double_s.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_exp_generic_double_s_table_exp_Z1_ap_ufixed_58_1_ap_q_mode_5_ap_o_mode_3_0_array_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_exp_generic_double_s_table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_exp_generic_double_s_table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_forward.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_forward_c_prev_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_generic_tanh_double_s.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_bf_V_96.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_bufferd_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_bufferd_V_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_bufferx_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_buffery_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_control_s_axi.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_dadd_64ns_64ns_64_5_full_dsp_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_dcmp_64ns_64ns_1_2_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_ddiv_64ns_64ns_64_31_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_dexp_64ns_64ns_64_20_full_dsp_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_dmul_64ns_64ns_64_6_max_dsp_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_dsqrt_64ns_64ns_64_21_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_dsub_64ns_64ns_64_5_full_dsp_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_fadd_32ns_32ns_32_7_full_dsp_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_fdiv_32ns_32ns_32_12_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_fmul_32ns_32ns_32_4_max_dsp_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_fpext_32ns_64_2_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_fptrunc_64ns_32_2_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_gmem_m_axi.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_h_wxf_V_100.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mac_muladd_16ns_16s_19s_31_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mac_mulsub_16s_16s_26ns_32_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_32s_16s_48_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_32s_32s_62_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_36ns_43ns_79_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_44ns_49ns_93_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_48s_17s_62_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_50ns_50ns_100_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_72ns_13s_84_5_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_mul_7ns_16s_23_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_mul_13ns_16s_29_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_mul_16s_16s_32_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_mul_mul_23s_16s_39_4_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_sdiv_36s_16s_36_40_1.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_wxf_V_88.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_z_gradswxf_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_z_hs_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_z_lstm_cache_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_z_lstm_f_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl_z_lstm_o_V.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_update.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_updateb.v" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/0427/hdl/verilog/kerneldl_kerneldl.v" \
+
+sv xil_defaultlib  --include "../../../../prj.srcs/sources_1/bd/emu/ipshared/ec67/hdl" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_sim_axi_perf_mon_0_0/sim/emu_sim_axi_perf_mon_0_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_sim_axi_perf_mon_1_0/sim/emu_sim_axi_perf_mon_1_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_sim_axi_perf_mon_2_0/sim/emu_sim_axi_perf_mon_2_0_stub.sv" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_sim_axi_perf_mon_3_0/sim/emu_sim_axi_perf_mon_3_0_stub.sv" \
+
+verilog xil_defaultlib  --include "../../../../prj.srcs/sources_1/bd/emu/ipshared/ec67/hdl" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_auto_us_0/sim/emu_auto_us_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_auto_cc_0/sim/emu_auto_cc_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_auto_cc_1/sim/emu_auto_cc_1.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_auto_cc_2/sim/emu_auto_cc_2.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_auto_cc_3/sim/emu_auto_cc_3.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_m01_regslice_0/sim/emu_m01_regslice_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_auto_cc_4/sim/emu_auto_cc_4.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_s01_regslice_0/sim/emu_s01_regslice_0.v" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_auto_us_cc_df_0/sim/emu_auto_us_cc_df_0.v" \
+"../../../../prj.srcs/sources_1/bd/emu/hdl/emu_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
