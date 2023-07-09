@@ -1,0 +1,11 @@
+Sun Jan  3 15:35:57 2021: Server was asked to start on port: '42478'
+Sun Jan  3 15:35:57 2021: Attempting to start server on port '42478'
+Sun Jan  3 15:35:57 2021: XRC main fifo: created main fifo '/tmp/xrcmain42478', fd read = 14
+Sun Jan  3 15:35:57 2021: Running Rule Check Server
+Sun Jan  3 15:35:57 2021: Version 1.4.0
+Sun Jan  3 15:35:57 2021: Rule Check Server: Accepted socket connection from client
+Sun Jan  3 15:35:57 2021: EXCHANGE_TOKEN received, server token: ee0964ca-80fe-4595-a5f5-9dea1b932120, passed token: ee0964ca-80fe-4595-a5f5-9dea1b932120
+Sun Jan  3 15:35:57 2021: SESSION_MGR: creating session with session uuid: 'dbb7e4f4-216f-48df-8d39-d52f8a778999' and name 'xocc_link_dl.hw.xilinx_aws-vu9p-f1-04261818_dynamic_5_0'
+Sun Jan  3 15:36:45 2021: Rule Check Server: Accepted socket connection from client
+Sun Jan  3 17:31:40 2021: Rule Check Server: Accepted socket connection from client
+Sun Jan  3 20:29:32 2021: SESSION_MGR: closing session for UUID 'dbb7e4f4-216f-48df-8d39-d52f8a778999' with name 'xocc_link_dl.hw.xilinx_aws-vu9p-f1-04261818_dynamic_5_0'

@@ -1,0 +1,14 @@
+manifest_format_version=2
+pci_vendor_id=0x1D0F
+pci_device_id=0xF010
+pci_subsystem_id=0x1D51
+pci_subsystem_vendor_id=0xFEDD
+dcp_hash=f8adf67c7f15681413f9ef344122aaa4edbc4c637ca0b2069c95f14e6b030dbc
+shell_version=0x04261818
+dcp_file_name=21_01_04-010150_SH_CL_routed.dcp
+hdk_version=
+tool_version=v2019.1
+date=21_01_04-010150
+clock_main_a0=239
+clock_extra_b0=168
+clock_extra_c0=500
