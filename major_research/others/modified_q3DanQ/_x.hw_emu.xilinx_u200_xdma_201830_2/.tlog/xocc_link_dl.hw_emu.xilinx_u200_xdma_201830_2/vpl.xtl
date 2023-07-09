@@ -1,0 +1,91 @@
+<ENTRY>
+{
+    "EntryID": "1",
+    "Type": "CmdStep",
+    "DateTimestamp": "2020-Oct-23 11:09:07.925000",
+    "TimestampMillis": "40147925",
+    "Payload": {
+        "CmdStepID": "0efb2296-5b71-4e24-bd91-6af4c24e5eab",
+        "Command": "vpl",
+        "LogFile": "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/link.steps.log",
+        "CommandLine": "\/tools\/Xilinx\/SDx\/2019.1\/bin\/unwrapped\/lnx64.o\/vpl -t hw_emu -f xilinx_u200_xdma_201830_2 --nk kerneldl:1 -s --xp param:compiler.enablePerformanceTrace=1 --xp vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high} --xp misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10} --xp misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10} --xp misc:BinaryName=dl.hw_emu.xilinx_u200_xdma_201830_2 --output_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int --log_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/logs\/link --report_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/reports\/link -k \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/kernel_info.dat --webtalk_flag SDAccel --temp_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link --emulation_mode debug_waveform --no-info --tlog_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/.tlog\/xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2 --iprepo \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/xo\/ip_repo\/xilinx_com_hls_kerneldl_1_0 --messageDb \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/xocc_link\/vpl.pb \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dr.bd.tcl ",
+        "OptionArgs": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "2",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:09:07.925000",
+    "TimestampMillis": "40147925",
+    "Payload": {
+        "CmdStepID": "0efb2296-5b71-4e24-bd91-6af4c24e5eab",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "3",
+    "Type": "SubCmdStep",
+    "DateTimestamp": "2020-Oct-23 11:09:18.977000",
+    "TimestampMillis": "40158977",
+    "Payload": {
+        "CmdStepID": "d8ec9b0e-ea69-48b1-b96c-1f921a330b58",
+        "Command": "vivado",
+        "LogFile": "$LOGDIR\/..\/..\/link\/xocc_link\/vivado.log",
+        "TransactionLogFile": "",
+        "CommandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+        "OptionArgs": [
+            "-log",
+            "vivado.log",
+            "-applog",
+            " -m64",
+            "-messageDb",
+            "vivado.pb",
+            "-mode",
+            "batch",
+            "-source",
+            "vpl.tcl",
+            "-notrace"
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "4",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:09:18.977000",
+    "TimestampMillis": "40158977",
+    "Payload": {
+        "CmdStepID": "d8ec9b0e-ea69-48b1-b96c-1f921a330b58",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "5",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:00.945000",
+    "TimestampMillis": "40320945",
+    "Payload": {
+        "CmdStepID": "d8ec9b0e-ea69-48b1-b96c-1f921a330b58",
+        "Status": "Passed"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "6",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:01.054000",
+    "TimestampMillis": "40321054",
+    "Payload": {
+        "CmdStepID": "0efb2296-5b71-4e24-bd91-6af4c24e5eab",
+        "Status": "Passed"
+    }
+}
+</ENTRY>

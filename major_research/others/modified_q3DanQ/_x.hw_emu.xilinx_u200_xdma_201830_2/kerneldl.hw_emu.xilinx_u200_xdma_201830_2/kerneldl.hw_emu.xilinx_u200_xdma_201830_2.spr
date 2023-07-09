@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="kerneldl.hw_emu.xilinx_u200_xdma_201830_2" dir="">
+  <FileSets>
+    <FileSet Name="kernel_kerneldl" Type="DesignSrcs">
+      <File Path="/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

@@ -1,0 +1,136 @@
+Attempting to get a license: ap_opencl
+INFO: [XOCC 17-1540] The version limit for your license is '2020.04' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Feature available: ap_opencl
+INFO: [XOCC 60-1306] Additional information associated with this xocc link can be found at:
+	Reports: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/reports/link
+	Log files: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/logs/link
+INFO: [XOCC 60-629] Linking for hardware emulation target
+INFO: [XOCC 60-1316] Initiating connection to rulecheck server, at Fri Oct 23 11:08:48 2020
+INFO: [XOCC 60-1315] Creating rulecheck session with output '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/reports/link/xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2_guidance.html', at Fri Oct 23 11:08:49 2020
+INFO: [XOCC 60-895]   Target platform: /tools/Xilinx/SDx/2019.1/platforms/xilinx_u200_xdma_201830_2/xilinx_u200_xdma_201830_2.xpfm
+INFO: [XOCC 60-423]   Target device: xilinx_u200_xdma_201830_2
+INFO: [XOCC 60-1332] Run 'xocc_link' status: Not started
+INFO: [XOCC 60-1443] [11:08:56] Run xocc_link: Step sdx_link: Started
+INFO: [XOCC 60-1453] Command Line: sdx_link --xo /home/inaba/alveo/DanQ_fhalf/xclbin/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo --nk kerneldl:1 -keep --xpfm /tools/Xilinx/SDx/2019.1/platforms/xilinx_u200_xdma_201830_2/xilinx_u200_xdma_201830_2.xpfm --target emu --output_dir /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int --temp_dir /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/sys_link
+INFO: [XOCC 60-1454] Run Directory: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/xocc_link
+using /tools/Xilinx/SDx/2019.1/platforms/xilinx_u200_xdma_201830_2/xilinx_u200_xdma_201830_2.xpfm
+extracting xo v3 file /home/inaba/alveo/DanQ_fhalf/xclbin/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo
+Creating IP database /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/sys_link/_sds/.cdb/xd_ip_db.xml
+processing accelerators: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/sys_link/iprepo/xilinx_com_hls_kerneldl_1_0
+ip_dir: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/sys_link/iprepo/xilinx_com_hls_kerneldl_1_0
+/tools/Xilinx/SDx/2019.1/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" /tools/Xilinx/SDx/2019.1/scripts/xdcc/xpathValueOf.xsl /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/sys_link/iprepo/xilinx_com_hls_kerneldl_1_0/component.xml
+ip_name: kerneldl
+Creating apsys_0.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: kerneldl, num: 1  {kerneldl_1}
+INFO: [CFGEN 83-2226] Inferring mapping for argument kerneldl_1.datax to DDR[1]
+INFO: [CFGEN 83-2226] Inferring mapping for argument kerneldl_1.datay to DDR[1]
+INFO: [CFGEN 83-2226] Inferring mapping for argument kerneldl_1.dout to DDR[1]
+
+Creating dr.bd.tcl
+INFO: [XOCC 60-1441] [11:09:06] Run xocc_link: Step sdx_link: Completed
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 554.078 ; gain = 0.000 ; free physical = 37889 ; free virtual = 119320
+INFO: [XOCC 60-1443] [11:09:06] Run xocc_link: Step vpl: Started
+INFO: [XOCC 60-1453] Command Line: vpl -t hw_emu -f xilinx_u200_xdma_201830_2 --nk kerneldl:1 -s --xp param:compiler.enablePerformanceTrace=1 --xp vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high} --xp misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10} --xp misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10} --xp misc:BinaryName=dl.hw_emu.xilinx_u200_xdma_201830_2 --output_dir /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int --log_dir /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/logs/link --report_dir /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/reports/link -k /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/kernel_info.dat --webtalk_flag SDAccel --temp_dir /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link --emulation_mode debug_waveform --no-info --tlog_dir /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/.tlog/xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2 --iprepo /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_kerneldl_1_0 --messageDb /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/xocc_link/vpl.pb /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dr.bd.tcl
+INFO: [XOCC 60-1454] Run Directory: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/xocc_link
+
+****** vpl v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+Attempting to get a license: ap_opencl
+INFO: [VPL 17-1540] The version limit for your license is '2020.04' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Feature available: ap_opencl
+INFO: [VPL 60-839] Read in kernel information from file '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: xilinx_u200_xdma_201830_2
+INFO: [VPL 60-1032] Extracting DSA to /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/vivado/vpl/.local/dsa
+[11:09:26] Run vpl: Step create_project: Started
+Creating Vivado project.
+[11:09:28] Run vpl: Step create_project: Completed
+[11:09:28] Run vpl: Step create_bd: Started
+[11:10:21] Run vpl: Step create_bd: Completed
+[11:10:21] Run vpl: Step update_bd: Started
+[11:10:21] Run vpl: Step update_bd: Completed
+[11:10:21] Run vpl: Step generate_target: Started
+[11:10:40] Run vpl: Step generate_target: Completed
+[11:10:40] Run vpl: Step config_simulation: Started
+[11:11:56] Run vpl: Step config_simulation: RUNNING...
+[11:12:00] Run vpl: Step config_simulation: Completed
+[11:12:00] Run vpl: FINISHED. Run Status: config_simulation Complete!
+INFO: [XOCC 60-1441] [11:12:01] Run xocc_link: Step vpl: Completed
+Time (s): cpu = 00:00:12 ; elapsed = 00:02:55 . Memory (MB): peak = 662.449 ; gain = 108.371 ; free physical = 35174 ; free virtual = 117801
+INFO: [XOCC 60-1443] [11:12:01] Run xocc_link: Step rtdgen: Started
+INFO: [XOCC 60-1453] Command Line: rtdgen
+INFO: [XOCC 60-1454] Run Directory: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/xocc_link
+INFO: [XOCC 60-991] clock name 'kernel2_clk_clk' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [XOCC 60-991] clock name 'kernel_clk_clk' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [XOCC 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): Kernel (KERNEL) clock: kernel2_clk_clk = 500, Kernel (DATA) clock: kernel_clk_clk = 300
+INFO: [XOCC 60-1453] Command Line: cf2sw -a /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/address_map.xml -sdsl /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/sdsl.dat -xclbin /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/xclbin_orig.xml -rtd /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2.rtd -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2.xml
+WARNING: [XOCC 60-1455] Debuggable symbols are not generated successfully, clean up /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/consolidated.cf
+INFO: [XOCC 60-1441] [11:12:04] Run xocc_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 662.449 ; gain = 0.000 ; free physical = 36114 ; free virtual = 118765
+INFO: [XOCC 60-1443] [11:12:04] Run xocc_link: Step xclbinutil: Started
+INFO: [XOCC 60-1453] Command Line: xclbinutil --key-value SYS:mode:hw_pr --add-section DEBUG_IP_LAYOUT:JSON:/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/behav.xse --force --add-section :JSON:/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2.rtd --append-section :JSON:/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2_xml.rtd --add-section BUILD_METADATA:JSON:/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2.xml --output /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin
+INFO: [XOCC 60-1454] Run Directory: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/xocc_link
+XRT Build Version: 2.2.2157
+       Build Date: 2019-05-22 17:58:55
+          Hash ID: 496442e176495c42c9bf519ed0f4b87685c41ed0
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 296 bytes
+Format : JSON
+File   : '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 25451645 bytes
+Format : RAW
+File   : '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/behav.xse'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 274 bytes
+Format : JSON
+File   : '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 2863 bytes
+Format : JSON
+File   : '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 5159 bytes
+Format : RAW
+File   : '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2.xml'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (25468737 bytes) to the output file: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin
+Leaving xclbinutil.
+INFO: [XOCC 60-1441] [11:12:04] Run xocc_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.12 . Memory (MB): peak = 662.449 ; gain = 0.000 ; free physical = 36419 ; free virtual = 119099
+INFO: [XOCC 60-1443] [11:12:04] Run xocc_link: Step xclbinutilinfo: Started
+INFO: [XOCC 60-1453] Command Line: xclbinutil --quiet --info /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin.info --input /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/int/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin
+INFO: [XOCC 60-1454] Run Directory: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/link/xocc_link
+INFO: [XOCC 60-1441] [11:12:05] Run xocc_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.28 . Memory (MB): peak = 662.449 ; gain = 0.000 ; free physical = 36415 ; free virtual = 119095
+INFO: [XOCC 60-244] Generating system estimate report...
+INFO: [XOCC 60-1092] Generated system estimate report: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/reports/link/system_estimate_dl.hw_emu.xilinx_u200_xdma_201830_2.xtxt
+INFO: [XOCC 60-586] Created xclbin/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin
+INFO: [XOCC 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/reports/link/xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2_guidance.html
+	Steps Log File: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/logs/link/link.steps.log
+
+INFO: [XOCC 60-791] Total elapsed time: 0h 3m 16s

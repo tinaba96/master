@@ -1,0 +1,399 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vivado/2019.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'inaba' on host 'alveo' (Linux_x86_64 version 3.10.0-1062.9.1.el7.x86_64) on Fri Oct 23 11:07:27 JST 2020
+INFO: [HLS 200-10] On os "CentOS Linux release 7.7.1908 (Core)"
+INFO: [HLS 200-10] In directory '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl'
+Sourcing Tcl script 'kerneldl.tcl'
+INFO: [HLS 200-10] Creating and opening project '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl'.
+INFO: [HLS 200-10] Adding design file '/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution '/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution'.
+INFO: [HLS 200-10] Setting target device to 'xcu200-fsgd2104-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -pipeline_loops=64
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -name_max_length=256
+INFO: [XFORM 203-1161] The maximum of name length is set into 256.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -enable_dsp_full_reg=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -module_auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_interface -m_axi_addr64=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp' ... 
+WARNING: [HLS 200-40] In file included from /home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:1:
+In file included from /home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:9:
+/home/inaba/alveo/DanQ_fhalf/src/kernel/optimizer.h:16:11: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+ float lr = 0.01;
+          ^
+/home/inaba/alveo/DanQ_fhalf/src/kernel/optimizer.h:17:18: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+ float decayrate = 0.99;
+                 ^
+/home/inaba/alveo/DanQ_fhalf/src/kernel/optimizer.h:18:15: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+ float little = 0.00000001;
+              ^
+3 warnings generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 836.188 ; gain = 148.953 ; free physical = 37992 ; free virtual = 119219
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 836.188 ; gain = 148.953 ; free physical = 37992 ; free virtual = 119219
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 903.117 ; gain = 215.883 ; free physical = 37922 ; free virtual = 119154
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'mpool::forward' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:519) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu::forward' into 'cnn::predict' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:42) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu::backward' into 'cnn::gradient' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'cnn::predict' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:144) automatically.
+INFO: [XFORM 203-602] Inlining function 'cnn::gradient' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:170) automatically.
+INFO: [XFORM 203-602] Inlining function 'rmsprop::update' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:172) automatically.
+INFO: [XFORM 203-602] Inlining function 'rmsprop::update.1' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:179) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1046.086 ; gain = 358.852 ; free physical = 37796 ; free virtual = 119032
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:349) in function 'conv1d::forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3.1.1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:367) in function 'conv1d::forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:50) in function 'relu::forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:498) in function 'mpool::forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:508) in function 'mpool::forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:537) in function 'mpool::backward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:550) in function 'mpool::backward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:68) in function 'relu::backward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:412) in function 'conv1d::backward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:432) in function 'conv1d::backward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/optimizer.h:66) in function 'rmsprop::update.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/optimizer.h:66) in function 'rmsprop::update' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:21) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:27) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-4' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:133) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-5' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:139) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-6' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:146) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-7' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:164) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-8' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:174) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-9' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:180) in function 'kerneldl' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:508) in function 'mpool::forward' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:514) in function 'mpool::forward' completely with a factor of 13.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu::forward' into 'cnn::predict' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:42) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu::backward' into 'cnn::gradient' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'cnn::predict' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:144) automatically.
+INFO: [XFORM 203-602] Inlining function 'cnn::gradient' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:170) automatically.
+INFO: [XFORM 203-602] Inlining function 'rmsprop::update' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:172) automatically.
+INFO: [XFORM 203-602] Inlining function 'rmsprop::update.1' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:179) automatically.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'dout' in function 'mpool::backward' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:552:4).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'bufferd' in function 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:72:5).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1108.191 ; gain = 420.957 ; free physical = 37826 ; free virtual = 119069
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:503:16) in function 'mpool::forward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:364:17) in function 'conv1d::forward'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:361:17) in function 'conv1d::forward' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:356:17) in function 'conv1d::forward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:410:18) in function 'conv1d::backward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:407:17) in function 'conv1d::backward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:402:16) in function 'conv1d::backward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:429:16) in function 'conv1d::backward'.
+WARNING: [XFORM 203-631] Renaming function 'mpool::forward' to 'forward' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:495)
+WARNING: [XFORM 203-631] Renaming function 'mpool::backward' to 'backward' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:533)
+WARNING: [XFORM 203-631] Renaming function 'conv1d::forward' to 'forward.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:349:36)
+WARNING: [XFORM 203-631] Renaming function 'conv1d::backward' to 'backward.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:402:28)
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 24000 on port 'gmemm' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:166:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 4000 on port 'gmemm' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:135:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 24000 on port 'gmemm' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:148:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1108.191 ; gain = 420.957 ; free physical = 37827 ; free virtual = 119072
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kerneldl' ...
+WARNING: [SYN 201-103] Legalizing function name 'backward.1' to 'backward_1'.
+WARNING: [SYN 201-103] Legalizing function name 'forward.1' to 'forward_1'.
+WARNING: [SYN 201-103] Legalizing function name '__hls_fptosi_float_i32' to 'p_hls_fptosi_float_i32'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backward' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 47.45 seconds; current allocated memory: 337.624 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 337.806 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backward_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln405) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln431) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 10, Depth = 17.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 338.350 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 338.941 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'forward_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln359) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln364) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 5)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 6)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 7, Depth = 16.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 339.273 MB.
+INFO: [HLS 200-434] Only 2 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 339.677 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_hls_fptosi_float_i32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function '__hls_fptosi_float_i32'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 339.794 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 339.917 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'forward' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=begin) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln506) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 106, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 107, Depth = 111.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 341.245 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 343.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kerneldl' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 7'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 8'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 9'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 99.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 10'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 11'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 99.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 12'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.85 seconds; current allocated memory: 344.784 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.19 seconds; current allocated memory: 347.052 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backward' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backward'.
+INFO: [HLS 200-111]  Elapsed time: 0.77 seconds; current allocated memory: 347.790 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backward_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_mac_muladd_9ns_11ns_10ns_19_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backward_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 349.788 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forward_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_mac_muladd_3ns_6ns_16ns_16_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_mac_muladd_9ns_11ns_10ns_19_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forward_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 352.859 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_hls_fptosi_float_i32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_hls_fptosi_float_i32'.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 354.457 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forward' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fcmp_32ns_32ns_1_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_mac_muladd_5ns_7ns_19ns_19_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_mul_mul_11ns_9ns_19_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_sitofp_32ns_32_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forward'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 359.356 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kerneldl' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kerneldl/gmemm' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kerneldl/datax' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kerneldl/datay' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kerneldl/dout' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kerneldl/model' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kerneldl' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'datax', 'datay', 'dout' and 'model' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_dadd_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_ddiv_64ns_64ns_64_31_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_dsqrt_64ns_64ns_64_30_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_dsub_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fcmp_32ns_32ns_1_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fpext_32ns_64_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fptrunc_64ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kerneldl'.
+INFO: [HLS 200-111]  Elapsed time: 1.33 seconds; current allocated memory: 370.783 MB.
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_backward_tempp_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_z_paramsw1_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_z_gradsw1_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_z_a_actc_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_z_b_mask_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_z_c_max_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_buffery_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_h1_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_h2_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_bufferd_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 1180.355 ; gain = 493.121 ; free physical = 37708 ; free virtual = 118974
+INFO: [VHDL 208-304] Generating VHDL RTL for kerneldl with prefix kerneldl_.
+INFO: [VLOG 209-307] Generating Verilog RTL for kerneldl with prefix kerneldl_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'kerneldl_kerneldl_ap_dadd_6_full_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1467.535 ; gain = 89.758 ; free physical = 37380 ; free virtual = 118648
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kerneldl_kerneldl_ap_dadd_6_full_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kerneldl_kerneldl_ap_dadd_6_full_dsp_64'...
+WARNING: [IP_Flow 19-4832] The IP name 'kerneldl_kerneldl_ap_ddiv_29_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kerneldl_kerneldl_ap_ddiv_29_no_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kerneldl_kerneldl_ap_ddiv_29_no_dsp_64'...
+WARNING: [IP_Flow 19-4832] The IP name 'kerneldl_kerneldl_ap_dsqrt_28_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kerneldl_kerneldl_ap_dsqrt_28_no_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kerneldl_kerneldl_ap_dsqrt_28_no_dsp_64'...
+WARNING: [IP_Flow 19-4832] The IP name 'kerneldl_kerneldl_ap_dsub_6_full_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kerneldl_kerneldl_ap_dsub_6_full_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kerneldl_kerneldl_ap_dsub_6_full_dsp_64'...
+WARNING: [IP_Flow 19-4832] The IP name 'kerneldl_kerneldl_ap_fadd_5_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kerneldl_kerneldl_ap_fadd_5_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kerneldl_kerneldl_ap_fadd_5_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'kerneldl_kerneldl_ap_fcmp_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kerneldl_kerneldl_ap_fcmp_0_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kerneldl_kerneldl_ap_fcmp_0_no_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'kerneldl_kerneldl_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kerneldl_kerneldl_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kerneldl_kerneldl_ap_fmul_2_max_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'kerneldl_kerneldl_ap_fpext_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kerneldl_kerneldl_ap_fpext_0_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kerneldl_kerneldl_ap_fpext_0_no_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'kerneldl_kerneldl_ap_fptrunc_0_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kerneldl_kerneldl_ap_fptrunc_0_no_dsp_64'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kerneldl_kerneldl_ap_fptrunc_0_no_dsp_64'...
+WARNING: [IP_Flow 19-4832] The IP name 'kerneldl_kerneldl_ap_sitofp_3_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kerneldl_kerneldl_ap_sitofp_3_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kerneldl_kerneldl_ap_sitofp_3_no_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 23 11:08:46 2020...
+HLS completed successfully
+INFO: [HLS 200-112] Total elapsed time: 79.02 seconds; peak allocated memory: 370.783 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Fri Oct 23 11:08:46 2020...

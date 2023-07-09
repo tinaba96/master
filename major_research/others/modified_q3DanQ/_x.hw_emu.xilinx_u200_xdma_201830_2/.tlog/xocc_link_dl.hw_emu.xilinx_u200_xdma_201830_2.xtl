@@ -1,0 +1,438 @@
+<ENTRY>
+{
+    "EntryID": "1",
+    "Type": "CmdStep",
+    "DateTimestamp": "2020-Oct-23 11:08:48.545000",
+    "TimestampMillis": "40128545",
+    "Payload": {
+        "CmdStepID": "4809f5f8-5884-4ac7-88f6-32416d71b004",
+        "Command": "xocc",
+        "LogFile": "$LOGDIR\/..\/link\/link.steps.log",
+        "CommandLine": "\/tools\/Xilinx\/SDx\/2019.1\/bin\/unwrapped\/lnx64.o\/xocc  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -t hw_emu --platform xilinx_u200_xdma_201830_2 --save-temps --temp_dir .\/_x.hw_emu.xilinx_u200_xdma_201830_2\/ -l --nk kerneldl:1 -oxclbin\/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin xclbin\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo ",
+        "OptionArgs": [
+            "-t",
+            "hw_emu",
+            "--platform",
+            "xilinx_u200_xdma_201830_2",
+            "--save-temps",
+            "--temp_dir",
+            ".\/_x.hw_emu.xilinx_u200_xdma_201830_2\/",
+            "-l",
+            "--nk",
+            "kerneldl:1",
+            "-oxclbin\/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin",
+            "xclbin\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo"
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "2",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:08:48.545000",
+    "TimestampMillis": "40128545",
+    "Payload": {
+        "CmdStepID": "4809f5f8-5884-4ac7-88f6-32416d71b004",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "3",
+    "Type": "FlowMetaData",
+    "DateTimestamp": "2020-Oct-23 11:08:56.601000",
+    "TimestampMillis": "40136601",
+    "Payload": {
+        "HardwarePlatform": "xilinx_u200_xdma_201830_2.xpfm",
+        "HardwareDSA": "xilinx_u200_xdma_201830_2.dsa",
+        "PlatformDirectory": "\/tools\/Xilinx\/SDx\/2019.1\/platforms\/xilinx_u200_xdma_201830_2",
+        "Runtime": "OpenCL",
+        "SystemConfiguration": "Linux",
+        "BinaryContainer": "dl.hw_emu.xilinx_u200_xdma_201830_2",
+        "BuildFlow": "LINK",
+        "Target": "HW_EMU",
+        "Kernels": [
+            {
+                "KernelName": "kerneldl",
+                "KernelObj": "$LOGDIR\/..\/..\/xclbin\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo",
+                "KernelSrcs": [
+                    "$LOGDIR\/..\/link\/int\/xo\/kerneldl\/kerneldl\/cpu_sources\/kernel.cpp"
+                ]
+            }
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "4",
+    "Type": "SubCmdStep",
+    "DateTimestamp": "2020-Oct-23 11:08:56.684000",
+    "TimestampMillis": "40136684",
+    "Payload": {
+        "CmdStepID": "52ae281e-e584-4e6e-9874-86184ebe7a04",
+        "Command": "sdx_link",
+        "LogFile": "",
+        "TransactionLogFile": "",
+        "CommandLine": "sdx_link --xo \/home\/inaba\/alveo\/DanQ_fhalf\/xclbin\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo --nk kerneldl:1 -keep --xpfm \/tools\/Xilinx\/SDx\/2019.1\/platforms\/xilinx_u200_xdma_201830_2\/xilinx_u200_xdma_201830_2.xpfm --target emu --output_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int --temp_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/sys_link",
+        "OptionArgs": [
+            "--xo",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/xclbin\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo",
+            "--nk",
+            "kerneldl:1",
+            "-keep",
+            "--xpfm",
+            "\/tools\/Xilinx\/SDx\/2019.1\/platforms\/xilinx_u200_xdma_201830_2\/xilinx_u200_xdma_201830_2.xpfm",
+            "--target",
+            "emu",
+            "--output_dir",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int",
+            "--temp_dir",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/sys_link"
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "5",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:08:56.684000",
+    "TimestampMillis": "40136684",
+    "Payload": {
+        "CmdStepID": "52ae281e-e584-4e6e-9874-86184ebe7a04",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "6",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:09:06.293000",
+    "TimestampMillis": "40146293",
+    "Payload": {
+        "CmdStepID": "52ae281e-e584-4e6e-9874-86184ebe7a04",
+        "Status": "Passed"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "7",
+    "Type": "SubCmdStep",
+    "DateTimestamp": "2020-Oct-23 11:09:06.294000",
+    "TimestampMillis": "40146294",
+    "Payload": {
+        "CmdStepID": "0ab22c3c-7cb6-436c-95d4-67e55e814f30",
+        "Command": "vpl",
+        "LogFile": "",
+        "TransactionLogFile": "",
+        "CommandLine": "vpl -t hw_emu -f xilinx_u200_xdma_201830_2 --nk kerneldl:1 -s --xp param:compiler.enablePerformanceTrace=1 --xp vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high} --xp misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10} --xp misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10} --xp misc:BinaryName=dl.hw_emu.xilinx_u200_xdma_201830_2 --output_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int --log_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/logs\/link --report_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/reports\/link -k \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/kernel_info.dat --webtalk_flag SDAccel --temp_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link --emulation_mode debug_waveform --no-info --tlog_dir \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/.tlog\/xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2 --iprepo \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/xo\/ip_repo\/xilinx_com_hls_kerneldl_1_0 --messageDb \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/xocc_link\/vpl.pb \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dr.bd.tcl",
+        "OptionArgs": [
+            "-t",
+            "hw_emu",
+            "-f",
+            "xilinx_u200_xdma_201830_2",
+            "--nk",
+            "kerneldl:1",
+            "-s",
+            "--xp",
+            "param:compiler.enablePerformanceTrace=1",
+            "--xp",
+            "vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}",
+            "--xp",
+            "misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}",
+            "--xp",
+            "misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}",
+            "--xp",
+            "misc:BinaryName=dl.hw_emu.xilinx_u200_xdma_201830_2",
+            "--output_dir",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int",
+            "--log_dir",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/logs\/link",
+            "--report_dir",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/reports\/link",
+            "-k",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/kernel_info.dat",
+            "--webtalk_flag",
+            "SDAccel",
+            "--temp_dir",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link",
+            "--emulation_mode",
+            "debug_waveform",
+            "--no-info",
+            "--tlog_dir",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/.tlog\/xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2",
+            "--iprepo",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/xo\/ip_repo\/xilinx_com_hls_kerneldl_1_0",
+            "--messageDb",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/xocc_link\/vpl.pb",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dr.bd.tcl"
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "8",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:09:06.294000",
+    "TimestampMillis": "40146294",
+    "Payload": {
+        "CmdStepID": "0ab22c3c-7cb6-436c-95d4-67e55e814f30",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "9",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:01.067000",
+    "TimestampMillis": "40321067",
+    "Payload": {
+        "CmdStepID": "0ab22c3c-7cb6-436c-95d4-67e55e814f30",
+        "Status": "Passed"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "10",
+    "Type": "SubCmdStep",
+    "DateTimestamp": "2020-Oct-23 11:12:01.069000",
+    "TimestampMillis": "40321069",
+    "Payload": {
+        "CmdStepID": "bd3079ec-7cfa-4bd6-a1ee-491fa5448ad5",
+        "Command": "rtdgen",
+        "LogFile": "",
+        "TransactionLogFile": "",
+        "CommandLine": "rtdgen",
+        "OptionArgs": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "11",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:01.069000",
+    "TimestampMillis": "40321069",
+    "Payload": {
+        "CmdStepID": "bd3079ec-7cfa-4bd6-a1ee-491fa5448ad5",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "12",
+    "Type": "SubCmdStep",
+    "DateTimestamp": "2020-Oct-23 11:12:01.083000",
+    "TimestampMillis": "40321083",
+    "Payload": {
+        "CmdStepID": "d6ec64a1-b964-40b3-9595-b8e3fabb50e1",
+        "Command": "cf2sw",
+        "LogFile": "",
+        "TransactionLogFile": "",
+        "CommandLine": "cf2sw -a \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/address_map.xml -sdsl \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/sdsl.dat -xclbin \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/xclbin_orig.xml -rtd \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.rtd -o \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.xml",
+        "OptionArgs": [
+            "-a",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/address_map.xml",
+            "-sdsl",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/sdsl.dat",
+            "-xclbin",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/xclbin_orig.xml",
+            "-rtd",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.rtd",
+            "-o",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.xml"
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "13",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:01.083000",
+    "TimestampMillis": "40321083",
+    "Payload": {
+        "CmdStepID": "d6ec64a1-b964-40b3-9595-b8e3fabb50e1",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "14",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:02.309000",
+    "TimestampMillis": "40322309",
+    "Payload": {
+        "CmdStepID": "d6ec64a1-b964-40b3-9595-b8e3fabb50e1",
+        "Status": "Passed"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "15",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:04.607000",
+    "TimestampMillis": "40324607",
+    "Payload": {
+        "CmdStepID": "bd3079ec-7cfa-4bd6-a1ee-491fa5448ad5",
+        "Status": "Passed"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "16",
+    "Type": "SubCmdStep",
+    "DateTimestamp": "2020-Oct-23 11:12:04.608000",
+    "TimestampMillis": "40324608",
+    "Payload": {
+        "CmdStepID": "5c7511f4-3b13-4b1f-9082-cff054d043ed",
+        "Command": "xclbinutil",
+        "LogFile": "",
+        "TransactionLogFile": "",
+        "CommandLine": "xclbinutil --key-value SYS:mode:hw_pr --add-section DEBUG_IP_LAYOUT:JSON:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/debug_ip_layout.rtd --add-section BITSTREAM:RAW:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/behav.xse --force --add-section :JSON:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.rtd --append-section :JSON:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2_xml.rtd --add-section BUILD_METADATA:JSON:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2_build.rtd --add-section EMBEDDED_METADATA:RAW:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.xml --output \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin",
+        "OptionArgs": [
+            "--key-value",
+            "SYS:mode:hw_pr",
+            "--add-section",
+            "DEBUG_IP_LAYOUT:JSON:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/debug_ip_layout.rtd",
+            "--add-section",
+            "BITSTREAM:RAW:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/behav.xse",
+            "--force",
+            "--add-section",
+            ":JSON:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.rtd",
+            "--append-section",
+            ":JSON:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/appendSection.rtd",
+            "--add-section",
+            "CLOCK_FREQ_TOPOLOGY:JSON:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2_xml.rtd",
+            "--add-section",
+            "BUILD_METADATA:JSON:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2_build.rtd",
+            "--add-section",
+            "EMBEDDED_METADATA:RAW:\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.xml",
+            "--output",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin"
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "17",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:04.608000",
+    "TimestampMillis": "40324608",
+    "Payload": {
+        "CmdStepID": "5c7511f4-3b13-4b1f-9082-cff054d043ed",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "18",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:04.730000",
+    "TimestampMillis": "40324730",
+    "Payload": {
+        "CmdStepID": "5c7511f4-3b13-4b1f-9082-cff054d043ed",
+        "Status": "Passed"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "19",
+    "Type": "SubCmdStep",
+    "DateTimestamp": "2020-Oct-23 11:12:04.731000",
+    "TimestampMillis": "40324731",
+    "Payload": {
+        "CmdStepID": "05a9ad5a-e2df-46af-b4c3-3c8347d64182",
+        "Command": "xclbinutilinfo",
+        "LogFile": "",
+        "TransactionLogFile": "",
+        "CommandLine": "xclbinutil --quiet --info \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin.info --input \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin",
+        "OptionArgs": [
+            "--quiet",
+            "--info",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin.info",
+            "--input",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/link\/int\/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin"
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "20",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:04.731000",
+    "TimestampMillis": "40324731",
+    "Payload": {
+        "CmdStepID": "05a9ad5a-e2df-46af-b4c3-3c8347d64182",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "21",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:05.010000",
+    "TimestampMillis": "40325010",
+    "Payload": {
+        "CmdStepID": "05a9ad5a-e2df-46af-b4c3-3c8347d64182",
+        "Status": "Passed"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "22",
+    "Type": "Report",
+    "DateTimestamp": "2020-Oct-23 11:12:05.020000",
+    "TimestampMillis": "40325020",
+    "Payload": {
+        "File": "$LOGDIR\/..\/reports\/link\/system_estimate_dl.hw_emu.xilinx_u200_xdma_201830_2.xtxt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_SYSTEM_ESTIMATE",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "23",
+    "Type": "Report",
+    "DateTimestamp": "2020-Oct-23 11:12:05.119000",
+    "TimestampMillis": "40325119",
+    "Payload": {
+        "File": "$LOGDIR\/..\/reports\/link\/xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2_guidance.html",
+        "Type": "HTML",
+        "ReportType": "GLOBAL_RULECHECK_GUIDANCE",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "24",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:12:09.643000",
+    "TimestampMillis": "40329643",
+    "Payload": {
+        "CmdStepID": "4809f5f8-5884-4ac7-88f6-32416d71b004",
+        "Status": "Passed"
+    }
+}
+</ENTRY>

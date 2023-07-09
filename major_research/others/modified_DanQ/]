@@ -1,0 +1,334 @@
+//#include "hls_math.h"
+#include <math.h>
+#include <stdio.h>
+
+class lstm{
+public:
+
+	/*
+	float f[320];
+	float g[320];
+	float i[320];
+	float o[320];
+
+	float h_prev[320];
+	float h_next[320];
+
+	float c_prev[320];
+	float c_next[320];
+
+	*/
+
+	float cache[8*320];
+
+
+	// input_dim = 320
+	void forward(float* in, float* h_next, float* wxf, float* wxg, float* wxi, float* wxo, float* whf, float* whg, float* whi, float* who, float* bf, float* bg, float* bi, float* bo)
+	{
+
+		float f[320];
+		float g[320];
+		float i[320];
+		float o[320];
+
+		float h_prev[320];
+		float c_prev[320];
+		float c_next[320];
+
+		for(int i = 0; i < 320; i++)
+		{
+			f[i] += in[i]*wxf[i];
+			f[i] += h_prev[i]*whf[i];
+			f[i] += bf[i];
+		}	
+		
+
+
+		for(int i = 0; i < 320; i++)
+		{
+			g[i] = 0;
+			g[i] += in[i]*wxg[i];
+			g[i] += h_prev[i]*whg[i];
+			g[i] += bg[i];
+		}	
+		
+
+		for(int k = 0; k < 320; k++)
+		{
+			i[k] = 0;
+			i[k] += in[k]*wxi[k];
+			i[k] += h_prev[k]*whi[k];
+			i[k] += bi[k];
+		}	
+
+
+		for(int i = 0; i < 320; i++)
+		{
+			o[i] = 0;
+			o[i] += in[i]*wxo[i];
+			o[i] += h_prev[i]*who[i];
+			o[i] += bo[i];
+		}	
+
+
+		for(int k = 0; k < 320; k++)
+		{
+			f[k] = 1/(1+exp(-f[k]));  // sigmoid
+			g[k] = tanh(g[k]);
+			i[k] = 1/(1+exp(-g[k]));  // sigmoid
+			o[k] = 1/(1+exp(-o[k]));  // sigmoid
+		}	
+
+		for(int k = 0; k < 320; k++)
+		{
+			c_next[k] = f[k]*c_prev[k] + g[k]*i[k];
+			h_next[k] = o[k]*tanh(c_next[k]);
+		}
+
+
+		/*
+		cache[0] = x;
+		cache[1] = h_prev;
+		cache[2] = c_prev;
+		cache[3] = i;
+		cache[4] = f;
+		cache[5] = g;
+		cache[6] = o;
+		cache[7] = c_next;
+		*/
+		for(int i = 0; i < 320; i++)
+		{
+			cache[i] = x[i];
+		}
+		for(int i = 0; i < 320; i++)
+		{
+			cache[320+i] = h_prev[i];
+		}
+		for(int i = 0; i < 320; i++)
+		{
+			cache[320*2+i] = c_prev[i];
+		}
+		for(int k = 0; k < 320; k++)
+		{
+			cache[320*3+k] = i[k];
+		}
+		for(int i = 0; i < 320; i++)
+		{
+			cache[320*4+i] = f[i];
+		}
+		for(int i = 0; i < 320; i++)
+		{
+			cache[320*5+i] = g[i];
+		}
+		for(int i = 0; i < 320; i++)
+		{
+			cache[320*6+i] = o[i];
+		}
+		for(int i = 0; i < 320; i++)
+		{
+			cache[320*7+i] = c_next[i];
+		}
+
+
+
+	}
+
+
+
+
+
+	void backward(float* dout, float* dh_next, float* dc_next, float* gradswxf, float* gradswxg, float* gradswxi, float* gradswxo, float* gradswhf, float* gradswhg, float* gradswhi, float* gradswho)
+	{
+		//dout = 320
+		for(int i = 0; i < 320; i++)
+		{
+
+			x = cache[0];
+			h_prev = cache[1];
+			c_prev = cache[2];
+			i = cache[3];
+			f = cache[4];
+			g = cache[5];
+			o = cache[6];
+			c_next = cache[7];
+
+
+			tanh_c_next[i] = tanh(c_next[i]);
+			
+			ds[i] = dc_next[i] + (dh_next[i]*o[i])(1-tanh_c_next[i]**2);
+
+			dc_prev[i] = ds[i] * f[i]; 
+
+			di[i] = ds[i] * g[i];
+			df[i] = ds[i] * c_prev[i];
+			do[i] = dh_next*tanh_c_next;
+			dg[i] = ds[i]*i;
+
+			di[i] *= i[i] * (1-i[i]):
+			df[i] *= f[i] * (1-f[i]):
+			do[i] *= o[i] * (1-o[i]):
+			dg[i] *= (1-g[i]**2):
+
+
+			dWhf[i] += h_prev[319-i]*df[i];
+			dWhg[i] += h_prev[319-i]*dg[i];
+			dWhi[i] += h_prev[319-i]*di[i];
+			dWho[i] += h_prev[319-i]*do[i];
+
+
+			dWxf[i] += x[319-i]*df[i];
+			dWxg[i] += x[319-i]*dg[i];
+			dWxi[i] += x[319-i]*di[i];
+			dWxo[i] += x[319-i]*do[i];
+
+
+
+			db[i] =  df[i] + dg[i] + di[i] + do[i];
+
+
+		} // -320
+
+			gradswxf += dWxf;
+			gradswxg += dWxg;
+			gradswxi += dWxi;
+			gradswxo += dWxo;
+
+			gradswhf += dWhf;
+			gradswhg += dWhg;
+			gradswhi += dWhi;
+			gradswho += dWho;
+			
+			gradslb += db;
+
+		for(int i = 0; i < 320; i++)
+		{
+			//dout=dx[320]
+			dx[i] += di[i]*wxi[i];
+			dx[i] += df[i]*wxf[i];
+			dx[i] += do[i]*wxo[i];
+			dx[i] += dg[i]*wxg[i];
+
+			dh_prev[i] += di[i]*whi[i];
+			dh_prev[i] += df[i]*whf[i];
+			dh_prev[i] += do[i]*who[i];
+			dh_prev[i] += dg[i]*whg[i];
+
+		}
+		
+		
+	}
+
+};
+
+class TimeLSTM
+{
+public:
+	/*
+	float gradswxf[320];
+	float gradswxg[320];
+	float gradswxi[320];
+	float gradswxo[320];
+
+	float gradswhf[320];
+	float gradswhg[320];
+	float gradswhi[320];
+	float gradswho[320];
+	*/
+
+	float hs[75*320];  //final output
+
+	/*
+	float bf[320];
+	float bg[320]; 
+	float bi[320];  
+	float bo[320];
+	*/
+
+
+	LSTM lstm[320];
+
+
+	//void forward(float* xs, float* hs)
+	void forward(float* xs, float* hs, float* wxf, float* wxg, float* wxi, float* wxo, float* whf, float whg, float* whi, float* who, float* bf, float* bg, float* bi, float* bo)
+	{
+
+		for(int t = 0; t < 75; t++)
+		{
+
+			LSTM lstm[t];
+
+
+			float in[320];
+			for(int i = 0; i < 320; i++)
+			{
+				in[i] = xs[t*320+i];	
+			}
+
+			//LSTM.forward(float* h, float* c);
+			lstm.forward(in, float* h_next, float* wxf, float* wxg, float* wxi, float* wxo, float* whf, float whg, float* whi, float* who, float* bf, float* bg, float* bi, float* bo)
+
+			for(int i = 0; i < 320; i++)
+			{
+				//hs[t*320+i] = h[i]
+				hs[t*320+i] = h_next[i]
+			}
+		}
+	}
+
+
+	//void backward(float* dhs, float* dout)
+	void backward(float* hs, float* gradswxf, float* gradswxg, float* gradswxi, float* gradswxo, float* gradswhf, float* gradswhg, float* gradswhi, float* gradswho, float* gradswxf_tot, float* gradswxg_tot, float* gradswxi_tot, float* gradswxo_tot, float* gradswhf_tot, float* gradswhg_tot, float* gradswhi_tot, float* gradswho_tot, float* bf_tot, float* bg_tot, float* bi_tot, float* bo_tot);
+	{
+		float dh = 0;  //dh_prev
+		float dc = 0;  //dc_prev
+
+		for(int t = 0; t < 75; t++)
+		{
+			LSTM lstm[74-t];
+
+			for(int i = 0; i < 320; i++)
+			{
+				dout = hs[t*320+i];
+			}
+			//hs+dh=dout
+			lstm.backward(dout + dh, dc, float* gradswxf, float* gradswxg, float* gradswxi, float* gradswxo, float* gradswhf, float* gradswhg, float* gradswhi, float* gradswho);
+
+
+			for(int i = 0; i < 320; i++)
+			{
+				
+				dout[(74-t)*320] = dx[i]; //dout = dxs
+
+
+				gradswxf_tot[i] += gradswxf[i];
+				gradswxf[i] = 0;
+				gradswxg_tot[i] += gradswxg[i];
+				gradswxg[i] = 0;
+				gradswxi_tot[i] += gradswxi[i];
+				gradswxi[i] = 0;
+				gradswxo_tot[i] += gradswxo[i];
+				gradswxo[i] = 0;
+
+
+				gradswhf_tot[i] += gradswhf[i];
+				gradswhf[i] = 0;
+				gradswhg_tot[i] += gradswhg[i];
+				gradswhg[i] = 0;
+				gradswhi_tot[i] += gradswhi[i];
+				gradswhi[i] = 0;
+				gradswho_tot[i] += gradswho[i];
+				gradswho[i] = 0;
+
+			}
+				bf_tot += bf;
+				bf = 0;
+				bg_tot += bg;
+				bg = 0;
+				bi_tot += bi;
+				bi = 0;
+				bo_tot += bo;
+				bo = 0;
+		}
+	}
+};
+

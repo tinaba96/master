@@ -1,0 +1,182 @@
+<ENTRY>
+{
+    "EntryID": "1",
+    "Type": "CmdStep",
+    "DateTimestamp": "2020-Oct-23 11:07:16.291000",
+    "TimestampMillis": "40036291",
+    "Payload": {
+        "CmdStepID": "3fb41196-b898-4a25-b4b6-7d9795e6e36f",
+        "Command": "xocc",
+        "LogFile": "$LOGDIR\/..\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.steps.log",
+        "CommandLine": "\/tools\/Xilinx\/SDx\/2019.1\/bin\/unwrapped\/lnx64.o\/xocc  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -t hw_emu --platform xilinx_u200_xdma_201830_2 --save-temps --temp_dir .\/_x.hw_emu.xilinx_u200_xdma_201830_2\/ -c -k kerneldl -Isrc\/kernel -oxclbin\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo src\/kernel\/kernel.cpp ",
+        "OptionArgs": [
+            "-t",
+            "hw_emu",
+            "--platform",
+            "xilinx_u200_xdma_201830_2",
+            "--save-temps",
+            "--temp_dir",
+            ".\/_x.hw_emu.xilinx_u200_xdma_201830_2\/",
+            "-c",
+            "-k",
+            "kerneldl",
+            "-Isrc\/kernel",
+            "-oxclbin\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo",
+            "src\/kernel\/kernel.cpp"
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "2",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:07:16.291000",
+    "TimestampMillis": "40036291",
+    "Payload": {
+        "CmdStepID": "3fb41196-b898-4a25-b4b6-7d9795e6e36f",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "3",
+    "Type": "FlowMetaData",
+    "DateTimestamp": "2020-Oct-23 11:07:24.448000",
+    "TimestampMillis": "40044448",
+    "Payload": {
+        "HardwarePlatform": "xilinx_u200_xdma_201830_2.xpfm",
+        "HardwareDSA": "xilinx_u200_xdma_201830_2.dsa",
+        "PlatformDirectory": "\/tools\/Xilinx\/SDx\/2019.1\/platforms\/xilinx_u200_xdma_201830_2",
+        "Runtime": "OpenCL",
+        "SystemConfiguration": "Linux",
+        "BinaryContainer": "",
+        "BuildFlow": "COMPILE",
+        "Target": "HW_EMU",
+        "Kernels": [
+            {
+                "KernelName": "kerneldl",
+                "KernelObj": "$LOGDIR\/..\/..\/xclbin\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo",
+                "KernelSrcs": [
+                    "$LOGDIR\/..\/..\/src\/kernel\/kernel.cpp"
+                ]
+            }
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "4",
+    "Type": "SubCmdStep",
+    "DateTimestamp": "2020-Oct-23 11:07:24.451000",
+    "TimestampMillis": "40044451",
+    "Payload": {
+        "CmdStepID": "606e652b-5776-4f37-89ea-4153a2bb7e1a",
+        "Command": "vivado_hls",
+        "LogFile": "$LOGDIR\/..\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2\/kerneldl\/vivado_hls.log",
+        "TransactionLogFile": "",
+        "CommandLine": "vivado_hls -f \/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2\/kerneldl\/kerneldl.tcl -messageDb vivado_hls.pb",
+        "OptionArgs": [
+            "vivado_hls",
+            "-f",
+            "\/home\/inaba\/alveo\/DanQ_fhalf\/_x.hw_emu.xilinx_u200_xdma_201830_2\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2\/kerneldl\/kerneldl.tcl",
+            "-messageDb",
+            "vivado_hls.pb"
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "5",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:07:24.451000",
+    "TimestampMillis": "40044451",
+    "Payload": {
+        "CmdStepID": "606e652b-5776-4f37-89ea-4153a2bb7e1a",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "6",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:08:46.738000",
+    "TimestampMillis": "40126738",
+    "Payload": {
+        "CmdStepID": "606e652b-5776-4f37-89ea-4153a2bb7e1a",
+        "Status": "Passed"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "7",
+    "Type": "Report",
+    "DateTimestamp": "2020-Oct-23 11:08:46.751000",
+    "TimestampMillis": "40126751",
+    "Payload": {
+        "File": "$LOGDIR\/..\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2\/kerneldl\/kerneldl\/solution\/.autopilot\/db\/kerneldl.design.xml",
+        "Type": "XML",
+        "ReportType": "KERNEL_HLS_REPORT",
+        "KernelName": "kerneldl"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "8",
+    "Type": "Report",
+    "DateTimestamp": "2020-Oct-23 11:08:46.751000",
+    "TimestampMillis": "40126751",
+    "Payload": {
+        "File": "$LOGDIR\/..\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2\/kerneldl\/kerneldl\/solution\/.autopilot\/db\/.message_syn.xml",
+        "Type": "XML",
+        "ReportType": "KERNEL_HLS_DRC_SYNTHESIS",
+        "KernelName": "kerneldl"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "9",
+    "Type": "Report",
+    "DateTimestamp": "2020-Oct-23 11:08:46.755000",
+    "TimestampMillis": "40126755",
+    "Payload": {
+        "File": "$LOGDIR\/..\/reports\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2\/system_estimate_kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xtxt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_SYSTEM_ESTIMATE",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "10",
+    "Type": "Report",
+    "DateTimestamp": "2020-Oct-23 11:08:46.831000",
+    "TimestampMillis": "40126831",
+    "Payload": {
+        "File": "$LOGDIR\/..\/reports\/kerneldl.hw_emu.xilinx_u200_xdma_201830_2\/xocc_compile_kerneldl.hw_emu.xilinx_u200_xdma_201830_2_guidance.html",
+        "Type": "HTML",
+        "ReportType": "GLOBAL_RULECHECK_GUIDANCE",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "11",
+    "Type": "Status",
+    "DateTimestamp": "2020-Oct-23 11:08:46.861000",
+    "TimestampMillis": "40126861",
+    "Payload": {
+        "CmdStepID": "3fb41196-b898-4a25-b4b6-7d9795e6e36f",
+        "Status": "Passed"
+    }
+}
+</ENTRY>

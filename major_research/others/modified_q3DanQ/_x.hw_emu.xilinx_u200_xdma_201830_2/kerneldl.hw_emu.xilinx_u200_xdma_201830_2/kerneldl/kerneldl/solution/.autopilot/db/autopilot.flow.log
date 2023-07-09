@@ -1,0 +1,1453 @@
+INFO-FLOW: Workspace /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution opened at Fri Oct 23 11:07:27 JST 2020
+Execute     set_part xcu200-fsgd2104-2-e 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data single -quiet 
+Command       ap_part_info done; 0.86 sec.
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcu200:-fsgd2104:-2-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xcu200 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute         ap_part_info -data single -name xcu200-fsgd2104-2-e 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data resources 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Command       add_library done; 0.11 sec.
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xcu200-fsgd2104-2-e'
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.03 sec.
+Execute     create_clock -period 300MHz -name default 
+Execute       config_clock -quiet -name default -period 3.333 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+Execute     config_sdx -target xocc 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=0 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+Execute       config_export -vivado_optimization_level=0 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute         send_msg_by_id INFO @200-435@%s%s 'config_export -vivado_optimization_level' config_export -vivado_phys_opt=none 
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=none
+Execute         config_export -vivado_phys_opt=none 
+Execute       get_config_compile -pipeline_loops 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_compile -pipeline_loops=64 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -pipeline_loops=64
+Execute       config_compile -pipeline_loops=64 
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+Execute       get_config_compile -name_max_length 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_compile -name_max_length=256 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -name_max_length=256
+Execute       config_compile -name_max_length=256 
+INFO: [XFORM 203-1161] The maximum of name length is set into 256.
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_schedule -enable_dsp_full_reg=1 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -enable_dsp_full_reg=1
+Execute       config_schedule -enable_dsp_full_reg=1 
+Execute       get_config_rtl -register_reset_num 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_rtl -register_reset_num=3 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -register_reset_num=3
+Execute       config_rtl -register_reset_num=3 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_rtl -module_auto_prefix=1 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -module_auto_prefix=1
+Execute       config_rtl -module_auto_prefix=1 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_interface -m_axi_addr64=1 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_interface -m_axi_addr64=1
+Execute       config_interface -m_axi_addr64=1 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty 27% 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+Execute       set_clock_uncertainty 27% 
+Execute         get_clock_period -default -name=default 
+Execute         config_clock -quiet -name default -uncertainty 0.9 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+Execute     config_export -vivado_optimization_level 0 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     config_dataflow -strict_mode warning 
+Execute     set_clock_uncertainty 27.000000% 
+Execute       get_clock_period -default -name=default 
+Execute       config_clock -quiet -name default -uncertainty 0.9 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+Execute     config_interface -m_axi_addr64 
+Execute     config_export -format ip_catalog -ipname kerneldl 
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute         get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute         get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file '/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         is_m_axi_addr64 
+INFO-FLOW: Handling /home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp as C++
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info 
+Execute         is_encrypted /home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp"   -I/home/inaba/alveo/DanQ_fhalf/src/kernel  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp" 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp -I/home/inaba/alveo/DanQ_fhalf/src/kernel -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp
+Command         clang done; 1.51 sec.
+Execute         tidy_31 xilinx-xfmat-array-geometry /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 4.22 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute         clang -syntaxcheck -src /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc" -hls  -I/home/inaba/alveo/DanQ_fhalf/src/kernel  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp"  -o "/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -I/home/inaba/alveo/DanQ_fhalf/src/kernel -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/useless.bc
+WARNING: [HLS 200-40] In file included from /home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:1:
+In file included from /home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:9:
+/home/inaba/alveo/DanQ_fhalf/src/kernel/optimizer.h:16:11: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+ float lr = 0.01;
+          ^
+/home/inaba/alveo/DanQ_fhalf/src/kernel/optimizer.h:17:18: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+ float decayrate = 0.99;
+                 ^
+/home/inaba/alveo/DanQ_fhalf/src/kernel/optimizer.h:18:15: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+ float little = 0.00000001;
+              ^
+3 warnings generated.
+Command         clang done; 4.03 sec.
+INFO-FLOW: Done: GCC PP time: 9.8 seconds per iteration
+Execute         source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute         list_core -type functional_unit 
+Execute         tidy_31 xilinx-systemc-detector /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp std=gnu++98 -directive=/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/.systemc_flag -quiet -fix-errors /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 3.12 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute         tidy_31 xilinx-directive2pragma /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp std=gnu++98 -directive=/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/all.directive.json -quiet -fix-errors /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 3 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/xilinx-dataflow-lawyer.kernel.pp.0.cpp.diag.yml /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/xilinx-dataflow-lawyer.kernel.pp.0.cpp.out.log 2> /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/xilinx-dataflow-lawyer.kernel.pp.0.cpp.err.log 
+Command         ap_eval done; 2.47 sec.
+Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp std=gnu++98 
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/tidy-3.1.kernel.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/tidy-3.1.kernel.pp.0.cpp.out.log 2> /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/tidy-3.1.kernel.pp.0.cpp.err.log 
+Command           ap_eval done; 6.31 sec.
+Execute           source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute             source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/xilinx-legacy-rewriter.kernel.pp.0.cpp.out.log 2> /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/xilinx-legacy-rewriter.kernel.pp.0.cpp.err.log 
+Command           ap_eval done; 2.61 sec.
+Command         tidy_31 done; 9.58 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 15.1 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute         tidy_31 xilinx-ssdm-intrinsics-arguments /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 5 sec.
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info 
+INFO-FLOW: Processing labels
+Execute         clang -src /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pragma.2.cpp"  -I/home/inaba/alveo/DanQ_fhalf/src/kernel  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.bc" 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.pragma.2.cpp -I/home/inaba/alveo/DanQ_fhalf/src/kernel -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.bc
+Command         clang done; 3.29 sec.
+INFO-FLOW: Linking Debug ...
+Execute         llvm-ld /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.g.bc -hls-opt -except-internalize kerneldl -L/tools/Xilinx/Vivado/2019.1/lnx64/lib -lhlsm -lhlsmc++ -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.g 
+Command         llvm-ld done; 0.74 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 836.188 ; gain = 148.953 ; free physical = 37992 ; free virtual = 119219
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 836.188 ; gain = 148.953 ; free physical = 37992 ; free virtual = 119219
+Execute         get_config_sdx -target 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute           transform -promote-dbg-pointer /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.pp.bc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.pp.0.bc -f 
+Execute           llvm-ld /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.pp.0.bc -disable-opt -L/tools/Xilinx/Vivado/2019.1/lnx64/lib -lfloatconversion -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.g.0 
+Command           llvm-ld done; 1.2 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top kerneldl -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.g.0.bc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command           transform done; 0.82 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 903.117 ; gain = 215.883 ; free physical = 37922 ; free virtual = 119154
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.g.1.bc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'mpool::forward' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:519) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu::forward' into 'cnn::predict' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:42) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu::backward' into 'cnn::gradient' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'cnn::predict' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:144) automatically.
+INFO: [XFORM 203-602] Inlining function 'cnn::gradient' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:170) automatically.
+INFO: [XFORM 203-602] Inlining function 'rmsprop::update' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:172) automatically.
+INFO: [XFORM 203-602] Inlining function 'rmsprop::update.1' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:179) automatically.
+Command           transform done; 1.63 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.g.2.prechk.bc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command           transform done; 0.15 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1046.086 ; gain = 358.852 ; free physical = 37796 ; free virtual = 119032
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.g.1.bc to /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.o.1.bc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:349) in function 'conv1d::forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3.1.1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:367) in function 'conv1d::forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:50) in function 'relu::forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:498) in function 'mpool::forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:508) in function 'mpool::forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:537) in function 'mpool::backward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:550) in function 'mpool::backward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:68) in function 'relu::backward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:412) in function 'conv1d::backward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:432) in function 'conv1d::backward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/optimizer.h:66) in function 'rmsprop::update.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/optimizer.h:66) in function 'rmsprop::update' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:21) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:27) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-4' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:133) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-5' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:139) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-6' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:146) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-7' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:164) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-8' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:174) in function 'kerneldl' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-9' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:180) in function 'kerneldl' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:508) in function 'mpool::forward' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:514) in function 'mpool::forward' completely with a factor of 13.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (/wrk/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu::forward' into 'cnn::predict' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:42) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu::backward' into 'cnn::gradient' (/home/inaba/alveo/DanQ_fhalf/src/kernel/cnn.h:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'cnn::predict' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:144) automatically.
+INFO: [XFORM 203-602] Inlining function 'cnn::gradient' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:170) automatically.
+INFO: [XFORM 203-602] Inlining function 'rmsprop::update' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:172) automatically.
+INFO: [XFORM 203-602] Inlining function 'rmsprop::update.1' into 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:179) automatically.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'dout' in function 'mpool::backward' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:552:4).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'bufferd' in function 'kerneldl' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:72:5).
+Command           transform done; 2.9 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.o.1.tmp.bc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command           transform done; 0.56 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1108.191 ; gain = 420.957 ; free physical = 37826 ; free virtual = 119069
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.o.2.bc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:503:16) in function 'mpool::forward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:364:17) in function 'conv1d::forward'.
+Execute             get_top
+Execute               get_top 
+Execute             get_files -fullpath
+Execute               get_files -fullpath 
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:361:17) in function 'conv1d::forward' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:356:17) in function 'conv1d::forward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:410:18) in function 'conv1d::backward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:407:17) in function 'conv1d::backward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:402:16) in function 'conv1d::backward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:429:16) in function 'conv1d::backward'.
+WARNING: [XFORM 203-631] Renaming function 'mpool::forward' to 'forward' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:495)
+WARNING: [XFORM 203-631] Renaming function 'mpool::backward' to 'backward' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:533)
+WARNING: [XFORM 203-631] Renaming function 'conv1d::forward' to 'forward.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:349:36)
+WARNING: [XFORM 203-631] Renaming function 'conv1d::backward' to 'backward.1' (/home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:402:28)
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 24000 on port 'gmemm' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:166:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 4000 on port 'gmemm' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:135:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 24000 on port 'gmemm' (/home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp:148:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+Command           transform done; 1.47 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1108.191 ; gain = 420.957 ; free physical = 37827 ; free virtual = 119072
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 8.75 sec.
+Command       elaborate done; 46.07 sec.
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'kerneldl' ...
+Execute         ap_set_top_model kerneldl 
+WARNING: [SYN 201-103] Legalizing function name 'backward.1' to 'backward_1'.
+WARNING: [SYN 201-103] Legalizing function name 'forward.1' to 'forward_1'.
+WARNING: [SYN 201-103] Legalizing function name '__hls_fptosi_float_i32' to 'p_hls_fptosi_float_i32'.
+Execute         get_model_list kerneldl -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model kerneldl 
+Execute         preproc_iomode -model forward 
+Execute         preproc_iomode -model __hls_fptosi_float_i32 
+Execute         preproc_iomode -model forward.1 
+Execute         preproc_iomode -model backward.1 
+Execute         preproc_iomode -model backward 
+Execute         get_model_list kerneldl -filter all-wo-channel 
+INFO-FLOW: Model list for configure: backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl
+INFO-FLOW: Configuring Module : backward ...
+Execute         set_default_model backward 
+Execute         apply_spec_resource_limit backward 
+INFO-FLOW: Configuring Module : backward.1 ...
+Execute         set_default_model backward.1 
+Execute         apply_spec_resource_limit backward.1 
+INFO-FLOW: Configuring Module : forward.1 ...
+Execute         set_default_model forward.1 
+Execute         apply_spec_resource_limit forward.1 
+INFO-FLOW: Configuring Module : __hls_fptosi_float_i32 ...
+Execute         set_default_model __hls_fptosi_float_i32 
+Execute         apply_spec_resource_limit __hls_fptosi_float_i32 
+INFO-FLOW: Configuring Module : forward ...
+Execute         set_default_model forward 
+Execute         apply_spec_resource_limit forward 
+INFO-FLOW: Configuring Module : kerneldl ...
+Execute         set_default_model kerneldl 
+Execute         apply_spec_resource_limit kerneldl 
+INFO-FLOW: Model list for preprocess: backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl
+INFO-FLOW: Preprocessing Module: backward ...
+Execute         set_default_model backward 
+Execute         cdfg_preprocess -model backward 
+Execute         rtl_gen_preprocess backward 
+INFO-FLOW: Preprocessing Module: backward.1 ...
+Execute         set_default_model backward.1 
+Execute         cdfg_preprocess -model backward.1 
+Execute         rtl_gen_preprocess backward.1 
+INFO-FLOW: Preprocessing Module: forward.1 ...
+Execute         set_default_model forward.1 
+Execute         cdfg_preprocess -model forward.1 
+Execute         rtl_gen_preprocess forward.1 
+INFO-FLOW: Preprocessing Module: __hls_fptosi_float_i32 ...
+Execute         set_default_model __hls_fptosi_float_i32 
+Execute         cdfg_preprocess -model __hls_fptosi_float_i32 
+Execute         rtl_gen_preprocess __hls_fptosi_float_i32 
+INFO-FLOW: Preprocessing Module: forward ...
+Execute         set_default_model forward 
+Execute         cdfg_preprocess -model forward 
+Execute         rtl_gen_preprocess forward 
+INFO-FLOW: Preprocessing Module: kerneldl ...
+Execute         set_default_model kerneldl 
+Execute         cdfg_preprocess -model kerneldl 
+Execute         rtl_gen_preprocess kerneldl 
+INFO-FLOW: Model list for synthesis: backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backward' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model backward 
+Execute         schedule -model backward 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 47.45 seconds; current allocated memory: 337.624 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.verbose.sched.rpt 
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.sched.adb -f 
+INFO-FLOW: Finish scheduling backward.
+Execute         set_default_model backward 
+Execute         bind -model backward 
+BIND OPTION: model=backward
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 337.806 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.verbose.bind.rpt 
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.bind.adb -f 
+INFO-FLOW: Finish binding backward.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'backward_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model backward.1 
+Execute         schedule -model backward.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln405) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln431) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+WARNING: [SCHED 204-68] The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) of variable 'tmp_2', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414 on array 'gradsw1' and 'load' operation ('gradsw1_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:414) on array 'gradsw1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 10, Depth = 17.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.21 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 338.350 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.verbose.sched.rpt 
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.sched.adb -f 
+INFO-FLOW: Finish scheduling backward.1.
+Execute         set_default_model backward.1 
+Execute         bind -model backward.1 
+BIND OPTION: model=backward.1
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 338.941 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.verbose.bind.rpt 
+Command         syn_report done; 0.17 sec.
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.bind.adb -f 
+INFO-FLOW: Finish binding backward.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'forward_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model forward.1 
+Execute         schedule -model forward.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln359) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln364) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 5)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 6)
+   between 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369) and 'fadd' operation ('tmp_1', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:369).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 7, Depth = 16.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 339.273 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.verbose.sched.rpt 
+INFO: [HLS 200-434] Only 2 loops out of a total 3 loops have been pipelined in this design.
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.sched.adb -f 
+INFO-FLOW: Finish scheduling forward.1.
+Execute         set_default_model forward.1 
+Execute         bind -model forward.1 
+BIND OPTION: model=forward.1
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 339.677 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.verbose.bind.rpt 
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.bind.adb -f 
+INFO-FLOW: Finish binding forward.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_hls_fptosi_float_i32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model __hls_fptosi_float_i32 
+Execute         schedule -model __hls_fptosi_float_i32 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function '__hls_fptosi_float_i32'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 339.794 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.verbose.sched.rpt 
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.sched.adb -f 
+INFO-FLOW: Finish scheduling __hls_fptosi_float_i32.
+Execute         set_default_model __hls_fptosi_float_i32 
+Execute         bind -model __hls_fptosi_float_i32 
+BIND OPTION: model=__hls_fptosi_float_i32
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 339.917 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.verbose.bind.rpt 
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.bind.adb -f 
+INFO-FLOW: Finish binding __hls_fptosi_float_i32.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'forward' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model forward 
+Execute         schedule -model forward 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=begin) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln506) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+WARNING: [SCHED 204-68] The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 106, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525) of variable 'tmp', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:525 on array 'in_r' and 'load' operation ('in_load', /home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h:517) on array 'in_r'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 107, Depth = 111.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.31 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 341.245 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.verbose.sched.rpt 
+Command         syn_report done; 0.16 sec.
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.sched.adb -f 
+INFO-FLOW: Finish scheduling forward.
+Execute         set_default_model forward 
+Execute         bind -model forward 
+BIND OPTION: model=forward
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.13 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 343.305 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.verbose.bind.rpt 
+Command         syn_report done; 0.34 sec.
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.bind.adb -f 
+INFO-FLOW: Finish binding forward.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kerneldl' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model kerneldl 
+Execute         schedule -model kerneldl 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 7'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 8'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 9'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 99.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 10'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 11'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 99.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 12'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.46 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.85 seconds; current allocated memory: 344.784 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.verbose.sched.rpt 
+Command         syn_report done; 0.52 sec.
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.sched.adb -f 
+INFO-FLOW: Finish scheduling kerneldl.
+Execute         set_default_model kerneldl 
+Execute         bind -model kerneldl 
+BIND OPTION: model=kerneldl
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.65 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.19 seconds; current allocated memory: 347.052 MB.
+Execute         syn_report -verbosereport -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.verbose.bind.rpt 
+Command         syn_report done; 0.72 sec.
+Execute         db_write -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.bind.adb -f 
+INFO-FLOW: Finish binding kerneldl.
+Execute         get_model_list kerneldl -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess backward 
+Execute         rtl_gen_preprocess backward.1 
+Execute         rtl_gen_preprocess forward.1 
+Execute         rtl_gen_preprocess __hls_fptosi_float_i32 
+Execute         rtl_gen_preprocess forward 
+Execute         rtl_gen_preprocess kerneldl 
+INFO-FLOW: Model list for RTL generation: backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backward' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model backward -module_prefix kerneldl_ -vendor xilinx -mg_file /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backward'.
+INFO: [HLS 200-111]  Elapsed time: 0.77 seconds; current allocated memory: 347.790 MB.
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute         gen_rtl backward -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/systemc/kerneldl_backward -synmodules backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl 
+Execute         gen_rtl backward -style xilinx -f -lang vhdl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/vhdl/kerneldl_backward 
+Execute         gen_rtl backward -style xilinx -f -lang vlog -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/verilog/kerneldl_backward 
+Execute         syn_report -csynth -model backward -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/backward_csynth.rpt 
+Execute         syn_report -rtlxml -model backward -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/backward_csynth.xml 
+Execute         syn_report -verbosereport -model backward -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.verbose.rpt 
+Execute         db_write -model backward -f -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.adb 
+Execute         gen_tb_info backward -p /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'backward_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model backward.1 -module_prefix kerneldl_ -vendor xilinx -mg_file /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_mac_muladd_9ns_11ns_10ns_19_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'backward_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 349.788 MB.
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute         gen_rtl backward.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/systemc/kerneldl_backward_1 -synmodules backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl 
+Execute         gen_rtl backward.1 -style xilinx -f -lang vhdl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/vhdl/kerneldl_backward_1 
+Execute         gen_rtl backward.1 -style xilinx -f -lang vlog -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/verilog/kerneldl_backward_1 
+Execute         syn_report -csynth -model backward.1 -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/backward_1_csynth.rpt 
+Execute         syn_report -rtlxml -model backward.1 -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/backward_1_csynth.xml 
+Execute         syn_report -verbosereport -model backward.1 -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.verbose.rpt 
+Command         syn_report done; 0.19 sec.
+Execute         db_write -model backward.1 -f -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.adb 
+Execute         gen_tb_info backward.1 -p /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forward_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model forward.1 -module_prefix kerneldl_ -vendor xilinx -mg_file /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_mac_muladd_3ns_6ns_16ns_16_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_mac_muladd_9ns_11ns_10ns_19_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forward_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 352.859 MB.
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute         gen_rtl forward.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/systemc/kerneldl_forward_1 -synmodules backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl 
+Execute         gen_rtl forward.1 -style xilinx -f -lang vhdl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/vhdl/kerneldl_forward_1 
+Execute         gen_rtl forward.1 -style xilinx -f -lang vlog -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/verilog/kerneldl_forward_1 
+Execute         syn_report -csynth -model forward.1 -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/forward_1_csynth.rpt 
+Execute         syn_report -rtlxml -model forward.1 -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/forward_1_csynth.xml 
+Execute         syn_report -verbosereport -model forward.1 -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.verbose.rpt 
+Command         syn_report done; 0.12 sec.
+Execute         db_write -model forward.1 -f -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.adb 
+Execute         gen_tb_info forward.1 -p /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_hls_fptosi_float_i32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model __hls_fptosi_float_i32 -module_prefix kerneldl_ -vendor xilinx -mg_file /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_hls_fptosi_float_i32'.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 354.457 MB.
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute         gen_rtl __hls_fptosi_float_i32 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/systemc/kerneldl_p_hls_fptosi_float_i32 -synmodules backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl 
+Execute         gen_rtl __hls_fptosi_float_i32 -style xilinx -f -lang vhdl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/vhdl/kerneldl_p_hls_fptosi_float_i32 
+Execute         gen_rtl __hls_fptosi_float_i32 -style xilinx -f -lang vlog -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/verilog/kerneldl_p_hls_fptosi_float_i32 
+Execute         syn_report -csynth -model __hls_fptosi_float_i32 -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/p_hls_fptosi_float_i32_csynth.rpt 
+Execute         syn_report -rtlxml -model __hls_fptosi_float_i32 -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/p_hls_fptosi_float_i32_csynth.xml 
+Execute         syn_report -verbosereport -model __hls_fptosi_float_i32 -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.verbose.rpt 
+Execute         db_write -model __hls_fptosi_float_i32 -f -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.adb 
+Execute         gen_tb_info __hls_fptosi_float_i32 -p /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forward' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model forward -module_prefix kerneldl_ -vendor xilinx -mg_file /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fcmp_32ns_32ns_1_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_mac_muladd_5ns_7ns_19ns_19_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_mul_mul_11ns_9ns_19_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_sitofp_32ns_32_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forward'.
+Command         create_rtl_model done; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 359.356 MB.
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute         gen_rtl forward -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/systemc/kerneldl_forward -synmodules backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl 
+Execute         gen_rtl forward -style xilinx -f -lang vhdl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/vhdl/kerneldl_forward 
+Execute         gen_rtl forward -style xilinx -f -lang vlog -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/verilog/kerneldl_forward 
+Execute         syn_report -csynth -model forward -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/forward_csynth.rpt 
+Command         syn_report done; 0.2 sec.
+Execute         syn_report -rtlxml -model forward -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/forward_csynth.xml 
+Execute         syn_report -verbosereport -model forward -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.verbose.rpt 
+Command         syn_report done; 0.42 sec.
+Execute         db_write -model forward -f -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.adb 
+Command         db_write done; 0.2 sec.
+Execute         gen_tb_info forward -p /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kerneldl' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model kerneldl -module_prefix kerneldl_ -vendor xilinx -mg_file /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'kerneldl/gmemm' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kerneldl/datax' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kerneldl/datay' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kerneldl/dout' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kerneldl/model' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kerneldl' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'datax', 'datay', 'dout' and 'model' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_dadd_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_ddiv_64ns_64ns_64_31_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_dsqrt_64ns_64ns_64_30_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_dsub_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fcmp_32ns_32ns_1_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fpext_32ns_64_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kerneldl_fptrunc_64ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kerneldl'.
+Command         create_rtl_model done; 0.32 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.33 seconds; current allocated memory: 370.783 MB.
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute         gen_rtl kerneldl -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/systemc/kerneldl_kerneldl -synmodules backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl 
+Execute         gen_rtl kerneldl -istop -style xilinx -f -lang vhdl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/vhdl/kerneldl_kerneldl 
+Command         gen_rtl done; 0.19 sec.
+Execute         gen_rtl kerneldl -istop -style xilinx -f -lang vlog -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/verilog/kerneldl_kerneldl 
+Command         gen_rtl done; 0.11 sec.
+Execute         syn_report -csynth -model kerneldl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/kerneldl_csynth.rpt 
+Execute         syn_report -rtlxml -model kerneldl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/syn/report/kerneldl_csynth.xml 
+Execute         syn_report -verbosereport -model kerneldl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.verbose.rpt 
+Command         syn_report done; 0.85 sec.
+Execute         db_write -model kerneldl -f -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.adb 
+Command         db_write done; 0.23 sec.
+Execute         gen_tb_info kerneldl -p /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl 
+Execute         export_constraint_db -f -tool general -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.constraint.tcl 
+Execute         syn_report -designview -model kerneldl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.design.xml 
+Command         syn_report done; 0.52 sec.
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model kerneldl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model kerneldl -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks kerneldl 
+Execute         get_config_export -vivado_clock 
+Execute         sc_get_portdomain kerneldl 
+INFO-FLOW: Model list for RTL component generation: backward backward.1 forward.1 __hls_fptosi_float_i32 forward kerneldl
+INFO-FLOW: Handling components in module [backward] ... 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.compgen.tcl 
+INFO-FLOW: Found component kerneldl_backward_tempp.
+INFO-FLOW: Append model kerneldl_backward_tempp
+INFO-FLOW: Handling components in module [backward_1] ... 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.compgen.tcl 
+INFO-FLOW: Found component kerneldl_kerneldl_fadd_32ns_32ns_32_7_full_dsp_1.
+INFO-FLOW: Append model kerneldl_kerneldl_fadd_32ns_32ns_32_7_full_dsp_1
+INFO-FLOW: Found component kerneldl_kerneldl_fmul_32ns_32ns_32_4_max_dsp_1.
+INFO-FLOW: Append model kerneldl_kerneldl_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: Found component kerneldl_kerneldl_mac_muladd_9ns_11ns_10ns_19_4_1.
+INFO-FLOW: Append model kerneldl_kerneldl_mac_muladd_9ns_11ns_10ns_19_4_1
+INFO-FLOW: Handling components in module [forward_1] ... 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.compgen.tcl 
+INFO-FLOW: Found component kerneldl_kerneldl_mac_muladd_3ns_6ns_16ns_16_4_1.
+INFO-FLOW: Append model kerneldl_kerneldl_mac_muladd_3ns_6ns_16ns_16_4_1
+INFO-FLOW: Handling components in module [p_hls_fptosi_float_i32] ... 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.compgen.tcl 
+INFO-FLOW: Handling components in module [forward] ... 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.compgen.tcl 
+INFO-FLOW: Found component kerneldl_kerneldl_sitofp_32ns_32_5_1.
+INFO-FLOW: Append model kerneldl_kerneldl_sitofp_32ns_32_5_1
+INFO-FLOW: Found component kerneldl_kerneldl_fcmp_32ns_32ns_1_2_1.
+INFO-FLOW: Append model kerneldl_kerneldl_fcmp_32ns_32ns_1_2_1
+INFO-FLOW: Found component kerneldl_kerneldl_mul_mul_11ns_9ns_19_4_1.
+INFO-FLOW: Append model kerneldl_kerneldl_mul_mul_11ns_9ns_19_4_1
+INFO-FLOW: Found component kerneldl_kerneldl_mac_muladd_5ns_7ns_19ns_19_4_1.
+INFO-FLOW: Append model kerneldl_kerneldl_mac_muladd_5ns_7ns_19ns_19_4_1
+INFO-FLOW: Handling components in module [kerneldl] ... 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.tcl 
+INFO-FLOW: Found component kerneldl_kerneldl_fptrunc_64ns_32_2_1.
+INFO-FLOW: Append model kerneldl_kerneldl_fptrunc_64ns_32_2_1
+INFO-FLOW: Found component kerneldl_kerneldl_fpext_32ns_64_2_1.
+INFO-FLOW: Append model kerneldl_kerneldl_fpext_32ns_64_2_1
+INFO-FLOW: Found component kerneldl_kerneldl_dadd_64ns_64ns_64_8_full_dsp_1.
+INFO-FLOW: Append model kerneldl_kerneldl_dadd_64ns_64ns_64_8_full_dsp_1
+INFO-FLOW: Found component kerneldl_kerneldl_dsub_64ns_64ns_64_8_full_dsp_1.
+INFO-FLOW: Append model kerneldl_kerneldl_dsub_64ns_64ns_64_8_full_dsp_1
+INFO-FLOW: Found component kerneldl_kerneldl_ddiv_64ns_64ns_64_31_1.
+INFO-FLOW: Append model kerneldl_kerneldl_ddiv_64ns_64ns_64_31_1
+INFO-FLOW: Found component kerneldl_kerneldl_dsqrt_64ns_64ns_64_30_1.
+INFO-FLOW: Append model kerneldl_kerneldl_dsqrt_64ns_64ns_64_30_1
+INFO-FLOW: Found component kerneldl_kerneldl_z_paramsw1.
+INFO-FLOW: Append model kerneldl_kerneldl_z_paramsw1
+INFO-FLOW: Found component kerneldl_kerneldl_z_gradsw1.
+INFO-FLOW: Append model kerneldl_kerneldl_z_gradsw1
+INFO-FLOW: Found component kerneldl_kerneldl_z_a_actc.
+INFO-FLOW: Append model kerneldl_kerneldl_z_a_actc
+INFO-FLOW: Found component kerneldl_kerneldl_z_b_mask.
+INFO-FLOW: Append model kerneldl_kerneldl_z_b_mask
+INFO-FLOW: Found component kerneldl_kerneldl_z_c_max.
+INFO-FLOW: Append model kerneldl_kerneldl_z_c_max
+INFO-FLOW: Found component kerneldl_kerneldl_buffery.
+INFO-FLOW: Append model kerneldl_kerneldl_buffery
+INFO-FLOW: Found component kerneldl_kerneldl_h1.
+INFO-FLOW: Append model kerneldl_kerneldl_h1
+INFO-FLOW: Found component kerneldl_kerneldl_h2.
+INFO-FLOW: Append model kerneldl_kerneldl_h2
+INFO-FLOW: Found component kerneldl_kerneldl_bufferd.
+INFO-FLOW: Append model kerneldl_kerneldl_bufferd
+INFO-FLOW: Found component kerneldl_kerneldl_control_s_axi.
+INFO-FLOW: Append model kerneldl_kerneldl_control_s_axi
+INFO-FLOW: Found component kerneldl_kerneldl_gmemm_m_axi.
+INFO-FLOW: Append model kerneldl_kerneldl_gmemm_m_axi
+INFO-FLOW: Append model backward
+INFO-FLOW: Append model backward_1
+INFO-FLOW: Append model forward_1
+INFO-FLOW: Append model p_hls_fptosi_float_i32
+INFO-FLOW: Append model forward
+INFO-FLOW: Append model kerneldl
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: kerneldl_backward_tempp kerneldl_kerneldl_fadd_32ns_32ns_32_7_full_dsp_1 kerneldl_kerneldl_fmul_32ns_32ns_32_4_max_dsp_1 kerneldl_kerneldl_mac_muladd_9ns_11ns_10ns_19_4_1 kerneldl_kerneldl_mac_muladd_3ns_6ns_16ns_16_4_1 kerneldl_kerneldl_sitofp_32ns_32_5_1 kerneldl_kerneldl_fcmp_32ns_32ns_1_2_1 kerneldl_kerneldl_mul_mul_11ns_9ns_19_4_1 kerneldl_kerneldl_mac_muladd_5ns_7ns_19ns_19_4_1 kerneldl_kerneldl_fptrunc_64ns_32_2_1 kerneldl_kerneldl_fpext_32ns_64_2_1 kerneldl_kerneldl_dadd_64ns_64ns_64_8_full_dsp_1 kerneldl_kerneldl_dsub_64ns_64ns_64_8_full_dsp_1 kerneldl_kerneldl_ddiv_64ns_64ns_64_31_1 kerneldl_kerneldl_dsqrt_64ns_64ns_64_30_1 kerneldl_kerneldl_z_paramsw1 kerneldl_kerneldl_z_gradsw1 kerneldl_kerneldl_z_a_actc kerneldl_kerneldl_z_b_mask kerneldl_kerneldl_z_c_max kerneldl_kerneldl_buffery kerneldl_kerneldl_h1 kerneldl_kerneldl_h2 kerneldl_kerneldl_bufferd kerneldl_kerneldl_control_s_axi kerneldl_kerneldl_gmemm_m_axi backward backward_1 forward_1 p_hls_fptosi_float_i32 forward kerneldl
+INFO-FLOW: To file: write model kerneldl_backward_tempp
+INFO-FLOW: To file: write model kerneldl_kerneldl_fadd_32ns_32ns_32_7_full_dsp_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_mac_muladd_9ns_11ns_10ns_19_4_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_mac_muladd_3ns_6ns_16ns_16_4_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_sitofp_32ns_32_5_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_fcmp_32ns_32ns_1_2_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_mul_mul_11ns_9ns_19_4_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_mac_muladd_5ns_7ns_19ns_19_4_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_fptrunc_64ns_32_2_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_fpext_32ns_64_2_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_dadd_64ns_64ns_64_8_full_dsp_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_dsub_64ns_64ns_64_8_full_dsp_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_ddiv_64ns_64ns_64_31_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_dsqrt_64ns_64ns_64_30_1
+INFO-FLOW: To file: write model kerneldl_kerneldl_z_paramsw1
+INFO-FLOW: To file: write model kerneldl_kerneldl_z_gradsw1
+INFO-FLOW: To file: write model kerneldl_kerneldl_z_a_actc
+INFO-FLOW: To file: write model kerneldl_kerneldl_z_b_mask
+INFO-FLOW: To file: write model kerneldl_kerneldl_z_c_max
+INFO-FLOW: To file: write model kerneldl_kerneldl_buffery
+INFO-FLOW: To file: write model kerneldl_kerneldl_h1
+INFO-FLOW: To file: write model kerneldl_kerneldl_h2
+INFO-FLOW: To file: write model kerneldl_kerneldl_bufferd
+INFO-FLOW: To file: write model kerneldl_kerneldl_control_s_axi
+INFO-FLOW: To file: write model kerneldl_kerneldl_gmemm_m_axi
+INFO-FLOW: To file: write model backward
+INFO-FLOW: To file: write model backward_1
+INFO-FLOW: To file: write model forward_1
+INFO-FLOW: To file: write model p_hls_fptosi_float_i32
+INFO-FLOW: To file: write model forward
+INFO-FLOW: To file: write model kerneldl
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.11 sec.
+Command         ap_source done; 0.11 sec.
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=3.333 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_backward_tempp_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.compgen.tcl 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.compgen.tcl 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.compgen.tcl 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.tcl 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_z_paramsw1_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_z_gradsw1_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_z_a_actc_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_z_b_mask_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_z_c_max_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_buffery_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_h1_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_h2_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'kerneldl_kerneldl_bufferd_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           source ./control.slave.tcl 
+Execute           is_m_axi_addr64 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Command         ap_source done; 0.32 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.11 sec.
+Command         ap_source done; 0.11 sec.
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=kerneldl xml_exists=0
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.compgen.tcl 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.compgen.tcl 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.tcl 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Command         ap_source done; 0.11 sec.
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.tcl 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute           ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.compgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.tcl 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.constraint.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=0
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=5
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=32 #gSsdmPorts=0
+Execute         source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -xo 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.dataonly.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.dataonly.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         get_config_sdx -target 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.dataonly.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.constraint.tcl 
+Execute         sc_get_clocks kerneldl 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute         get_config_debug -directory 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_dadd_6_full_dsp_64_ip.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_ddiv_29_no_dsp_64_ip.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_dsqrt_28_no_dsp_64_ip.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_dsub_6_full_dsp_64_ip.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_fadd_5_full_dsp_32_ip.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_fcmp_0_no_dsp_32_ip.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_fpext_0_no_dsp_32_ip.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_fptrunc_0_no_dsp_64_ip.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_sitofp_3_no_dsp_32_ip.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.tbgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.tbgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.tbgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.tbgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.tbgen.tcl 
+Execute         source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute         get_config_sdx -target 
+Execute         get_config_sdx -profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 1180.355 ; gain = 493.121 ; free physical = 37708 ; free virtual = 118974
+INFO: [VHDL 208-304] Generating VHDL RTL for kerneldl with prefix kerneldl_.
+INFO: [VLOG 209-307] Generating Verilog RTL for kerneldl with prefix kerneldl_.
+Command       autosyn done; 10.68 sec.
+Command     csynth_design done; 56.76 sec.
+Execute     export_design 
+Execute       get_config_export -acc 
+Execute       get_config_export -clock_margin 
+Execute       get_config_export -custom_script 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -driver_input_dir 
+Execute       get_config_export -format 
+Execute       get_config_export -ipname 
+Execute       get_config_export -kernel_drc 
+Execute       get_config_export -library 
+Execute       get_config_export -qor_test 
+Execute       get_config_export -rtl 
+Execute       get_config_export -sdaccel 
+Execute       get_config_export -sim 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -use_ip 
+Execute       get_config_export -use_netlist 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -xo 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -ipname kerneldl
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -vivado_clock 
+Execute       get_top 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -target 
+Execute       get_config_export -sdx_tcl 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -tool vivado -sdx-target xocc
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl both -sdx-target xocc -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl both -sdx-target xocc -tool Vivado -impltomg_flag
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.compgen.tcl 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.compgen.tcl 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.tcl 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.tcl 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute         ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.compgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.tcl 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.constraint.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=0
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       kernel.xml check internal_kernel_xml(0)=/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.internal.xml srclang=c top=kerneldl
+INFO-FLOW: DBG:CMD:       kernel.xml check proj_kernel_xml    (0)=/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/../../../kernel.xml use_proj_kernel_xml=false
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       ap_gen_kernel_xml /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.internal.xml a kerneldl none
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+INFO-FLOW: Generating Kernel XML ...
+Execute       transform -hls -top=kerneldl -xcl-target=hls -xcl-xmlinfo=/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/../../../kernel.xml -xcl-profiletype=none -mem2reg -hlskernelxml /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.g.bc -o /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/a.cl.xml.bc -f 
+INFO-FLOW: DBG:CMD: Copying raw kernel.xml: /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/../../../kernel.xml -> /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       update_final_kernel_xml /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/../../../kernel.xml
+Execute       get_config_debug -enable 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD: Updating /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/../../../kernel.xml with values: interrupt true debug false compileOptions {-I /home/inaba/alveo/DanQ_fhalf/src/kernel} name kerneldl vlnv xilinx.com:hls:kerneldl:1.0
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=5
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=0 g_has_adaptors=false generate_bd_files=0 #modelList=32 #gSsdmPorts=0
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.dataonly.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.dataonly.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.dataonly.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.constraint.tcl 
+Execute       sc_get_clocks kerneldl 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_dadd_6_full_dsp_64_ip.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_ddiv_29_no_dsp_64_ip.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_dsqrt_28_no_dsp_64_ip.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_dsub_6_full_dsp_64_ip.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_fadd_5_full_dsp_32_ip.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_fcmp_0_no_dsp_32_ip.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_fpext_0_no_dsp_32_ip.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_fptrunc_0_no_dsp_64_ip.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/misc/kerneldl_kerneldl_ap_sitofp_3_no_dsp_32_ip.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/backward_1.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward_1.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/p_hls_fptosi_float_i32.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/forward.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       get_config_debug -enable 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       copying IP vlog from /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/verilog
+INFO-FLOW: DBG:CMD:       copying IP vhdl from /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/vhdl
+INFO-FLOW: DBG:CMD:       copy ip_driver_dir 1_0 /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/driver
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=0
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.dataonly.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.compgen.dataonly.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=kerneldl
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=kerneldl
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.rtl_wrap.cfg.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.constraint.tcl 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/kerneldl.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/.autopilot/db/global.setting.tcl 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data names -quiet 
+Execute       ap_part_info -name xcu200-fsgd2104-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:     exec /home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/kerneldl.hw_emu.xilinx_u200_xdma_201830_2/kerneldl/kerneldl/solution/impl/ip/pack.sh
+Command     export_design done; 20.94 sec.
+Execute     close_project 
+Execute     cleanup_all 

@@ -1,0 +1,22 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_psr_dma_pcie_0/sim/emu_psr_dma_pcie_0.vhd" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_psr_kernel_clk_0/sim/emu_psr_kernel_clk_0.vhd" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_psr_axi_lite_control_clk_0/sim/emu_psr_axi_lite_control_clk_0.vhd" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_psr_kernel2_clk_0/sim/emu_psr_kernel2_clk_0.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_dadd_3_full_dsp_64.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_dcmp_0_no_dsp_64.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_ddiv_29_no_dsp_64.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_dexp_18_full_dsp_64.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_dmul_4_max_dsp_64.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_dsqrt_19_no_dsp_64.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_dsub_3_full_dsp_64.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_fadd_5_full_dsp_32.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_fdiv_10_no_dsp_32.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_fmul_2_max_dsp_32.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_fpext_0_no_dsp_32.vhd" \
+"../../../../prj.srcs/sources_1/bd/emu/ipshared/4ea0/hdl/ip/kerneldl_kerneldl_ap_fptrunc_0_no_dsp_64.vhd" \
+"../../../../prj.ip_user_files/bd/emu/ip/emu_kerneldl_1_0/sim/emu_kerneldl_1_0.vhd" \
+
+# Do not sort compile order
+nosort

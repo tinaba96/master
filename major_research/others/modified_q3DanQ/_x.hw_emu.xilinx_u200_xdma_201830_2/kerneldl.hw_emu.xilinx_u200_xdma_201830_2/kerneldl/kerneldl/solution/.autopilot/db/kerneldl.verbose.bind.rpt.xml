@@ -1,0 +1,61 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'kerneldl'" level="0">
+<item name = "Date">Fri Oct 23 11:08:18 2020
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">kerneldl</item>
+<item name = "Solution">solution</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu200-fsgd2104-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33, 2.820, 0.90</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">345285, 326788085, 345285, 326788085, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_forward_fu_634">forward, 2880007, 2880007, 2880007, 2880007, none</column>
+<column name="grp_backward_1_fu_640">backward_1, 324792021, 324792021, 324792021, 324792021, none</column>
+<column name="grp_forward_1_fu_648">forward_1, 234316003, 234316003, 234316003, 234316003, none</column>
+<column name="grp_backward_fu_657">backward, 624005, 624005, 624005, 624005, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">33280, 33280, 1, 1, 1, 33280, yes</column>
+<column name="- Loop 2">312000, 312000, 1, 1, 1, 312000, yes</column>
+<column name="- Loop 3">4001, 4001, 3, 1, 1, 4000, yes</column>
+<column name="- Loop 4">312000, 312000, 1, 1, 1, 312000, yes</column>
+<column name="- Loop 5">312004, 312004, 6, 1, 1, 312000, yes</column>
+<column name="- Loop 6">24001, 24001, 3, 1, 1, 24000, yes</column>
+<column name="- Loop 7">24001, 24001, 3, 1, 1, 24000, yes</column>
+<column name="- Loop 8">312000, 312000, 2, 1, 1, 312000, yes</column>
+<column name="- Loop 9">33377, 33377, 99, 1, 1, 33280, yes</column>
+<column name="- Loop 10">33280, 33280, 1, 1, 1, 33280, yes</column>
+<column name="- Loop 11">312097, 312097, 99, 1, 1, 312000, yes</column>
+<column name="- Loop 12">312000, 312000, 1, 1, 1, 312000, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

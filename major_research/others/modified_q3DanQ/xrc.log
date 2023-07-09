@@ -1,0 +1,10 @@
+Fri Oct 23 11:08:49 2020: Server was asked to start on port: '38783'
+Fri Oct 23 11:08:49 2020: Attempting to start server on port '38783'
+Fri Oct 23 11:08:49 2020: XRC main fifo: created main fifo '/tmp/xrcmain38783', fd read = 13
+Fri Oct 23 11:08:49 2020: Running Rule Check Server
+Fri Oct 23 11:08:49 2020: Version 1.4.0
+Fri Oct 23 11:08:49 2020: Rule Check Server: Accepted socket connection from client
+Fri Oct 23 11:08:49 2020: EXCHANGE_TOKEN received, server token: 692089e9-de29-4f52-b111-71e0a4ace467, passed token: 692089e9-de29-4f52-b111-71e0a4ace467
+Fri Oct 23 11:08:49 2020: SESSION_MGR: creating session with session uuid: 'c35c1cc5-5226-4309-9ade-c8ccefa53958' and name 'xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2'
+Fri Oct 23 11:09:26 2020: Rule Check Server: Accepted socket connection from client
+Fri Oct 23 11:12:05 2020: SESSION_MGR: closing session for UUID 'c35c1cc5-5226-4309-9ade-c8ccefa53958' with name 'xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2'

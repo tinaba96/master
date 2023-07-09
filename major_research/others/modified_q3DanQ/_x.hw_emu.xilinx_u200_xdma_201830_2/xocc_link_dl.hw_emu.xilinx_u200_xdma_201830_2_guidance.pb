@@ -1,0 +1,3 @@
+
+Ø
+-xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2$c35c1cc5-5226-4309-9ade-c8ccefa53958ïxocc  -t hw_emu --platform xilinx_u200_xdma_201830_2 --save-temps --temp_dir ./_x.hw_emu.xilinx_u200_xdma_201830_2/ -l --nk kerneldl:1 -oxclbin/dl.hw_emu.xilinx_u200_xdma_201830_2.xclbin xclbin/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo *Ž"‰/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/reports/link/xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2_guidance.html2~"z/home/inaba/alveo/DanQ_fhalf/_x.hw_emu.xilinx_u200_xdma_201830_2/xocc_link_dl.hw_emu.xilinx_u200_xdma_201830_2_guidance.pb

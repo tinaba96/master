@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Design Guidance Report</title>
+<link rel="stylesheet" href="file:///tools/Xilinx/SDx/2019.1/data/rulecheck/rulecheck.css">
+<script type="text/javascript" src="file:///tools/Xilinx/SDx/2019.1/data/rulecheck/rulecheck.js"></script>
+</head><body>
+<center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
+<tr><td><b>Copyright</b></td><td>Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.</td></tr>
+<tr><td><b>Tool Version</b></td><td>xrcserver v.2019.1 (lin64) Build 0 </td></tr>
+<tr><td><b>Date</b></td><td>Fri Oct 23 11:08:46 2020</td></tr>
+<tr><td><b>Host</b></td><td>alveo running 64-bit CentOS Linux release 7.7.1908 (Core)</td></tr>
+<tr><td><b>Command</b></td><td>xocc  -t hw_emu --platform xilinx_u200_xdma_201830_2 --save-temps --temp_dir ./_x.hw_emu.xilinx_u200_xdma_201830_2/ -c -k kerneldl -Isrc/kernel -oxclbin/kerneldl.hw_emu.xilinx_u200_xdma_201830_2.xo src/kernel/kernel.cpp </td></tr>
+</table></center><br>
+<table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
+<tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
+<tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
+</table>
+<a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
+<pre>Violations found: 24
+</pre>
+<pre>Rule Specs Violated: 3
+</pre>
+<a name="VIOLATION DETAILS"></a><h1>2 VIOLATION DETAILS</h1>
+<table border="1">
+<caption>Items that may require attention</caption>
+<tr class="ns-sort">
+<th align="left">Id</th>
+<th align="left">Name</th>
+<th align="left">Severity</th>
+<th align="left" width="170">Full Name</th>
+<th align="left">Categories</th>
+<th align="left" width="350">Details</th>
+<th align="left" width="380">Resolution</th>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>) and 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>).
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">Unable to enforce a carried constraint (II = 5)
+   between 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>) and 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>).
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">Unable to enforce a carried constraint (II = 6)
+   between 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>) and 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>).
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">17</td>
+<td align="left">General</td>
+<td align="left">advisory</td>
+<td align="left">HLS General Related</td>
+<td align="left">Accelerator.kerneldl.General</td>
+<td align="left">Only 2 loops out of a total 3 loops have been pipelined in this design.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">18</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a>) of variable 'tmp', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a> on array 'in_r' and 'load' operation ('in_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=517">layers.h</a>) on array 'in_r'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a>) of variable 'tmp', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a> on array 'in_r' and 'load' operation ('in_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=517">layers.h</a>) on array 'in_r'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a>) of variable 'tmp', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a> on array 'in_r' and 'load' operation ('in_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=517">layers.h</a>) on array 'in_r'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a>) of variable 'tmp', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a> on array 'in_r' and 'load' operation ('in_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=517">layers.h</a>) on array 'in_r'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a>) of variable 'tmp', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a> on array 'in_r' and 'load' operation ('in_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=517">layers.h</a>) on array 'in_r'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a>) of variable 'tmp', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a> on array 'in_r' and 'load' operation ('in_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=517">layers.h</a>) on array 'in_r'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">24</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'forward' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 106, distance = 1, offset = 1)
+   between 'store' operation ('in_addr_13_write_ln525', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a>) of variable 'tmp', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=525">layers.h</a> on array 'in_r' and 'load' operation ('in_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=517">layers.h</a>) on array 'in_r'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">Cannot flatten a loop nest 'Loop-2.1' (<a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=361">layers.h</a>) in function 'conv1d::forward' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.kerneldl.Interface</td>
+<td align="left">Inferring multiple bus burst read of a total cumulative length 24000 on port 'gmemm' (<a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp#line=166">kernel.cpp</a>). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.kerneldl.Interface</td>
+<td align="left">Inferring multiple bus burst read of a total cumulative length 4000 on port 'gmemm' (<a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp#line=135">kernel.cpp</a>). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.kerneldl.Interface</td>
+<td align="left">Inferring multiple bus burst write of a total cumulative length 24000 on port 'gmemm' (<a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/kernel.cpp#line=148">kernel.cpp</a>). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) of variable 'tmp_2', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a> on array 'gradsw1' and 'load' operation ('gradsw1_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) on array 'gradsw1'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) of variable 'tmp_2', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a> on array 'gradsw1' and 'load' operation ('gradsw1_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) on array 'gradsw1'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) of variable 'tmp_2', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a> on array 'gradsw1' and 'load' operation ('gradsw1_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) on array 'gradsw1'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) of variable 'tmp_2', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a> on array 'gradsw1' and 'load' operation ('gradsw1_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) on array 'gradsw1'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) of variable 'tmp_2', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a> on array 'gradsw1' and 'load' operation ('gradsw1_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) on array 'gradsw1'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">The II Violation in module 'backward_1' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 1)
+   between 'store' operation ('gradsw1_addr_write_ln414', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) of variable 'tmp_2', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a> on array 'gradsw1' and 'load' operation ('gradsw1_load', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=414">layers.h</a>) on array 'gradsw1'.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>) and 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>).
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>) and 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>).
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">Loop</td>
+<td align="left">warning</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.kerneldl.Loop</td>
+<td align="left">Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>) and 'fadd' operation ('tmp_1', <a href="file:///home/inaba/alveo/DanQ_fhalf/src/kernel/layers.h#line=369">layers.h</a>).
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+</table>
+<br>
+</body></html>
