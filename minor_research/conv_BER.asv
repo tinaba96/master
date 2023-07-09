@@ -1,0 +1,33 @@
+M = 16;
+k = log2(M);
+
+dataIn = randi([0 1],100000,1);
+
+tPoly = poly2trellis([5 4],[23 35 0; 0 5 13]);
+codeRate = 2/3;
+
+codeword = convenc(dataIn,tPoly);
+
+codewordMat = reshape(codeword,length(codeword)/k,k);
+txSym = bi2de(codewordMat);
+
+txSig = qammod(txSym,M);
+
+EbNo = 10;
+snr = EbNo + 10*log10(k*codeRate);
+rxSig = awgn(txSig,snr,'measured');
+
+demodSig = qamdemod(rxSig,M);
+
+demodSigMat = de2bi(demodSig,k);
+demodSigBinary = demodSigMat(:);
+
+traceBack = 16;
+
+dataOut = vitdec(demodSigBinary,tPoly,traceBack,'cont','hard');
+
+decDelay = 2*traceBack;
+
+
+
+
