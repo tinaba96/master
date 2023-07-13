@@ -70,8 +70,11 @@ The flow to execute using AWS F1 Instance is;
 6. Execution on FPGA
 
 
+software emulation
+hardware emulation
+hardware
 
-
+generate FPGAbinary (.xclbin) and execute it using real FPGA device by using makefile
 
 High Level Synthesis (HLS) tools are widely known and used for a FPGA imple- mentation rather than using Hardware Description Language (HDL). 
 
