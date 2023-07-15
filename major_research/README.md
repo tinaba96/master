@@ -20,6 +20,7 @@ The purpose of this research is to accelerate a training of a deep learning for 
 - Mutli-FPGA Implementation using AWS F1 Instance
 
 The overview of the FPGA Implementation
+
 ![image](https://github.com/tinaba96/master/assets/57109730/909df276-43a6-47c1-b23b-2854795d3a9c)
 
 By separating the process on multiple FPGAs the way they can process individually, I can obtain faster training time.
@@ -31,9 +32,11 @@ I focused on the BiLSTM layer, which consumes about 48% of the whole training ti
 
 
 The overview of the Dual FPGA Implementation
+
 ![image](https://github.com/tinaba96/master/assets/57109730/644eec14-1ca4-40a9-8798-63bbcc6f6423)
 
 The overview of the 8 FPGA Implementation
+
 ![image](https://github.com/tinaba96/master/assets/57109730/7971036b-98c5-4125-83b8-94a70dd50177)
 
 
