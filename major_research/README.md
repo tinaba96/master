@@ -64,20 +64,106 @@ To exectue in FPGA, I used High Level Synthesis so that I can mainly use C++ to 
 The flow to execute using AWS F1 Instance is;
 1. Functional Specification
 2. High-Level SYnthesis
-3. RTL Synthesis
+3. RTL Synthesis (Vivado HLS / Vitis)
 4. Creating bitstream
 5. Creating Amazon FPGA Image (AFI)
 6. Execution on FPGA
+
+
+install vivado_hls
+run
+source /home/vivado_init.sh
+vivado_hls
+
+build and generate xclbin file
+
+source /usr/local/bin/sdaccel.sh
+
+
+
+
+COMMON_REPO = /home/centos/single500
+ABS_COMMON_REPO = $(shell readlink -f $(COMMON_REPO))
+
+TARGETS := hw
+TARGET := $(TARGETS)
+DEVICE := $(DEVICES)
+XCLBIN := ./xclbin
+
+include ./utils.mk
+
+DSA := $(call device2dsa, $(DEVICE))
+BUILD_DIR := ./_x.$(TARGET).$(DSA)
+
+BUILD_DIR_dl = $(BUILD_DIR)/
+
+
+
+
+
+include ./utils.mk
+
+DSA := $(call device2dsa, $(DEVICE))
+BUILD_DIR := ./_x.$(TARGET).$(DSA)
+
+BUILD_DIR_dl = $(BUILD_DIR)/
+
+CXX := $(XILINX_SDX)/bin/xcpp
+XOCC := $(XILINX_SDX)/bin/xocc
+
+#Include Libraries
+include libs/opencl/opencl.mk
+include libs/xcl2/xcl2.mk
+CXXFLAGS += $(xcl2_CXXFLAGS)
+LDFLAGS += $(xcl2_LDFLAGS)
+HOST_SRCS += $(xcl2_SRCS)
+CXXFLAGS += $(opencl_CXXFLAGS) -Wall -O0 -g -std=c++11
+LDFLAGS += $(opencl_LDFLAGS)
+
+HOST_SRCS += src/host/main.cpp
+KERNEL_SRCS += src/kernel/kernel.cpp
+
+# Host compiler global settings
+CXXFLAGS += -fmessage-length=0
+LDFLAGS += -lrt -lstdc++
+
+# Kernel compiler global settings
+CLFLAGS += -t $(TARGET) --platform $(DEVICE) --save-temps
+
+
+#EXECUTABLE = helloworld
+EXECUTABLE = dl
+CMD_ARGS = $(XCLBIN)/dl.$(TARGET).$(DSA).xclbin
+
+EMCONFIG_DIR = $(XCLBIN)/$(DSA)
+
+BINARY_CONTAINERS += $(XCLBIN)/dl.$(TARGET).$(DSA).xclbin
+BINARY_CONTAINER_dl_OBJS += $(XCLBIN)/kerneldl.$(TARGET).$(DSA).xo
+
+
+
+
+
+
+
+
 
 
 software emulation
 hardware emulation
 hardware
 
+
+1. make build to generate .xclbin file
+2. make all to execute
+
 generate FPGAbinary (.xclbin) and execute it using real FPGA device by using makefile
 
 High Level Synthesis (HLS) tools are widely known and used for a FPGA imple- mentation rather than using Hardware Description Language (HDL). 
 
+SDAccel is a software development environment provided by Xilinx for designing and deploying applications on Xilinx FPGA (Field-Programmable Gate Array) devices. It is part of the Xilinx Vitis unified software platform, which enables developers to target and optimize their applications for Xilinx FPGAs, SoCs (System-on-Chips), and ACAPs (Adaptive Compute Acceleration Platforms).
+
+SDAccel provides a high-level programming model that allows developers to design their applications using OpenCL, C, C++, or RTL (Register Transfer Level) languages. It includes a set of development tools and libraries that assist in the design, simulation, optimization, and deployment of FPGA-based applications.
 
 
 
