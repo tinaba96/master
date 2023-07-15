@@ -232,7 +232,7 @@ You can run this command for Hardware execution.
 make check TARGETS=hw DEVICES=xilinx_u200_xdma_201830_2
 ```
 
-Here is the example of the execution report.
+Here is the example of the execution report. 
 https://github.com/tinaba96/master/blob/master/major_research/reports/profile_summary.html
 
 
