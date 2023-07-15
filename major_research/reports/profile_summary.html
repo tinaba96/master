@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<HTML>
+<BODY>
+<STYLE>
+	h1 {
+		font-size:200%;
+	}
+	table th,tr,td {
+		border-collapse: collapse; /* share common border between cells */
+		padding: 4px; /* padding within cells */
+		table-layout : fixed
+	}
+	table th {
+	background-color:lightsteelblue
+	}
+	/* Tooltip container */
+		.tooltip {
+		position: relative;
+		display: inline-block;
+	}
+	/* Tooltip text */
+	.tooltip .tooltiptext {
+		visibility: hidden;
+		width: 600px;
+		background-color: #555;
+		color: #fff;
+		text-align: left;
+		padding: 5px 0;
+		border-radius: 6px;
+		/* Position the tooltip text */
+		position: absolute;
+		z-index: 1;
+		bottom: 125%;
+		left: -100%;
+		margin-left: -60px;
+		/* Fade in tooltip */
+		opacity: 0;
+		transition: opacity 1s;
+	}
+	/* Tooltip arrow */
+	.tooltip .tooltiptext::after {
+		content: ;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: #555 transparent transparent transparent;
+	}
+	/* Show the tooltip text when you mouse over the tooltip container */
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+		opacity: 1;
+	}
+</STYLE>
+<h1>Profile Summary</h1>
+<br>
+<h3>Application: dl</h3>
+<h3>Created: 2020-12-21 12:52:30</h3>
+<h3>Devices: xilinx_u200_xdma_201830_2-0</h3>
+<h3>Msec: 1608522750735</h3>
+<h3>Report name: Profile Summary</h3>
+<h3>Target: System Run</h3>
+<h3>Tool version: 2019.1</h3>
+<br>
+<h2>OpenCL API Calls</h2>
+
+<TABLE border="1">
+<TR>
+<TH>API Name</TH>
+<TH>Number<br>Of Calls</TH>
+<TH>Total<br>Time (ms)</TH>
+<TH>Minimum<br>Time (ms)</TH>
+<TH>Average<br>Time (ms)</TH>
+<TH>Maximum<br>Time (ms)</TH>
+</TR>
+<TR>
+<TD>clFinish</TD>
+<TD>2000</TD>
+<TD>1245390.000</TD>
+<TD>414.425</TD>
+<TD>622.695</TD>
+<TD>11478.200</TD>
+</TR>
+<TR>
+<TD>clCreateBuffer</TD>
+<TD>53000</TD>
+<TD>5503.390</TD>
+<TD>0.006</TD>
+<TD>0.104</TD>
+<TD>4.744</TD>
+</TR>
+<TR>
+<TD>clCreateProgramWithBinary</TD>
+<TD>1</TD>
+<TD>2774.330</TD>
+<TD>2774.330</TD>
+<TD>2774.330</TD>
+<TD>2774.330</TD>
+</TR>
+<TR>
+<TD>clSetKernelArg</TD>
+<TD>56000</TD>
+<TD>456.996</TD>
+<TD>0.001</TD>
+<TD>0.008</TD>
+<TD>0.336</TD>
+</TR>
+<TR>
+<TD>clReleaseProgram</TD>
+<TD>1</TD>
+<TD>192.657</TD>
+<TD>192.657</TD>
+<TD>192.657</TD>
+<TD>192.657</TD>
+</TR>
+<TR>
+<TD>clReleaseMemObject</TD>
+<TD>61384</TD>
+<TD>80.668</TD>
+<TD>0.001</TD>
+<TD>0.001</TD>
+<TD>0.329</TD>
+</TR>
+<TR>
+<TD>clEnqueueTask</TD>
+<TD>2000</TD>
+<TD>78.247</TD>
+<TD>0.023</TD>
+<TD>0.039</TD>
+<TD>0.121</TD>
+</TR>
+<TR>
+<TD>clEnqueueMigrateMemObjects</TD>
+<TD>4000</TD>
+<TD>53.891</TD>
+<TD>0.004</TD>
+<TD>0.013</TD>
+<TD>0.103</TD>
+</TR>
+<TR>
+<TD>clRetainMemObject</TD>
+<TD>8384</TD>
+<TD>11.931</TD>
+<TD>0.001</TD>
+<TD>0.001</TD>
+<TD>0.187</TD>
+</TR>
+<TR>
+<TD>clCreateCommandQueue</TD>
+<TD>2000</TD>
+<TD>6.395</TD>
+<TD>0.002</TD>
+<TD>0.003</TD>
+<TD>0.020</TD>
+</TR>
+<TR>
+<TD>clReleaseCommandQueue</TD>
+<TD>2000</TD>
+<TD>6.018</TD>
+<TD>0.001</TD>
+<TD>0.003</TD>
+<TD>0.017</TD>
+</TR>
+<TR>
+<TD>clCreateKernel</TD>
+<TD>1</TD>
+<TD>1.048</TD>
+<TD>1.048</TD>
+<TD>1.048</TD>
+<TD>1.048</TD>
+</TR>
+<TR>
+<TD>clReleaseKernel</TD>
+<TD>1</TD>
+<TD>0.761</TD>
+<TD>0.761</TD>
+<TD>0.761</TD>
+<TD>0.761</TD>
+</TR>
+<TR>
+<TD>clGetExtensionFunctionAddress</TD>
+<TD>2</TD>
+<TD>0.021</TD>
+<TD>0.004</TD>
+<TD>0.010</TD>
+<TD>0.016</TD>
+</TR>
+<TR>
+<TD>clGetPlatformInfo</TD>
+<TD>14</TD>
+<TD>0.018</TD>
+<TD>0.001</TD>
+<TD>0.001</TD>
+<TD>0.003</TD>
+</TR>
+<TR>
+<TD>clCreateContext</TD>
+<TD>1</TD>
+<TD>0.008</TD>
+<TD>0.008</TD>
+<TD>0.008</TD>
+<TD>0.008</TD>
+</TR>
+<TR>
+<TD>clGetDeviceIDs</TD>
+<TD>2</TD>
+<TD>0.006</TD>
+<TD>0.001</TD>
+<TD>0.003</TD>
+<TD>0.005</TD>
+</TR>
+<TR>
+<TD>clReleaseContext</TD>
+<TD>1</TD>
+<TD>0.006</TD>
+<TD>0.006</TD>
+<TD>0.006</TD>
+<TD>0.006</TD>
+</TR>
+<TR>
+<TD>clGetExtensionFunctionAddressForPlatform</TD>
+<TD>2</TD>
+<TD>0.006</TD>
+<TD>0.002</TD>
+<TD>0.003</TD>
+<TD>0.004</TD>
+</TR>
+<TR>
+<TD>clReleaseDevice</TD>
+<TD>2</TD>
+<TD>0.005</TD>
+<TD>0.002</TD>
+<TD>0.002</TD>
+<TD>0.003</TD>
+</TR>
+<TR>
+<TD>clRetainDevice</TD>
+<TD>2</TD>
+<TD>0.003</TD>
+<TD>0.001</TD>
+<TD>0.002</TD>
+<TD>0.002</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Kernel Execution</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Kernel</TH>
+<TH>Number Of<br>Enqueues</TH>
+<TH>Total<br>Time (ms)</TH>
+<TH>Minimum<br>Time (ms)</TH>
+<TH>Average<br>Time (ms)</TH>
+<TH>Maximum<br>Time (ms)</TH>
+</TR>
+<TR>
+<TD>kerneldl</TD>
+<TD>2000</TD>
+<TD>1217780.000</TD>
+<TD>411.320</TD>
+<TD>608.892</TD>
+<TD>1358.540</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Compute Unit Utilization</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Device</TH>
+<TH>Compute Unit</TH>
+<TH>Kernel</TH>
+<TH>Global<br>Work Size</TH>
+<TH>Local<br>Work Size</TH>
+<TH>Number<br>Of Calls</TH>
+<TH>Dataflow<br>Execution</TH>
+<TH>Max Parallel<br>Executions</TH>
+<TH>Dataflow<br>Acceleration</TH>
+<TH>Total<br>Time (ms)</TH>
+<TH>Minimum<br>Time (ms)</TH>
+<TH>Average<br>Time (ms)</TH>
+<TH>Maximum<br>Time (ms)</TH>
+<TH>Clock<br>Freq (MHz)</TH>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1</TD>
+<TD>kerneldl</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+<TD>2000</TD>
+<TD>No</TD>
+<TD>1</TD>
+<TD>1.000000x</TD>
+<TD>1212970.000</TD>
+<TD>409.621</TD>
+<TD>606.485</TD>
+<TD>1353.940</TD>
+<TD>117</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Compute Units: Stall Information</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Compute Unit</TH>
+<TH>Execution Count</TH>
+<TH>Running<br>Time (ms)</TH>
+<TH>Intra-Kernel Dataflow<br>Stalls (ms)</TH>
+<TH>External Memory<br>Stalls (ms)</TH>
+<TH>Inter-Kernel Pipe<br>Stalls (ms)</TH>
+</TR>
+<TD colspan="6">No Data. Please use 'xocc -l --profile_kernel stall' to monitor and report kernel stall information.</TD>
+</TABLE>
+<br>
+<h2>Data Transfer: Host to Global Memory</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Context:Number<br>of Devices</TH>
+<TH>Transfer Type</TH>
+<TH>Number Of<br>Buffer Transfers</TH>
+<TH>Transfer<br>Rate (MB/s)</TH>
+<TH>Average Bandwidth<br>Utilization (%)</TH>
+<TH>Average<br>Buffer Size (KB)</TH>
+<TH>Total<br>Time (ms)</TH>
+<TH>Average<br>Time (ms)</TH>
+</TR>
+<TR>
+<TD>context0:1</TD>
+<TD>READ</TD>
+<TD>2000</TD>
+<TD>157.069320</TD>
+<TD>1.636139</TD>
+<TD>1885.130</TD>
+<TD>24003.767028</TD>
+<TD>12.001884</TD>
+</TR>
+<TR>
+<TD>context0:1</TD>
+<TD>WRITE</TD>
+<TD>3000</TD>
+<TD>4942.601586</TD>
+<TD>51.485433</TD>
+<TD>4928.480</TD>
+<TD>2991.426580</TD>
+<TD>0.997142</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Data Transfer: Kernels to Global Memory</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Device</TH>
+<TH>Compute Unit/<br>Port Name</TH>
+<TH>Kernel Arguments</TH>
+<TH>Memory Resources</TH>
+<TH>Transfer Type</TH>
+<TH>Number Of<br>Transfers</TH>
+<TH>Transfer<br>Rate (MB/s)</TH>
+<TH>Average Bandwidth<br>Utilization (%)</TH>
+<TH>Average<br>Size (KB)</TH>
+<TH>Average<br>Latency (ns)</TH>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM0</TD>
+<TD>datax|wxf_|whf_|wxf2_|whf2_|bf_|bf2_|h_wxf_|h_whf_|h_wxf2_|h_whi2_|h_bf2_</TD>
+<TD>DDR[1]</TD>
+<TD>READ</TD>
+<TD>8061280</TD>
+<TD>0.101</TD>
+<TD>0.001</TD>
+<TD>0.015</TD>
+<TD>1535.790</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM0</TD>
+<TD>datax|wxf_|whf_|wxf2_|whf2_|bf_|bf2_|h_wxf_|h_whf_|h_wxf2_|h_whi2_|h_bf2_</TD>
+<TD>DDR[1]</TD>
+<TD>WRITE</TD>
+<TD>3280640</TD>
+<TD>0.011</TD>
+<TD>0.000</TD>
+<TD>0.004</TD>
+<TD>1837.030</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM1</TD>
+<TD>datay|wxg_|whg_|wxg2_|whg2_|bg_|bg2_|h_wxg_|h_whg_|h_wxg2_|h_who2_|h_bg2_</TD>
+<TD>DDR[1]</TD>
+<TD>READ</TD>
+<TD>6561280</TD>
+<TD>0.022</TD>
+<TD>0.000</TD>
+<TD>0.004</TD>
+<TD>1423.340</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM1</TD>
+<TD>datay|wxg_|whg_|wxg2_|whg2_|bg_|bg2_|h_wxg_|h_whg_|h_wxg2_|h_who2_|h_bg2_</TD>
+<TD>DDR[1]</TD>
+<TD>WRITE</TD>
+<TD>6280640</TD>
+<TD>0.169</TD>
+<TD>0.001</TD>
+<TD>0.033</TD>
+<TD>65990.800</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM2</TD>
+<TD>dout|wxi_|whi_|wxi2_|whi2_|bi_|bi2_|h_wxi_|h_whi_|h_wxi2_|h_bf_</TD>
+<TD>DDR[1]</TD>
+<TD>READ</TD>
+<TD>8742080</TD>
+<TD>0.177</TD>
+<TD>0.002</TD>
+<TD>0.025</TD>
+<TD>1679.340</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM2</TD>
+<TD>dout|wxi_|whi_|wxi2_|whi2_|bi_|bi2_|h_wxi_|h_whi_|h_wxi2_|h_bf_</TD>
+<TD>DDR[1]</TD>
+<TD>WRITE</TD>
+<TD>2871040</TD>
+<TD>0.009</TD>
+<TD>0.000</TD>
+<TD>0.004</TD>
+<TD>1508.140</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM3</TD>
+<TD>buffer_output|wxo_|who_|wxo2_|who2_|bo_|bo2_|h_wxo_|h_who_|h_wxo2_|h_bg_</TD>
+<TD>DDR[1]</TD>
+<TD>READ</TD>
+<TD>5742080</TD>
+<TD>0.019</TD>
+<TD>0.000</TD>
+<TD>0.004</TD>
+<TD>1460.750</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM3</TD>
+<TD>buffer_output|wxo_|who_|wxo2_|who2_|bo_|bo2_|h_wxo_|h_who_|h_wxo2_|h_bg_</TD>
+<TD>DDR[1]</TD>
+<TD>WRITE</TD>
+<TD>4371040</TD>
+<TD>0.089</TD>
+<TD>0.001</TD>
+<TD>0.025</TD>
+<TD>183956.000</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM4</TD>
+<TD>h_whf2_|h_bi_|h_bi2_</TD>
+<TD>DDR[1]</TD>
+<TD>READ</TD>
+<TD>12880</TD>
+<TD>0.001</TD>
+<TD>0.000</TD>
+<TD>0.064</TD>
+<TD>404.099</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM4</TD>
+<TD>h_whf2_|h_bi_|h_bi2_</TD>
+<TD>DDR[1]</TD>
+<TD>WRITE</TD>
+<TD>15360</TD>
+<TD>0.001</TD>
+<TD>0.000</TD>
+<TD>0.054</TD>
+<TD>715583.000</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM5</TD>
+<TD>h_whg2_|h_bo_|h_bo2_</TD>
+<TD>DDR[1]</TD>
+<TD>READ</TD>
+<TD>12880</TD>
+<TD>0.001</TD>
+<TD>0.000</TD>
+<TD>0.064</TD>
+<TD>404.011</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1/M_AXI_GMEM5</TD>
+<TD>h_whg2_|h_bo_|h_bo2_</TD>
+<TD>DDR[1]</TD>
+<TD>WRITE</TD>
+<TD>15360</TD>
+<TD>0.001</TD>
+<TD>0.000</TD>
+<TD>0.054</TD>
+<TD>715736.000</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Data Transfer: DMA</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Device</TH>
+<TH>Transfer Type</TH>
+<TH>Number Of<br>Transfers</TH>
+<TH>Transfer<br>Rate (MB/s)</TH>
+<TH>Total Data<br>Transfer (MB)</TH>
+<TH>Total<br>Time (ms)</TH>
+<TH>Average<br>Size (KB)</TH>
+<TH>Average<br>Latency (ns)</TH>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>READ</TD>
+<TD>916906</TD>
+<TD>156.298017</TD>
+<TD>3751.740</TD>
+<TD>24003.767028</TD>
+<TD>4.092</TD>
+<TD>2765.657008</TD>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>WRITE</TD>
+<TD>28649000</TD>
+<TD>4901.902022</TD>
+<TD>14663.700</TD>
+<TD>2991.426580</TD>
+<TD>0.512</TD>
+<TD>2144.629610</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Top Data Transfer: Kernels to Global Memory</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Device</TH>
+<TH>Compute Unit</TH>
+<TH>Number Of<br>Transfers</TH>
+<TH>Average Bytes<br>per Transfer</TH>
+<TH>Transfer<br>Efficiency (%)</TH>
+<TH>Total Data<br>Transfer (MB)</TH>
+<TH>Total<br>Write (MB)</TH>
+<TH>Total<br>Read (MB)</TH>
+<TH>Total Transfer<br>Rate (MB/s)</TH>
+</TR>
+<TR>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>kerneldl_1</TD>
+<TD>45966560</TD>
+<TD>15.815</TD>
+<TD>0.386</TD>
+<TD>726.938</TD>
+<TD>338.862</TD>
+<TD>388.076</TD>
+<TD>0.599</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Top Kernel Execution</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Kernel Instance<br>Address</TH>
+<TH>Kernel</TH>
+<TH>Context ID</TH>
+<TH>Command<br>Queue ID</TH>
+<TH>Device</TH>
+<TH>Start<br>Time (ms)</TH>
+<TH>Duration (ms)</TH>
+<TH>Global<br>Work Size</TH>
+<TH>Local<br>Work Size</TH>
+</TR>
+<TR>
+<TD>0xd161c0</TD>
+<TD>kerneldl</TD>
+<TD>0</TD>
+<TD>999</TD>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>1092830.000</TD>
+<TD>1358.540</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+<TR>
+<TD>0xd161c0</TD>
+<TD>kerneldl</TD>
+<TD>0</TD>
+<TD>1999</TD>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>2225780.000</TD>
+<TD>1358.530</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+<TR>
+<TD>0xd161c0</TD>
+<TD>kerneldl</TD>
+<TD>0</TD>
+<TD>1001</TD>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>1144040.000</TD>
+<TD>970.618</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+<TR>
+<TD>0xd161c0</TD>
+<TD>kerneldl</TD>
+<TD>0</TD>
+<TD>1</TD>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>15225.100</TD>
+<TD>970.584</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+<TR>
+<TD>0xd161c0</TD>
+<TD>kerneldl</TD>
+<TD>0</TD>
+<TD>998</TD>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>1091320.000</TD>
+<TD>966.560</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+<TR>
+<TD>0xd161c0</TD>
+<TD>kerneldl</TD>
+<TD>0</TD>
+<TD>1998</TD>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>2224280.000</TD>
+<TD>966.520</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+<TR>
+<TD>0xd161c0</TD>
+<TD>kerneldl</TD>
+<TD>0</TD>
+<TD>1199</TD>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>1361920.000</TD>
+<TD>805.218</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+<TR>
+<TD>0xd161c0</TD>
+<TD>kerneldl</TD>
+<TD>0</TD>
+<TD>199</TD>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>230927.000</TD>
+<TD>805.190</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+<TR>
+<TD>0xd161c0</TD>
+<TD>kerneldl</TD>
+<TD>0</TD>
+<TD>1839</TD>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>2052870.000</TD>
+<TD>803.623</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+<TR>
+<TD>0xd161c0</TD>
+<TD>kerneldl</TD>
+<TD>0</TD>
+<TD>521</TD>
+<TD>xilinx_u200_xdma_201830_2-0</TD>
+<TD>575813.000</TD>
+<TD>803.555</TD>
+<TD>1:1:1</TD>
+<TD>1:1:1</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Top Memory Writes: Host to Global Memory</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Buffer Address</TH>
+<TH>Context ID</TH>
+<TH>Command<br>Queue ID</TH>
+<TH>Start<br>Time (ms)</TH>
+<TH>Duration (ms)</TH>
+<TH>Buffer Size (KB)</TH>
+<TH>Writing<br>Rate (MB/s)</TH>
+</TR>
+<TR>
+<TD>0x5000f79000</TD>
+<TD>0</TD>
+<TD>62</TD>
+<TD>83328.500</TD>
+<TD>3.172677</TD>
+<TD>13415.700</TD>
+<TD>4228.504824</TD>
+</TR>
+<TR>
+<TD>0x500206f000</TD>
+<TD>0</TD>
+<TD>1878</TD>
+<TD>2094510.000</TD>
+<TD>3.083084</TD>
+<TD>13415.700</TD>
+<TD>4351.383225</TD>
+</TR>
+<TR>
+<TD>0x50020a9000</TD>
+<TD>0</TD>
+<TD>80</TD>
+<TD>103404.000</TD>
+<TD>2.950738</TD>
+<TD>13415.700</TD>
+<TD>4546.550727</TD>
+</TR>
+<TR>
+<TD>0x5002087000</TD>
+<TD>0</TD>
+<TD>1276</TD>
+<TD>1446970.000</TD>
+<TD>2.933961</TD>
+<TD>13415.700</TD>
+<TD>4572.548851</TD>
+</TR>
+<TR>
+<TD>0x5002089000</TD>
+<TD>0</TD>
+<TD>152</TD>
+<TD>180827.000</TD>
+<TD>2.933172</TD>
+<TD>13415.700</TD>
+<TD>4573.778831</TD>
+</TR>
+<TR>
+<TD>0x5002087000</TD>
+<TD>0</TD>
+<TD>800</TD>
+<TD>878641.000</TD>
+<TD>2.931047</TD>
+<TD>13415.700</TD>
+<TD>4577.094806</TD>
+</TR>
+<TR>
+<TD>0x50016f7000</TD>
+<TD>0</TD>
+<TD>42</TD>
+<TD>61137.600</TD>
+<TD>2.912505</TD>
+<TD>13415.700</TD>
+<TD>4606.234152</TD>
+</TR>
+<TR>
+<TD>0x5002087000</TD>
+<TD>0</TD>
+<TD>840</TD>
+<TD>921871.000</TD>
+<TD>2.899844</TD>
+<TD>13415.700</TD>
+<TD>4626.345417</TD>
+</TR>
+<TR>
+<TD>0x500206f000</TD>
+<TD>0</TD>
+<TD>542</TD>
+<TD>598545.000</TD>
+<TD>2.892299</TD>
+<TD>13415.700</TD>
+<TD>4638.413940</TD>
+</TR>
+<TR>
+<TD>0x500206f000</TD>
+<TD>0</TD>
+<TD>322</TD>
+<TD>362484.000</TD>
+<TD>2.881667</TD>
+<TD>13415.700</TD>
+<TD>4655.527512</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Top Memory Reads: Host to Global Memory</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Buffer Address</TH>
+<TH>Context ID</TH>
+<TH>Command<br>Queue ID</TH>
+<TH>Start<br>Time (ms)</TH>
+<TH>Duration (ms)</TH>
+<TH>Buffer Size (KB)</TH>
+<TH>Reading<br>Rate (MB/s)</TH>
+</TR>
+<TR>
+<TD>0x50014d9000</TD>
+<TD>0</TD>
+<TD>999</TD>
+<TD>1094190.000</TD>
+<TD>10119.567818</TD>
+<TD>14375.700</TD>
+<TD>1.420582</TD>
+</TR>
+<TR>
+<TD>0x50014d9000</TD>
+<TD>0</TD>
+<TD>1999</TD>
+<TD>2227140.000</TD>
+<TD>10048.663658</TD>
+<TD>14375.700</TD>
+<TD>1.430606</TD>
+</TR>
+<TR>
+<TD>0x50020cc000</TD>
+<TD>0</TD>
+<TD>85</TD>
+<TD>109526.000</TD>
+<TD>163.021983</TD>
+<TD>1248.000</TD>
+<TD>7.655409</TD>
+</TR>
+<TR>
+<TD>0x50021da000</TD>
+<TD>0</TD>
+<TD>61</TD>
+<TD>82709.000</TD>
+<TD>162.865955</TD>
+<TD>1248.000</TD>
+<TD>7.662743</TD>
+</TR>
+<TR>
+<TD>0x50021cb000</TD>
+<TD>0</TD>
+<TD>33</TD>
+<TD>51650.000</TD>
+<TD>162.635259</TD>
+<TD>1248.000</TD>
+<TD>7.673613</TD>
+</TR>
+<TR>
+<TD>0x50021bb000</TD>
+<TD>0</TD>
+<TD>37</TD>
+<TD>56055.900</TD>
+<TD>162.466557</TD>
+<TD>1248.000</TD>
+<TD>7.681581</TD>
+</TR>
+<TR>
+<TD>0x50021d9000</TD>
+<TD>0</TD>
+<TD>47</TD>
+<TD>67195.100</TD>
+<TD>162.429703</TD>
+<TD>1248.000</TD>
+<TD>7.683324</TD>
+</TR>
+<TR>
+<TD>0x50020cc000</TD>
+<TD>0</TD>
+<TD>89</TD>
+<TD>113997.000</TD>
+<TD>162.423702</TD>
+<TD>1248.000</TD>
+<TD>7.683608</TD>
+</TR>
+<TR>
+<TD>0x5002210000</TD>
+<TD>0</TD>
+<TD>79</TD>
+<TD>102785.000</TD>
+<TD>162.321113</TD>
+<TD>1248.000</TD>
+<TD>7.688464</TD>
+</TR>
+<TR>
+<TD>0x50021d6000</TD>
+<TD>0</TD>
+<TD>13</TD>
+<TD>29396.700</TD>
+<TD>162.002227</TD>
+<TD>1248.000</TD>
+<TD>7.703598</TD>
+</TR>
+</TABLE>
+<br>
+<h2>Guidance (12 met, 35 warnings)</h2>
+
+<TABLE border="1">
+<TR>
+<TH>Name</TH>
+<TH>Threshold</TH>
+<TH>Actual</TH>
+<TH>Conclusion</TH>
+<TH>Details</TH>
+<TH>Resolution</TH>
+</TR>
+<TR>
+<TD>Average Read Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.015</TD>
+<TD>Not Met</TD>
+<TD>Kernel read size of 0.015 KB on port kerneldl_1/M_AXI_GMEM0 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst read transfers of vector data types to increase your read transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Write Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.004</TD>
+<TD>Not Met</TD>
+<TD>Kernel write size of 0.004 KB on port kerneldl_1/M_AXI_GMEM0 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst write transfers of vector data types to increase your write transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Read Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.004</TD>
+<TD>Not Met</TD>
+<TD>Kernel read size of 0.004 KB on port kerneldl_1/M_AXI_GMEM1 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst read transfers of vector data types to increase your read transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Write Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.033</TD>
+<TD>Not Met</TD>
+<TD>Kernel write size of 0.033 KB on port kerneldl_1/M_AXI_GMEM1 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst write transfers of vector data types to increase your write transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Read Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.025</TD>
+<TD>Not Met</TD>
+<TD>Kernel read size of 0.025 KB on port kerneldl_1/M_AXI_GMEM2 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst read transfers of vector data types to increase your read transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Write Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.004</TD>
+<TD>Not Met</TD>
+<TD>Kernel write size of 0.004 KB on port kerneldl_1/M_AXI_GMEM2 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst write transfers of vector data types to increase your write transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Read Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.004</TD>
+<TD>Not Met</TD>
+<TD>Kernel read size of 0.004 KB on port kerneldl_1/M_AXI_GMEM3 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst read transfers of vector data types to increase your read transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Write Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.025</TD>
+<TD>Not Met</TD>
+<TD>Kernel write size of 0.025 KB on port kerneldl_1/M_AXI_GMEM3 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst write transfers of vector data types to increase your write transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Read Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.064</TD>
+<TD>Not Met</TD>
+<TD>Kernel read size of 0.064 KB on port kerneldl_1/M_AXI_GMEM4 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst read transfers of vector data types to increase your read transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Write Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.054</TD>
+<TD>Not Met</TD>
+<TD>Kernel write size of 0.054 KB on port kerneldl_1/M_AXI_GMEM4 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst write transfers of vector data types to increase your write transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Read Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.064</TD>
+<TD>Not Met</TD>
+<TD>Kernel read size of 0.064 KB on port kerneldl_1/M_AXI_GMEM5 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst read transfers of vector data types to increase your read transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Average Write Size (KB)</TD>
+<TD>> 0.512</TD>
+<TD>0.054</TD>
+<TD>Not Met</TD>
+<TD>Kernel write size of 0.054 KB on port kerneldl_1/M_AXI_GMEM5 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Use burst transfers and packing into full memory data width.
+    <span class="tooltiptext"><html>It is recommended to use burst write transfers of vector data types to increase your write transfer sizes. Burst transfers provide efficient requests, and vectors better utilize the memory data width.<br><br>For further details, in SDx navigate to &quot;Xilinx&#8594;Open SDx Example Store&#133;&quot; and install the <i>Wide Memory Read/Write</i> designs under &quot;SDAccel Examples&#8594;Getting Started Examples&#8594;Kernel to Global Memory Examples.&quot; These kernels use inferred bursts of a wide 512-bit interface.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Read Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.001</TD>
+<TD>Not Met</TD>
+<TD>Kernel read utilization of 0.001% on port kerneldl_1/M_AXI_GMEM0 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory read efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Write Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.000</TD>
+<TD>Not Met</TD>
+<TD>Kernel write utilization of 0.000% on port kerneldl_1/M_AXI_GMEM0 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory write efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Read Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.000</TD>
+<TD>Not Met</TD>
+<TD>Kernel read utilization of 0.000% on port kerneldl_1/M_AXI_GMEM1 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory read efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Write Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.001</TD>
+<TD>Not Met</TD>
+<TD>Kernel write utilization of 0.001% on port kerneldl_1/M_AXI_GMEM1 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory write efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Read Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.002</TD>
+<TD>Not Met</TD>
+<TD>Kernel read utilization of 0.002% on port kerneldl_1/M_AXI_GMEM2 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory read efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Write Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.000</TD>
+<TD>Not Met</TD>
+<TD>Kernel write utilization of 0.000% on port kerneldl_1/M_AXI_GMEM2 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory write efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Read Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.000</TD>
+<TD>Not Met</TD>
+<TD>Kernel read utilization of 0.000% on port kerneldl_1/M_AXI_GMEM3 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory read efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Write Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.001</TD>
+<TD>Not Met</TD>
+<TD>Kernel write utilization of 0.001% on port kerneldl_1/M_AXI_GMEM3 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory write efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Read Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.000</TD>
+<TD>Not Met</TD>
+<TD>Kernel read utilization of 0.000% on port kerneldl_1/M_AXI_GMEM4 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory read efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Write Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.000</TD>
+<TD>Not Met</TD>
+<TD>Kernel write utilization of 0.000% on port kerneldl_1/M_AXI_GMEM4 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory write efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Read Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.000</TD>
+<TD>Not Met</TD>
+<TD>Kernel read utilization of 0.000% on port kerneldl_1/M_AXI_GMEM5 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory read efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Write Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.000</TD>
+<TD>Not Met</TD>
+<TD>Kernel write utilization of 0.000% on port kerneldl_1/M_AXI_GMEM5 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel data path and/or memory write efficiency.
+    <span class="tooltiptext"><html>There are a number of ways to increase this bandwidth utilization by improving the data paths of the kernels and/or the efficiency of the data transfers. Possible options include: loop unrolling, pipelining, vectorization, and maximizing memory port widths.<br><br><b><u>Not recommended:</b></u><pre><i/>
+void vadd( __global int* a, __global int* b, __global int* c) {
+  for (int i=0; i &lt 256; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><b><u>Recommended:</b></u><pre><i/>
+void vadd( __global <b>int16</b>* a, __global <b>int16</b>* b, __global <b>int16</b>* c) {
+<b>  __attribute__((xcl_pipeline_loop))</b>
+  for (int i=0; i &lt <b>256/16</b>; i++) {
+    c[i] = a[i] + b[i];
+  }
+}</i></pre><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Read Amount - Minimum (MB)</TD>
+<TD>> 0.250</TD>
+<TD>0.026</TD>
+<TD>Not Met</TD>
+<TD>Total kernel read of 388.076 MB on xilinx_u200_xdma_201830_2-0 was 2.625% of host data.</TD>
+<TD>
+  <a href=" " class="tooltip">Ensure compute units read data written by host.
+    <span class="tooltiptext"><html>The host is potentially writing too much data to off-chip global memory or the kernels are not functioning correctly. Make sure the host is not writing more data than it needs to.<br><br><a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Read Amount - Maximum (MB)</TD>
+<TD>< 2.000</TD>
+<TD>0.026</TD>
+<TD>Met</TD>
+<TD>No data re-use issues were found between host and compute units.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>Port Data Width</TD>
+<TD>= 512</TD>
+<TD>32</TD>
+<TD>Not Met</TD>
+<TD>Port kerneldl_1/m_axi_gmem0 has a data width of 32.</TD>
+<TD>
+  <a href=" " class="tooltip">Utilize the entire memory data width.
+    <span class="tooltiptext"><html>The width of data paths between kernels and the memory controller can be configured by the SDAccel compiler as 32, 64, 128, 256, or 512 bits depending on kernel argument types. For applications that require maximum data bandwidth between the kernel and DDR memory, it is recommended that global pointers are defined explicitly as 512-bit data types.<br><br>See Chapter 4 of <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Port Data Width</TD>
+<TD>= 512</TD>
+<TD>32</TD>
+<TD>Not Met</TD>
+<TD>Port kerneldl_1/m_axi_gmem1 has a data width of 32.</TD>
+<TD>
+  <a href=" " class="tooltip">Utilize the entire memory data width.
+    <span class="tooltiptext"><html>The width of data paths between kernels and the memory controller can be configured by the SDAccel compiler as 32, 64, 128, 256, or 512 bits depending on kernel argument types. For applications that require maximum data bandwidth between the kernel and DDR memory, it is recommended that global pointers are defined explicitly as 512-bit data types.<br><br>See Chapter 4 of <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Port Data Width</TD>
+<TD>= 512</TD>
+<TD>32</TD>
+<TD>Not Met</TD>
+<TD>Port kerneldl_1/m_axi_gmem2 has a data width of 32.</TD>
+<TD>
+  <a href=" " class="tooltip">Utilize the entire memory data width.
+    <span class="tooltiptext"><html>The width of data paths between kernels and the memory controller can be configured by the SDAccel compiler as 32, 64, 128, 256, or 512 bits depending on kernel argument types. For applications that require maximum data bandwidth between the kernel and DDR memory, it is recommended that global pointers are defined explicitly as 512-bit data types.<br><br>See Chapter 4 of <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Port Data Width</TD>
+<TD>= 512</TD>
+<TD>32</TD>
+<TD>Not Met</TD>
+<TD>Port kerneldl_1/m_axi_gmem3 has a data width of 32.</TD>
+<TD>
+  <a href=" " class="tooltip">Utilize the entire memory data width.
+    <span class="tooltiptext"><html>The width of data paths between kernels and the memory controller can be configured by the SDAccel compiler as 32, 64, 128, 256, or 512 bits depending on kernel argument types. For applications that require maximum data bandwidth between the kernel and DDR memory, it is recommended that global pointers are defined explicitly as 512-bit data types.<br><br>See Chapter 4 of <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Port Data Width</TD>
+<TD>= 512</TD>
+<TD>32</TD>
+<TD>Not Met</TD>
+<TD>Port kerneldl_1/m_axi_gmem4 has a data width of 32.</TD>
+<TD>
+  <a href=" " class="tooltip">Utilize the entire memory data width.
+    <span class="tooltiptext"><html>The width of data paths between kernels and the memory controller can be configured by the SDAccel compiler as 32, 64, 128, 256, or 512 bits depending on kernel argument types. For applications that require maximum data bandwidth between the kernel and DDR memory, it is recommended that global pointers are defined explicitly as 512-bit data types.<br><br>See Chapter 4 of <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Port Data Width</TD>
+<TD>= 512</TD>
+<TD>32</TD>
+<TD>Not Met</TD>
+<TD>Port kerneldl_1/m_axi_gmem5 has a data width of 32.</TD>
+<TD>
+  <a href=" " class="tooltip">Utilize the entire memory data width.
+    <span class="tooltiptext"><html>The width of data paths between kernels and the memory controller can be configured by the SDAccel compiler as 32, 64, 128, 256, or 512 bits depending on kernel argument types. For applications that require maximum data bandwidth between the kernel and DDR memory, it is recommended that global pointers are defined explicitly as 512-bit data types.<br><br>See Chapter 4 of <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Memory Connections</TD>
+<TD>> 0</TD>
+<TD>6</TD>
+<TD>Met</TD>
+<TD>Memory DDR[1] was used.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>PLRAM Usage</TD>
+<TD>> 0</TD>
+<TD>0</TD>
+<TD>Not Met</TD>
+<TD>PLRAMs were used by 0 port(s).</TD>
+<TD>
+  <a href=" " class="tooltip">Utilize PLRAMs to maximize performance.
+    <span class="tooltiptext"><html>PLRAMs can increase your system performance by providing low-latency, high-bandwidth access to your data. To take advantage of PLRAMs, assign CL memory buffers to PLRAMs in the host code and specify corresponding port mapping using the --sp xocc linker option:<pre><i/>xocc -l --sp &lt;compute_unit_name&gt;.&lt;kernel_interface_name&gt;:PLRAM[0:3]</i></pre>For more information, see examples in the Kernel To Global Memory category from the Xilinx On-boarding Example GitHub.</html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Memory Read Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.001</TD>
+<TD>Not Met</TD>
+<TD>Memory DDR[1] read utilization of 0.001% on device xilinx_u200_xdma_201830_2-0 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel memory read efficiency to memories.
+    <span class="tooltiptext"><html>Devices with multiple DDR banks can provide very high bandwidth to global memory. It is recommended to utilize more of the available read bandwidth to this DDR bank if it suits your application.<br><br>See Chapter 4 of <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Memory Write Bandwidth (%)</TD>
+<TD>> 5.000</TD>
+<TD>0.000</TD>
+<TD>Not Met</TD>
+<TD>Memory DDR[1] write utilization of 0.000% on device xilinx_u200_xdma_201830_2-0 was low.</TD>
+<TD>
+  <a href=" " class="tooltip">Improve kernel memory write efficiency to memories.
+    <span class="tooltiptext"><html>Devices with multiple DDR banks can provide very high bandwidth to global memory. It is recommended to utilize more of the available write bandwidth to this DDR bank if it suits your application.<br><br>See Chapter 4 of <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Migrate Memory API Calls</TD>
+<TD>> 0</TD>
+<TD>4000</TD>
+<TD>Met</TD>
+<TD>Migrate Memory APIs (e.g., clEnqueueMigrateMemObjects) were used.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>Average Read Size (KB)</TD>
+<TD>> 4.096</TD>
+<TD>1885.130</TD>
+<TD>Met</TD>
+<TD>Host read transfers were efficient from off-chip global memory.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>Average Write Size (KB)</TD>
+<TD>> 4.096</TD>
+<TD>4928.480</TD>
+<TD>Met</TD>
+<TD>Host write transfers were efficient to off-chip global memory.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>Peer to Peer Host Transfers</TD>
+<TD>= 0</TD>
+<TD>0</TD>
+<TD>Met</TD>
+<TD>Host performed no transfers from peer to peer buffer.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>Compute Unit Calls - Minimum</TD>
+<TD>> 0</TD>
+<TD>2000</TD>
+<TD>Met</TD>
+<TD>Compute unit kerneldl_1 on device xilinx_u200_xdma_201830_2-0 was used.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>Compute Unit Utilization (%)</TD>
+<TD>> 20.000</TD>
+<TD>99.605</TD>
+<TD>Met</TD>
+<TD>Compute unit kerneldl_1 had sufficient utilization.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>Compute Unit Calls - Maximum</TD>
+<TD>< 16</TD>
+<TD>1</TD>
+<TD>Met</TD>
+<TD>Kernel kerneldl was used an adequate amount.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>Kernel Utilization (%)</TD>
+<TD>= 100.000</TD>
+<TD>100.000</TD>
+<TD>Met</TD>
+<TD>Kernel kerneldl utilized correct amount of workgroups.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>Compute Unit Count</TD>
+<TD>> 1</TD>
+<TD>1</TD>
+<TD>Not Met</TD>
+<TD>Kernel kerneldl was executed 2000 time(s) with 1 compute unit(s).</TD>
+<TD>
+  <a href=" " class="tooltip">Ensure kernel utilizes multiple compute units.
+    <span class="tooltiptext"><html>For kernels that are executed multiple times, it is desired to prevent serial execution. The best way to do this is to instantiate multiple compute units of that kernel and execute them in parallel. Use the <i>xocc -l --nk</i> option to create multiple compute units. If there are no data dependencies between executions of the kernel, this will improve performance.<br><br>See Chapter 4 of <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?v=latest;d=ug1207-sdaccel-optimization-guide.pdf">SDAccel <br>Profiling and Optimization Guide</a></html></span>
+  </a>
+</TD>
+</TR>
+<TR>
+<TD>Device Utilization (ms)</TD>
+<TD>> 0</TD>
+<TD>2213078.832</TD>
+<TD>Met</TD>
+<TD>Device xilinx_u200_xdma_201830_2-0 was used.</TD>
+<TD></TD>
+</TR>
+<TR>
+<TD>Objects Released</TD>
+<TD>true</TD>
+<TD>true</TD>
+<TD>Met</TD>
+<TD>OpenCL objects were released by the host code.</TD>
+<TD></TD>
+</TR>
+</TABLE>
