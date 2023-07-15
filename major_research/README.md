@@ -1,14 +1,17 @@
-#
+# Master Research (Optimized-FDanQ: Implementation of Hybrid Neural Network "DanQ" on Cloud Multi-FPGA and its Optimization under Given Costs)
 
 ## Background
+- - -
 There are so many DNA sequences that people have to work on. One of the genome analysis that people have to face is to find the function of DNA from a DNA sequence. Recently, Machine Learning has been used to find the function of DNA from a DNA sequence. However, training a machine learning model for DNA sequences takes much time due to the size of the dataset.
 Since DNA sequence can be represented by the bit-width of two, FPGA has a substantial advantage of processing these kinds data because FPGA can construct a dedicated state machine. Also, FPGA can be a useful resource for processing fast by pipelining. 
 
 
 ## Objectives
+- - - 
 The purpose of this research is to accelerate a training of a deep learning for genome data by implementing on multi-FPGA. The main focus of our research is an optimization using AWS EC2 F1 instance in AWS cloud service which has multiple FPGA. By changing the size of instances, we can optimize the training time as well as instance usage fee depending on a user’s needs.
 
 ## Approach
+- - -
 - DanQ: Target Hybrid (CNN & RNN) Model for genomics data
 
 ![image](https://github.com/tinaba96/master/assets/57109730/cf69250c-abe9-4c8f-b234-f7555692fd1c)
@@ -40,7 +43,7 @@ My implementation can change the instance size by saving the parameters which ar
 ![image](https://github.com/tinaba96/master/assets/57109730/1c169898-44f5-4ec8-ae9e-3fc82d9764bf)
 
 ## Result & Conclusion
-
+- - -
 - FPGA Implemetaion
 There is a big task for improving the training time for deep learning, especially in the field of genomics. There are huge datasets of DNA sequences to estimate the chromatin effect.
 Therefore, it is necessary to accelerate the training time, and we proposed a method of using an FPGA. We focused on BiLSTM Layer and implemented it on AWS EC2 F1 Instances.
@@ -57,6 +60,7 @@ Comparing a case of using 8 FPGAs for all time and a case in which we optimized 
 
 
 # How To
+- - - 
 
 In each `/src` files, there are `/host` and `/kernel`. `/host` is the implementation for running in CPU and `/kernel` is the implementation for running in FPGA.
 To exectue in FPGA, I used High Level Synthesis so that I can mainly use C++ to implement. 
@@ -108,7 +112,9 @@ SDAccel provides a high-level programming model that allows developers to design
 
 https://www.xilinx.com/htmldocs/xilinx2019_1/sdaccel_doc/yrc1534452173645.html
 
-Note: OpenCL is a programming framework that can be used for CPUs, GPUs and FPGA implementation. In the context of FPGA, OpenCL enables developers to write code that targets FPGA devices, allowing them to take advantage of the parallel processing capabilities of FPGAs for accelerated computing.
+:::note info
+OpenCL is a programming framework that can be used for CPUs, GPUs and FPGA implementation. In the context of FPGA, OpenCL enables developers to write code that targets FPGA devices, allowing them to take advantage of the parallel processing capabilities of FPGAs for accelerated computing.
+:::
 
 
 ### BUild Process using SDAccel
@@ -215,5 +221,8 @@ You can run this command for Hardware execution.
 ```
 make check TARGETS=hw DEVICES=xilinx_u200_xdma_201830_2
 ```
+
+Here is the example of the execution report.
+https://github.com/tinaba96/master/blob/master/major_research/reports/profile_summary.html
 
 
