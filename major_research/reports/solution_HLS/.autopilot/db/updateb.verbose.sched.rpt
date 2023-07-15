@@ -1,0 +1,1298 @@
+
+
+================================================================
+== Vivado HLS Report for 'updateb'
+================================================================
+* Date:           Thu Jan  7 00:23:02 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        final
+* Solution:       solution_final
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.421 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      408|      408| 1.359 us | 1.359 us |  408|  408|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |      406|      406|        88|          1|          1|   320|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 88
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 90
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 88, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 90 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 86 
+86 --> 87 
+87 --> 88 
+88 --> 89 
+89 --> 2 
+90 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.60>
+ST_1 : Operation 91 [1/1] (0.60ns)   --->   "br label %1" [src/kernel/optimizer.h:49]   --->   Operation 91 'br' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 1.15>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%i_0 = phi i9 [ 0, %0 ], [ %i, %_ZN13ap_fixed_baseILi16ELi4ELb1EL9ap_q_mode0EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i158_ifconv ]"   --->   Operation 92 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str119)"   --->   Operation 93 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.59ns)   --->   "%icmp_ln49 = icmp eq i9 %i_0, -192" [src/kernel/optimizer.h:49]   --->   Operation 94 'icmp' 'icmp_ln49' <Predicate = true> <Delay = 0.59> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 320, i64 320, i64 320)"   --->   Operation 95 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.51ns)   --->   "%i = add i9 %i_0, 1" [src/kernel/optimizer.h:49]   --->   Operation 96 'add' 'i' <Predicate = true> <Delay = 0.51> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "br i1 %icmp_ln49, label %2, label %_ZN13ap_fixed_baseILi16ELi4ELb1EL9ap_q_mode0EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i158_ifconv" [src/kernel/optimizer.h:49]   --->   Operation 97 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%zext_ln55 = zext i9 %i_0 to i64" [src/kernel/optimizer.h:55]   --->   Operation 98 'zext' 'zext_ln55' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%h_V_addr = getelementptr [320 x i16]* %h_V, i64 0, i64 %zext_ln55" [src/kernel/optimizer.h:55]   --->   Operation 99 'getelementptr' 'h_V_addr' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%grads_V_addr = getelementptr [320 x i16]* %grads_V, i64 0, i64 %zext_ln55" [src/kernel/optimizer.h:59]   --->   Operation 100 'getelementptr' 'grads_V_addr' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_2 : Operation 101 [2/2] (1.15ns)   --->   "%temp2_V = load i16* %grads_V_addr, align 2" [src/kernel/optimizer.h:59]   --->   Operation 101 'load' 'temp2_V' <Predicate = (!icmp_ln49)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%params_V_addr = getelementptr [320 x i16]* %params_V, i64 0, i64 %zext_ln55" [src/kernel/optimizer.h:67]   --->   Operation 102 'getelementptr' 'params_V_addr' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.69>
+ST_3 : Operation 103 [1/2] (1.15ns)   --->   "%temp2_V = load i16* %grads_V_addr, align 2" [src/kernel/optimizer.h:59]   --->   Operation 103 'load' 'temp2_V' <Predicate = (!icmp_ln49)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%sext_ln1118_1 = sext i16 %temp2_V to i23" [src/kernel/optimizer.h:60]   --->   Operation 104 'sext' 'sext_ln1118_1' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_3 : Operation 105 [4/4] (0.53ns) (root node of the DSP)   --->   "%r_V_3 = mul i23 41, %sext_ln1118_1" [src/kernel/optimizer.h:60]   --->   Operation 105 'mul' 'r_V_3' <Predicate = (!icmp_ln49)> <Delay = 0.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 1.15>
+ST_4 : Operation 106 [2/2] (1.15ns)   --->   "%temp_V = load i16* %h_V_addr, align 2" [src/kernel/optimizer.h:55]   --->   Operation 106 'load' 'temp_V' <Predicate = (!icmp_ln49)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_4 : Operation 107 [3/4] (0.53ns) (root node of the DSP)   --->   "%r_V_3 = mul i23 41, %sext_ln1118_1" [src/kernel/optimizer.h:60]   --->   Operation 107 'mul' 'r_V_3' <Predicate = (!icmp_ln49)> <Delay = 0.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 1.69>
+ST_5 : Operation 108 [1/2] (1.15ns)   --->   "%temp_V = load i16* %h_V_addr, align 2" [src/kernel/optimizer.h:55]   --->   Operation 108 'load' 'temp_V' <Predicate = (!icmp_ln49)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_5 : Operation 109 [1/1] (0.00ns)   --->   "%sext_ln1118 = sext i16 %temp_V to i29" [src/kernel/optimizer.h:56]   --->   Operation 109 'sext' 'sext_ln1118' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_5 : Operation 110 [4/4] (0.53ns) (root node of the DSP)   --->   "%r_V = mul i29 4055, %sext_ln1118" [src/kernel/optimizer.h:56]   --->   Operation 110 'mul' 'r_V' <Predicate = (!icmp_ln49)> <Delay = 0.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 111 [2/4] (0.53ns) (root node of the DSP)   --->   "%r_V_3 = mul i23 41, %sext_ln1118_1" [src/kernel/optimizer.h:60]   --->   Operation 111 'mul' 'r_V_3' <Predicate = (!icmp_ln49)> <Delay = 0.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 0.53>
+ST_6 : Operation 112 [3/4] (0.53ns) (root node of the DSP)   --->   "%r_V = mul i29 4055, %sext_ln1118" [src/kernel/optimizer.h:56]   --->   Operation 112 'mul' 'r_V' <Predicate = (!icmp_ln49)> <Delay = 0.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 113 [1/4] (0.00ns) (root node of the DSP)   --->   "%r_V_3 = mul i23 41, %sext_ln1118_1" [src/kernel/optimizer.h:60]   --->   Operation 113 'mul' 'r_V_3' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 114 [1/1] (0.00ns)   --->   "%sext_ln1116 = sext i23 %r_V_3 to i39" [src/kernel/optimizer.h:60]   --->   Operation 114 'sext' 'sext_ln1116' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_6 : Operation 115 [1/1] (0.00ns)   --->   "%sext_ln1118_2 = sext i16 %temp2_V to i39" [src/kernel/optimizer.h:60]   --->   Operation 115 'sext' 'sext_ln1118_2' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_6 : Operation 116 [4/4] (0.53ns) (root node of the DSP)   --->   "%r_V_4 = mul i39 %sext_ln1116, %sext_ln1118_2" [src/kernel/optimizer.h:60]   --->   Operation 116 'mul' 'r_V_4' <Predicate = (!icmp_ln49)> <Delay = 0.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 7 <SV = 6> <Delay = 0.53>
+ST_7 : Operation 117 [2/4] (0.53ns) (root node of the DSP)   --->   "%r_V = mul i29 4055, %sext_ln1118" [src/kernel/optimizer.h:56]   --->   Operation 117 'mul' 'r_V' <Predicate = (!icmp_ln49)> <Delay = 0.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 118 [3/4] (0.53ns) (root node of the DSP)   --->   "%r_V_4 = mul i39 %sext_ln1116, %sext_ln1118_2" [src/kernel/optimizer.h:60]   --->   Operation 118 'mul' 'r_V_4' <Predicate = (!icmp_ln49)> <Delay = 0.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 0.73>
+ST_8 : Operation 119 [1/4] (0.00ns) (root node of the DSP)   --->   "%r_V = mul i29 4055, %sext_ln1118" [src/kernel/optimizer.h:56]   --->   Operation 119 'mul' 'r_V' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 120 [1/1] (0.00ns)   --->   "%p_Result_20 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %r_V, i32 27)" [src/kernel/optimizer.h:56]   --->   Operation 120 'bitselect' 'p_Result_20' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_8 : Operation 121 [1/1] (0.00ns)   --->   "%p_Val2_1 = call i16 @_ssdm_op_PartSelect.i16.i29.i32.i32(i29 %r_V, i32 12, i32 27)" [src/kernel/optimizer.h:56]   --->   Operation 121 'partselect' 'p_Val2_1' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_8 : Operation 122 [1/1] (0.00ns)   --->   "%p_Result_21 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %r_V, i32 27)" [src/kernel/optimizer.h:56]   --->   Operation 122 'bitselect' 'p_Result_21' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %r_V, i32 11)" [src/kernel/optimizer.h:56]   --->   Operation 123 'bitselect' 'tmp' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_8 : Operation 124 [1/1] (0.00ns)   --->   "%zext_ln415_1 = zext i1 %tmp to i16" [src/kernel/optimizer.h:56]   --->   Operation 124 'zext' 'zext_ln415_1' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_8 : Operation 125 [1/1] (0.60ns)   --->   "%p_Val2_4 = add i16 %p_Val2_1, %zext_ln415_1" [src/kernel/optimizer.h:56]   --->   Operation 125 'add' 'p_Val2_4' <Predicate = (!icmp_ln49)> <Delay = 0.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 126 [1/1] (0.00ns)   --->   "%tmp_4 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_4, i32 15)" [src/kernel/optimizer.h:56]   --->   Operation 126 'bitselect' 'tmp_4' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_8 : Operation 127 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%xor_ln416_2 = xor i1 %tmp_4, true" [src/kernel/optimizer.h:56]   --->   Operation 127 'xor' 'xor_ln416_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 128 [1/1] (0.12ns) (out node of the LUT)   --->   "%carry_1 = and i1 %p_Result_21, %xor_ln416_2" [src/kernel/optimizer.h:56]   --->   Operation 128 'and' 'carry_1' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 129 [1/1] (0.00ns)   --->   "%p_Result_22 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_4, i32 15)" [src/kernel/optimizer.h:56]   --->   Operation 129 'bitselect' 'p_Result_22' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_8 : Operation 130 [1/1] (0.00ns)   --->   "%Range2_all_ones_5 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %r_V, i32 28)" [src/kernel/optimizer.h:56]   --->   Operation 130 'bitselect' 'Range2_all_ones_5' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_8 : Operation 131 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i29.i32(i29 %r_V, i32 27)" [src/kernel/optimizer.h:56]   --->   Operation 131 'bitselect' 'tmp_8' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_8 : Operation 132 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%xor_ln779 = xor i1 %tmp_8, true" [src/kernel/optimizer.h:56]   --->   Operation 132 'xor' 'xor_ln779' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 133 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%xor_ln416_3 = xor i1 %p_Result_21, true" [src/kernel/optimizer.h:56]   --->   Operation 133 'xor' 'xor_ln416_3' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 134 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%or_ln416_2 = or i1 %tmp_4, %xor_ln416_3" [src/kernel/optimizer.h:56]   --->   Operation 134 'or' 'or_ln416_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 135 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%or_ln416 = or i1 %or_ln416_2, %xor_ln779" [src/kernel/optimizer.h:56]   --->   Operation 135 'or' 'or_ln416' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 136 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%deleted_ones = and i1 %Range2_all_ones_5, %or_ln416" [src/kernel/optimizer.h:56]   --->   Operation 136 'and' 'deleted_ones' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 137 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln786 = and i1 %p_Result_22, %deleted_ones" [src/kernel/optimizer.h:56]   --->   Operation 137 'and' 'and_ln786' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 138 [2/4] (0.53ns) (root node of the DSP)   --->   "%r_V_4 = mul i39 %sext_ln1116, %sext_ln1118_2" [src/kernel/optimizer.h:60]   --->   Operation 138 'mul' 'r_V_4' <Predicate = (!icmp_ln49)> <Delay = 0.53> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 9 <SV = 8> <Delay = 2.12>
+ST_9 : Operation 139 [1/1] (0.12ns)   --->   "%and_ln781 = and i1 %carry_1, %Range2_all_ones_5" [src/kernel/optimizer.h:56]   --->   Operation 139 'and' 'and_ln781' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node select_ln340)   --->   "%xor_ln785 = xor i1 %Range2_all_ones_5, %carry_1" [src/kernel/optimizer.h:56]   --->   Operation 140 'xor' 'xor_ln785' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 141 [1/1] (0.00ns) (grouped into LUT with out node select_ln340)   --->   "%or_ln785 = or i1 %p_Result_22, %xor_ln785" [src/kernel/optimizer.h:56]   --->   Operation 141 'or' 'or_ln785' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 142 [1/1] (0.12ns)   --->   "%xor_ln785_1 = xor i1 %p_Result_20, true" [src/kernel/optimizer.h:56]   --->   Operation 142 'xor' 'xor_ln785_1' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node select_ln340)   --->   "%overflow = and i1 %or_ln785, %xor_ln785_1" [src/kernel/optimizer.h:56]   --->   Operation 143 'and' 'overflow' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 144 [1/1] (0.00ns) (grouped into LUT with out node underflow)   --->   "%or_ln786 = or i1 %and_ln781, %and_ln786" [src/kernel/optimizer.h:56]   --->   Operation 144 'or' 'or_ln786' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 145 [1/1] (0.00ns) (grouped into LUT with out node underflow)   --->   "%xor_ln786 = xor i1 %or_ln786, true" [src/kernel/optimizer.h:56]   --->   Operation 145 'xor' 'xor_ln786' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 146 [1/1] (0.12ns) (out node of the LUT)   --->   "%underflow = and i1 %p_Result_20, %xor_ln786" [src/kernel/optimizer.h:56]   --->   Operation 146 'and' 'underflow' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 147 [1/1] (0.00ns) (grouped into LUT with out node select_ln340)   --->   "%or_ln340 = or i1 %underflow, %overflow" [src/kernel/optimizer.h:56]   --->   Operation 147 'or' 'or_ln340' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 148 [1/1] (0.00ns) (grouped into LUT with out node lhs_V)   --->   "%or_ln340_2 = or i1 %and_ln786, %xor_ln785_1" [src/kernel/optimizer.h:56]   --->   Operation 148 'or' 'or_ln340_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 149 [1/1] (0.00ns) (grouped into LUT with out node lhs_V)   --->   "%or_ln340_1 = or i1 %or_ln340_2, %and_ln781" [src/kernel/optimizer.h:56]   --->   Operation 149 'or' 'or_ln340_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 150 [1/4] (0.00ns) (root node of the DSP)   --->   "%r_V_4 = mul i39 %sext_ln1116, %sext_ln1118_2" [src/kernel/optimizer.h:60]   --->   Operation 150 'mul' 'r_V_4' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 151 [1/1] (0.24ns) (out node of the LUT)   --->   "%select_ln340 = select i1 %or_ln340, i16 32767, i16 %p_Val2_4" [src/kernel/optimizer.h:56]   --->   Operation 151 'select' 'select_ln340' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 152 [1/1] (0.00ns) (grouped into LUT with out node lhs_V)   --->   "%select_ln388 = select i1 %underflow, i16 -32768, i16 %p_Val2_4" [src/kernel/optimizer.h:56]   --->   Operation 152 'select' 'select_ln388' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 153 [1/1] (0.00ns) (grouped into LUT with out node lhs_V)   --->   "%select_ln340_3 = select i1 %or_ln340_1, i16 %select_ln340, i16 %select_ln388" [src/kernel/optimizer.h:56]   --->   Operation 153 'select' 'select_ln340_3' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 154 [1/1] (0.24ns) (out node of the LUT)   --->   "%lhs_V = call i40 @_ssdm_op_BitConcatenate.i40.i16.i24(i16 %select_ln340_3, i24 0)" [src/kernel/optimizer.h:60]   --->   Operation 154 'bitconcatenate' 'lhs_V' <Predicate = (!icmp_ln49)> <Delay = 0.24>
+ST_9 : Operation 155 [1/1] (0.00ns) (grouped into LUT with out node ret_V)   --->   "%sext_ln728 = sext i40 %lhs_V to i41" [src/kernel/optimizer.h:60]   --->   Operation 155 'sext' 'sext_ln728' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 156 [1/1] (0.00ns) (grouped into LUT with out node ret_V)   --->   "%sext_ln703 = sext i39 %r_V_4 to i41" [src/kernel/optimizer.h:60]   --->   Operation 156 'sext' 'sext_ln703' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 157 [1/1] (0.66ns) (out node of the LUT)   --->   "%ret_V = add i41 %sext_ln728, %sext_ln703" [src/kernel/optimizer.h:60]   --->   Operation 157 'add' 'ret_V' <Predicate = (!icmp_ln49)> <Delay = 0.66> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 158 [1/1] (0.00ns)   --->   "%p_Result_23 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V, i32 40)" [src/kernel/optimizer.h:60]   --->   Operation 158 'bitselect' 'p_Result_23' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 159 [1/1] (0.00ns)   --->   "%p_Val2_5 = call i16 @_ssdm_op_PartSelect.i16.i41.i32.i32(i41 %ret_V, i32 24, i32 39)" [src/kernel/optimizer.h:60]   --->   Operation 159 'partselect' 'p_Val2_5' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 160 [1/1] (0.00ns)   --->   "%p_Result_24 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V, i32 39)" [src/kernel/optimizer.h:60]   --->   Operation 160 'bitselect' 'p_Result_24' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 161 [1/1] (0.00ns)   --->   "%tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i39.i32(i39 %r_V_4, i32 23)" [src/kernel/optimizer.h:60]   --->   Operation 161 'bitselect' 'tmp_11' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 162 [1/1] (0.00ns)   --->   "%zext_ln415_2 = zext i1 %tmp_11 to i16" [src/kernel/optimizer.h:60]   --->   Operation 162 'zext' 'zext_ln415_2' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 163 [1/1] (0.60ns)   --->   "%p_Val2_9 = add i16 %p_Val2_5, %zext_ln415_2" [src/kernel/optimizer.h:60]   --->   Operation 163 'add' 'p_Val2_9' <Predicate = (!icmp_ln49)> <Delay = 0.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 164 [1/1] (0.00ns)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_9, i32 15)" [src/kernel/optimizer.h:60]   --->   Operation 164 'bitselect' 'tmp_12' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 165 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%xor_ln416 = xor i1 %tmp_12, true" [src/kernel/optimizer.h:60]   --->   Operation 165 'xor' 'xor_ln416' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 166 [1/1] (0.12ns) (out node of the LUT)   --->   "%carry_3 = and i1 %p_Result_24, %xor_ln416" [src/kernel/optimizer.h:60]   --->   Operation 166 'and' 'carry_3' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 167 [1/1] (0.00ns)   --->   "%p_Result_25 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_9, i32 15)" [src/kernel/optimizer.h:60]   --->   Operation 167 'bitselect' 'p_Result_25' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 168 [1/1] (0.00ns)   --->   "%Range2_all_ones_6 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V, i32 40)" [src/kernel/optimizer.h:60]   --->   Operation 168 'bitselect' 'Range2_all_ones_6' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 169 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_2)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V, i32 40)" [src/kernel/optimizer.h:60]   --->   Operation 169 'bitselect' 'tmp_15' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_9 : Operation 170 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_2)   --->   "%xor_ln779_1 = xor i1 %tmp_15, true" [src/kernel/optimizer.h:60]   --->   Operation 170 'xor' 'xor_ln779_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_2)   --->   "%xor_ln416_4 = xor i1 %p_Result_24, true" [src/kernel/optimizer.h:60]   --->   Operation 171 'xor' 'xor_ln416_4' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_2)   --->   "%or_ln416_3 = or i1 %tmp_12, %xor_ln416_4" [src/kernel/optimizer.h:60]   --->   Operation 172 'or' 'or_ln416_3' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 173 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_2)   --->   "%or_ln416_1 = or i1 %or_ln416_3, %xor_ln779_1" [src/kernel/optimizer.h:60]   --->   Operation 173 'or' 'or_ln416_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 174 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_2)   --->   "%deleted_ones_1 = and i1 %Range2_all_ones_6, %or_ln416_1" [src/kernel/optimizer.h:60]   --->   Operation 174 'and' 'deleted_ones_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 175 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln786_2 = and i1 %p_Result_25, %deleted_ones_1" [src/kernel/optimizer.h:60]   --->   Operation 175 'and' 'and_ln786_2' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 2.42>
+ST_10 : Operation 176 [1/1] (0.12ns)   --->   "%and_ln781_1 = and i1 %carry_3, %Range2_all_ones_6" [src/kernel/optimizer.h:60]   --->   Operation 176 'and' 'and_ln781_1' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 177 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_1)   --->   "%xor_ln785_2 = xor i1 %Range2_all_ones_6, %carry_3" [src/kernel/optimizer.h:60]   --->   Operation 177 'xor' 'xor_ln785_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 178 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_1)   --->   "%or_ln785_1 = or i1 %p_Result_25, %xor_ln785_2" [src/kernel/optimizer.h:60]   --->   Operation 178 'or' 'or_ln785_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 179 [1/1] (0.12ns)   --->   "%xor_ln785_3 = xor i1 %p_Result_23, true" [src/kernel/optimizer.h:60]   --->   Operation 179 'xor' 'xor_ln785_3' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 180 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_1)   --->   "%overflow_1 = and i1 %or_ln785_1, %xor_ln785_3" [src/kernel/optimizer.h:60]   --->   Operation 180 'and' 'overflow_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 181 [1/1] (0.00ns) (grouped into LUT with out node underflow_1)   --->   "%or_ln786_1 = or i1 %and_ln781_1, %and_ln786_2" [src/kernel/optimizer.h:60]   --->   Operation 181 'or' 'or_ln786_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 182 [1/1] (0.00ns) (grouped into LUT with out node underflow_1)   --->   "%xor_ln786_1 = xor i1 %or_ln786_1, true" [src/kernel/optimizer.h:60]   --->   Operation 182 'xor' 'xor_ln786_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 183 [1/1] (0.12ns) (out node of the LUT)   --->   "%underflow_1 = and i1 %p_Result_23, %xor_ln786_1" [src/kernel/optimizer.h:60]   --->   Operation 183 'and' 'underflow_1' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 184 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_1)   --->   "%or_ln340_3 = or i1 %underflow_1, %overflow_1" [src/kernel/optimizer.h:60]   --->   Operation 184 'or' 'or_ln340_3' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 185 [1/1] (0.00ns) (grouped into LUT with out node tmp_V_3)   --->   "%or_ln340_5 = or i1 %and_ln786_2, %xor_ln785_3" [src/kernel/optimizer.h:60]   --->   Operation 185 'or' 'or_ln340_5' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 186 [1/1] (0.00ns) (grouped into LUT with out node tmp_V_3)   --->   "%or_ln340_4 = or i1 %or_ln340_5, %and_ln781_1" [src/kernel/optimizer.h:60]   --->   Operation 186 'or' 'or_ln340_4' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 187 [1/1] (0.24ns) (out node of the LUT)   --->   "%select_ln340_1 = select i1 %or_ln340_3, i16 32767, i16 %p_Val2_9" [src/kernel/optimizer.h:60]   --->   Operation 187 'select' 'select_ln340_1' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 188 [1/1] (0.00ns) (grouped into LUT with out node tmp_V_3)   --->   "%select_ln388_1 = select i1 %underflow_1, i16 -32768, i16 %p_Val2_9" [src/kernel/optimizer.h:60]   --->   Operation 188 'select' 'select_ln388_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 189 [1/1] (0.24ns) (out node of the LUT)   --->   "%tmp_V_3 = select i1 %or_ln340_4, i16 %select_ln340_1, i16 %select_ln388_1" [src/kernel/optimizer.h:60]   --->   Operation 189 'select' 'tmp_V_3' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 190 [1/1] (1.15ns)   --->   "store i16 %tmp_V_3, i16* %h_V_addr, align 2" [src/kernel/optimizer.h:60]   --->   Operation 190 'store' <Predicate = (!icmp_ln49)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_10 : Operation 191 [1/1] (0.67ns)   --->   "%icmp_ln935 = icmp eq i16 %tmp_V_3, 0" [src/kernel/optimizer.h:65]   --->   Operation 191 'icmp' 'icmp_ln935' <Predicate = (!icmp_ln49)> <Delay = 0.67> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 192 [1/1] (0.00ns)   --->   "%p_Result_26 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %tmp_V_3, i32 15)" [src/kernel/optimizer.h:65]   --->   Operation 192 'bitselect' 'p_Result_26' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_10 : Operation 193 [1/1] (0.60ns)   --->   "%tmp_V = sub i16 0, %tmp_V_3" [src/kernel/optimizer.h:65]   --->   Operation 193 'sub' 'tmp_V' <Predicate = (!icmp_ln49)> <Delay = 0.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 194 [1/1] (0.24ns)   --->   "%tmp_V_4 = select i1 %p_Result_26, i16 %tmp_V, i16 %tmp_V_3" [src/kernel/optimizer.h:65]   --->   Operation 194 'select' 'tmp_V_4' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 195 [1/1] (0.00ns)   --->   "%p_Result_s = call i16 @llvm.part.select.i16(i16 %tmp_V_4, i32 15, i32 0) nounwind" [src/kernel/optimizer.h:65]   --->   Operation 195 'partselect' 'p_Result_s' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_10 : Operation 196 [1/1] (0.00ns)   --->   "%p_Result_27 = call i32 @_ssdm_op_BitConcatenate.i32.i16.i16(i16 -1, i16 %p_Result_s)" [src/kernel/optimizer.h:65]   --->   Operation 196 'bitconcatenate' 'p_Result_27' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_10 : Operation 197 [1/1] (0.84ns)   --->   "%l = call i32 @llvm.cttz.i32(i32 %p_Result_27, i1 true) nounwind" [src/kernel/optimizer.h:65]   --->   Operation 197 'cttz' 'l' <Predicate = (!icmp_ln49)> <Delay = 0.84> <Core = "CTTZ">   --->   Core 64 'CTTZ' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'cttz'> <InPorts = 1> <OutPorts = 1>
+ST_10 : Operation 198 [1/1] (0.00ns)   --->   "%trunc_ln943 = trunc i32 %l to i8" [src/kernel/optimizer.h:65]   --->   Operation 198 'trunc' 'trunc_ln943' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 2.30>
+ST_11 : Operation 199 [1/1] (0.66ns)   --->   "%sub_ln944 = sub nsw i32 16, %l" [src/kernel/optimizer.h:65]   --->   Operation 199 'sub' 'sub_ln944' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.66> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 200 [1/1] (0.00ns)   --->   "%trunc_ln944 = trunc i32 %sub_ln944 to i16" [src/kernel/optimizer.h:65]   --->   Operation 200 'trunc' 'trunc_ln944' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_11 : Operation 201 [1/1] (0.66ns)   --->   "%lsb_index = add nsw i32 -24, %sub_ln944" [src/kernel/optimizer.h:65]   --->   Operation 201 'add' 'lsb_index' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.66> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 202 [1/1] (0.00ns)   --->   "%tmp_17 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %lsb_index, i32 1, i32 31)" [src/kernel/optimizer.h:65]   --->   Operation 202 'partselect' 'tmp_17' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_11 : Operation 203 [1/1] (0.84ns)   --->   "%icmp_ln947 = icmp sgt i31 %tmp_17, 0" [src/kernel/optimizer.h:65]   --->   Operation 203 'icmp' 'icmp_ln947' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.84> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 204 [1/1] (0.00ns)   --->   "%trunc_ln947 = trunc i32 %sub_ln944 to i5" [src/kernel/optimizer.h:65]   --->   Operation 204 'trunc' 'trunc_ln947' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_11 : Operation 205 [1/1] (0.34ns)   --->   "%sub_ln947 = sub i5 9, %trunc_ln947" [src/kernel/optimizer.h:65]   --->   Operation 205 'sub' 'sub_ln947' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 206 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_1)   --->   "%zext_ln947 = zext i5 %sub_ln947 to i16" [src/kernel/optimizer.h:65]   --->   Operation 206 'zext' 'zext_ln947' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_11 : Operation 207 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_1)   --->   "%lshr_ln947 = lshr i16 -1, %zext_ln947" [src/kernel/optimizer.h:65]   --->   Operation 207 'lshr' 'lshr_ln947' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 208 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_1)   --->   "%p_Result_11 = and i16 %tmp_V_4, %lshr_ln947" [src/kernel/optimizer.h:65]   --->   Operation 208 'and' 'p_Result_11' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 209 [1/1] (0.67ns) (out node of the LUT)   --->   "%icmp_ln947_1 = icmp ne i16 %p_Result_11, 0" [src/kernel/optimizer.h:65]   --->   Operation 209 'icmp' 'icmp_ln947_1' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.67> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 210 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%a = and i1 %icmp_ln947, %icmp_ln947_1" [src/kernel/optimizer.h:65]   --->   Operation 210 'and' 'a' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 211 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %lsb_index, i32 31)" [src/kernel/optimizer.h:65]   --->   Operation 211 'bitselect' 'tmp_18' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_11 : Operation 212 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%xor_ln949 = xor i1 %tmp_18, true" [src/kernel/optimizer.h:65]   --->   Operation 212 'xor' 'xor_ln949' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 213 [1/1] (0.60ns)   --->   "%add_ln949 = add i16 -24, %trunc_ln944" [src/kernel/optimizer.h:65]   --->   Operation 213 'add' 'add_ln949' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 214 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%p_Result_3 = call i1 @_ssdm_op_BitSelect.i1.i16.i16(i16 %tmp_V_4, i16 %add_ln949)" [src/kernel/optimizer.h:65]   --->   Operation 214 'bitselect' 'p_Result_3' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_11 : Operation 215 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%and_ln949 = and i1 %p_Result_3, %xor_ln949" [src/kernel/optimizer.h:65]   --->   Operation 215 'and' 'and_ln949' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 216 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%or_ln949 = or i1 %and_ln949, %a" [src/kernel/optimizer.h:65]   --->   Operation 216 'or' 'or_ln949' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 217 [1/1] (0.12ns) (out node of the LUT)   --->   "%or_ln = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 0, i1 %or_ln949)" [src/kernel/optimizer.h:65]   --->   Operation 217 'bitconcatenate' 'or_ln' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.12>
+ST_11 : Operation 218 [1/1] (0.85ns)   --->   "%icmp_ln958 = icmp sgt i32 %lsb_index, 0" [src/kernel/optimizer.h:65]   --->   Operation 218 'icmp' 'icmp_ln958' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 219 [1/1] (0.66ns)   --->   "%add_ln958 = add nsw i32 -25, %sub_ln944" [src/kernel/optimizer.h:65]   --->   Operation 219 'add' 'add_ln958' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.66> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 220 [1/1] (0.66ns)   --->   "%sub_ln958 = sub i32 25, %sub_ln944" [src/kernel/optimizer.h:65]   --->   Operation 220 'sub' 'sub_ln958' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.66> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 2.19>
+ST_12 : Operation 221 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%m = zext i16 %tmp_V_4 to i64" [src/kernel/optimizer.h:65]   --->   Operation 221 'zext' 'm' <Predicate = (!icmp_ln49 & !icmp_ln958 & !icmp_ln935)> <Delay = 0.00>
+ST_12 : Operation 222 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln957_1 = zext i16 %tmp_V_4 to i32" [src/kernel/optimizer.h:65]   --->   Operation 222 'zext' 'zext_ln957_1' <Predicate = (!icmp_ln49 & icmp_ln958 & !icmp_ln935)> <Delay = 0.00>
+ST_12 : Operation 223 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%lshr_ln958 = lshr i32 %zext_ln957_1, %add_ln958" [src/kernel/optimizer.h:65]   --->   Operation 223 'lshr' 'lshr_ln958' <Predicate = (!icmp_ln49 & icmp_ln958 & !icmp_ln935)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 224 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln958 = zext i32 %lshr_ln958 to i64" [src/kernel/optimizer.h:65]   --->   Operation 224 'zext' 'zext_ln958' <Predicate = (!icmp_ln49 & icmp_ln958 & !icmp_ln935)> <Delay = 0.00>
+ST_12 : Operation 225 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln958_1 = zext i32 %sub_ln958 to i64" [src/kernel/optimizer.h:65]   --->   Operation 225 'zext' 'zext_ln958_1' <Predicate = (!icmp_ln49 & !icmp_ln958 & !icmp_ln935)> <Delay = 0.00>
+ST_12 : Operation 226 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%shl_ln958 = shl i64 %m, %zext_ln958_1" [src/kernel/optimizer.h:65]   --->   Operation 226 'shl' 'shl_ln958' <Predicate = (!icmp_ln49 & !icmp_ln958 & !icmp_ln935)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 227 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%m_1 = select i1 %icmp_ln958, i64 %zext_ln958, i64 %shl_ln958" [src/kernel/optimizer.h:65]   --->   Operation 227 'select' 'm_1' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 228 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln961 = zext i32 %or_ln to i64" [src/kernel/optimizer.h:65]   --->   Operation 228 'zext' 'zext_ln961' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_12 : Operation 229 [1/1] (1.05ns) (out node of the LUT)   --->   "%m_2 = add i64 %m_1, %zext_ln961" [src/kernel/optimizer.h:65]   --->   Operation 229 'add' 'm_2' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 1.05> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 230 [1/1] (0.00ns)   --->   "%m_5 = call i63 @_ssdm_op_PartSelect.i63.i64.i32.i32(i64 %m_2, i32 1, i32 63)" [src/kernel/optimizer.h:65]   --->   Operation 230 'partselect' 'm_5' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_12 : Operation 231 [1/1] (0.00ns)   --->   "%m_6 = zext i63 %m_5 to i64" [src/kernel/optimizer.h:65]   --->   Operation 231 'zext' 'm_6' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_12 : Operation 232 [1/1] (0.00ns)   --->   "%tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %m_2, i32 25)" [src/kernel/optimizer.h:65]   --->   Operation 232 'bitselect' 'tmp_19' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_12 : Operation 233 [1/1] (0.30ns)   --->   "%select_ln964 = select i1 %tmp_19, i8 127, i8 126" [src/kernel/optimizer.h:65]   --->   Operation 233 'select' 'select_ln964' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.30> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 234 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln964 = sub i8 4, %trunc_ln943" [src/kernel/optimizer.h:65]   --->   Operation 234 'sub' 'sub_ln964' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 235 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%add_ln964 = add i8 %select_ln964, %sub_ln964" [src/kernel/optimizer.h:65]   --->   Operation 235 'add' 'add_ln964' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.83> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 236 [1/1] (0.00ns)   --->   "%tmp_2 = call i9 @_ssdm_op_BitConcatenate.i9.i1.i8(i1 %p_Result_26, i8 %add_ln964)" [src/kernel/optimizer.h:65]   --->   Operation 236 'bitconcatenate' 'tmp_2' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_12 : Operation 237 [1/1] (0.00ns)   --->   "%p_Result_28 = call i64 @_ssdm_op_PartSet.i64.i64.i9.i32.i32(i64 %m_6, i9 %tmp_2, i32 23, i32 31)" [src/kernel/optimizer.h:65]   --->   Operation 237 'partset' 'p_Result_28' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_12 : Operation 238 [1/1] (0.00ns)   --->   "%trunc_ln738 = trunc i64 %p_Result_28 to i32" [src/kernel/optimizer.h:65]   --->   Operation 238 'trunc' 'trunc_ln738' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+
+State 13 <SV = 12> <Delay = 1.54>
+ST_13 : Operation 239 [1/1] (0.00ns)   --->   "%bitcast_ln739 = bitcast i32 %trunc_ln738 to float" [src/kernel/optimizer.h:65]   --->   Operation 239 'bitcast' 'bitcast_ln739' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 0.00>
+ST_13 : Operation 240 [2/2] (1.54ns)   --->   "%tmp_7 = fpext float %bitcast_ln739 to double" [src/kernel/optimizer.h:66]   --->   Operation 240 'fpext' 'tmp_7' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 1.54> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 1.95>
+ST_14 : Operation 241 [1/2] (1.54ns)   --->   "%tmp_7 = fpext float %bitcast_ln739 to double" [src/kernel/optimizer.h:66]   --->   Operation 241 'fpext' 'tmp_7' <Predicate = (!icmp_ln49 & !icmp_ln935)> <Delay = 1.54> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 242 [1/1] (0.41ns)   --->   "%select_ln66 = select i1 %icmp_ln935, double 0.000000e+00, double %tmp_7" [src/kernel/optimizer.h:66]   --->   Operation 242 'select' 'select_ln66' <Predicate = (!icmp_ln49)> <Delay = 0.41> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 2.05>
+ST_15 : Operation 243 [30/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 243 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 2.05>
+ST_16 : Operation 244 [29/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 244 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 2.05>
+ST_17 : Operation 245 [28/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 245 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 2.05>
+ST_18 : Operation 246 [27/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 246 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 2.05>
+ST_19 : Operation 247 [26/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 247 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 2.05>
+ST_20 : Operation 248 [25/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 248 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 2.05>
+ST_21 : Operation 249 [24/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 249 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 2.05>
+ST_22 : Operation 250 [23/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 250 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 2.05>
+ST_23 : Operation 251 [22/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 251 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 2.05>
+ST_24 : Operation 252 [21/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 252 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 2.05>
+ST_25 : Operation 253 [20/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 253 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 2.05>
+ST_26 : Operation 254 [19/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 254 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 2.05>
+ST_27 : Operation 255 [18/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 255 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 2.05>
+ST_28 : Operation 256 [17/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 256 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 2.05>
+ST_29 : Operation 257 [16/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 257 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 2.05>
+ST_30 : Operation 258 [15/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 258 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 2.05>
+ST_31 : Operation 259 [14/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 259 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 2.05>
+ST_32 : Operation 260 [13/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 260 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 2.05>
+ST_33 : Operation 261 [12/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 261 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 2.05>
+ST_34 : Operation 262 [11/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 262 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 2.05>
+ST_35 : Operation 263 [10/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 263 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 2.05>
+ST_36 : Operation 264 [9/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 264 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 2.05>
+ST_37 : Operation 265 [8/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 265 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 2.05>
+ST_38 : Operation 266 [7/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 266 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 2.05>
+ST_39 : Operation 267 [6/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 267 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 2.05>
+ST_40 : Operation 268 [5/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 268 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 2.05>
+ST_41 : Operation 269 [4/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 269 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 2.05>
+ST_42 : Operation 270 [3/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 270 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 2.05>
+ST_43 : Operation 271 [2/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 271 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 2.05>
+ST_44 : Operation 272 [1/30] (2.05ns)   --->   "%v_assign = call double @llvm.sqrt.f64(double %select_ln66)" [src/kernel/optimizer.h:66]   --->   Operation 272 'dsqrt' 'v_assign' <Predicate = (!icmp_ln49)> <Delay = 2.05> <Core = "DSqrt">   --->   Core 118 'DSqrt' <Latency = 29> <II = 1> <Delay = 2.05> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 2.18>
+ST_45 : Operation 273 [1/1] (0.00ns)   --->   "%ireg_V = bitcast double %v_assign to i64" [src/kernel/optimizer.h:66]   --->   Operation 273 'bitcast' 'ireg_V' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_45 : Operation 274 [1/1] (0.00ns)   --->   "%trunc_ln556 = trunc i64 %ireg_V to i63" [src/kernel/optimizer.h:66]   --->   Operation 274 'trunc' 'trunc_ln556' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_45 : Operation 275 [1/1] (0.00ns)   --->   "%p_Result_29 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %ireg_V, i32 63)" [src/kernel/optimizer.h:66]   --->   Operation 275 'bitselect' 'p_Result_29' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_45 : Operation 276 [1/1] (0.00ns)   --->   "%exp_tmp_V = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %ireg_V, i32 52, i32 62)" [src/kernel/optimizer.h:66]   --->   Operation 276 'partselect' 'exp_tmp_V' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_45 : Operation 277 [1/1] (0.00ns)   --->   "%zext_ln461 = zext i11 %exp_tmp_V to i12" [src/kernel/optimizer.h:66]   --->   Operation 277 'zext' 'zext_ln461' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_45 : Operation 278 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%exp_V = add i12 -1023, %zext_ln461" [src/kernel/optimizer.h:66]   --->   Operation 278 'add' 'exp_V' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_45 : Operation 279 [1/1] (0.00ns)   --->   "%trunc_ln565 = trunc i64 %ireg_V to i52" [src/kernel/optimizer.h:66]   --->   Operation 279 'trunc' 'trunc_ln565' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_45 : Operation 280 [1/1] (0.00ns)   --->   "%tmp_3 = call i53 @_ssdm_op_BitConcatenate.i53.i1.i52(i1 true, i52 %trunc_ln565)" [src/kernel/optimizer.h:66]   --->   Operation 280 'bitconcatenate' 'tmp_3' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_45 : Operation 281 [1/1] (0.00ns)   --->   "%p_Result_30 = zext i53 %tmp_3 to i54" [src/kernel/optimizer.h:66]   --->   Operation 281 'zext' 'p_Result_30' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_45 : Operation 282 [1/1] (0.74ns)   --->   "%man_V_1 = sub i54 0, %p_Result_30" [src/kernel/optimizer.h:66]   --->   Operation 282 'sub' 'man_V_1' <Predicate = (!icmp_ln49)> <Delay = 0.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 283 [1/1] (1.05ns)   --->   "%icmp_ln571 = icmp eq i63 %trunc_ln556, 0" [src/kernel/optimizer.h:66]   --->   Operation 283 'icmp' 'icmp_ln571' <Predicate = (!icmp_ln49)> <Delay = 1.05> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 284 [1/1] (0.52ns)   --->   "%F2 = sub i12 1075, %zext_ln461" [src/kernel/optimizer.h:66]   --->   Operation 284 'sub' 'F2' <Predicate = (!icmp_ln49)> <Delay = 0.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 285 [1/1] (0.62ns)   --->   "%QUAN_INC = icmp sgt i12 %F2, 12" [src/kernel/optimizer.h:66]   --->   Operation 285 'icmp' 'QUAN_INC' <Predicate = (!icmp_ln49)> <Delay = 0.62> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 286 [1/1] (0.52ns)   --->   "%add_ln581 = add i12 -12, %F2" [src/kernel/optimizer.h:66]   --->   Operation 286 'add' 'add_ln581' <Predicate = (!icmp_ln49)> <Delay = 0.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 287 [1/1] (0.52ns)   --->   "%sub_ln581 = sub i12 12, %F2" [src/kernel/optimizer.h:66]   --->   Operation 287 'sub' 'sub_ln581' <Predicate = (!icmp_ln49)> <Delay = 0.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 288 [1/1] (0.29ns)   --->   "%sh_amt = select i1 %QUAN_INC, i12 %add_ln581, i12 %sub_ln581" [src/kernel/optimizer.h:66]   --->   Operation 288 'select' 'sh_amt' <Predicate = (!icmp_ln49)> <Delay = 0.29> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_45 : Operation 289 [1/1] (0.00ns)   --->   "%tmp_21 = call i8 @_ssdm_op_PartSelect.i8.i12.i32.i32(i12 %sh_amt, i32 4, i32 11)" [src/kernel/optimizer.h:66]   --->   Operation 289 'partselect' 'tmp_21' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_45 : Operation 290 [1/1] (0.58ns)   --->   "%icmp_ln603 = icmp eq i8 %tmp_21, 0" [src/kernel/optimizer.h:66]   --->   Operation 290 'icmp' 'icmp_ln603' <Predicate = (!icmp_ln49)> <Delay = 0.58> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 291 [1/1] (0.62ns)   --->   "%icmp_ln591 = icmp sgt i12 %add_ln581, 54" [src/kernel/optimizer.h:66]   --->   Operation 291 'icmp' 'icmp_ln591' <Predicate = (!icmp_ln49)> <Delay = 0.62> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 292 [1/1] (0.27ns)   --->   "%tmp70_cast_cast = select i1 %QUAN_INC, i12 2, i12 1" [src/kernel/optimizer.h:66]   --->   Operation 292 'select' 'tmp70_cast_cast' <Predicate = (!icmp_ln49)> <Delay = 0.27> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_45 : Operation 293 [1/1] (0.75ns) (root node of TernaryAdder)   --->   "%empty_59 = add i12 %tmp70_cast_cast, %exp_V" [src/kernel/optimizer.h:66]   --->   Operation 293 'add' 'empty_59' <Predicate = (!icmp_ln49)> <Delay = 0.75> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_45 : Operation 294 [1/1] (0.00ns)   --->   "%tmp_25 = call i10 @_ssdm_op_PartSelect.i10.i12.i32.i32(i12 %empty_59, i32 2, i32 11)" [src/kernel/optimizer.h:66]   --->   Operation 294 'partselect' 'tmp_25' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+
+State 46 <SV = 45> <Delay = 2.36>
+ST_46 : Operation 295 [1/1] (0.26ns)   --->   "%p_Val2_s = select i1 %p_Result_29, i54 %man_V_1, i54 %p_Result_30" [src/kernel/optimizer.h:66]   --->   Operation 295 'select' 'p_Val2_s' <Predicate = (!icmp_ln49)> <Delay = 0.26> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_46 : Operation 296 [1/1] (0.00ns)   --->   "%sext_ln581 = sext i12 %sh_amt to i32" [src/kernel/optimizer.h:66]   --->   Operation 296 'sext' 'sext_ln581' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 297 [1/1] (0.62ns)   --->   "%icmp_ln582 = icmp eq i12 %F2, 12" [src/kernel/optimizer.h:66]   --->   Operation 297 'icmp' 'icmp_ln582' <Predicate = (!icmp_ln49)> <Delay = 0.62> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 298 [1/1] (0.00ns)   --->   "%trunc_ln583 = trunc i54 %p_Val2_s to i16" [src/kernel/optimizer.h:66]   --->   Operation 298 'trunc' 'trunc_ln583' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 299 [1/1] (0.62ns)   --->   "%icmp_ln585 = icmp ult i12 %sh_amt, 54" [src/kernel/optimizer.h:66]   --->   Operation 299 'icmp' 'icmp_ln585' <Predicate = (!icmp_ln49)> <Delay = 0.62> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 300 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_17)   --->   "%zext_ln586 = zext i32 %sext_ln581 to i54" [src/kernel/optimizer.h:66]   --->   Operation 300 'zext' 'zext_ln586' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 301 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_17)   --->   "%ashr_ln586 = ashr i54 %p_Val2_s, %zext_ln586" [src/kernel/optimizer.h:66]   --->   Operation 301 'ashr' 'ashr_ln586' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 302 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_17)   --->   "%trunc_ln586 = trunc i54 %ashr_ln586 to i16" [src/kernel/optimizer.h:66]   --->   Operation 302 'trunc' 'trunc_ln586' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 303 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_17)   --->   "%tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %ireg_V, i32 63)" [src/kernel/optimizer.h:66]   --->   Operation 303 'bitselect' 'tmp_22' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 304 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_17)   --->   "%select_ln588 = select i1 %tmp_22, i16 -1, i16 0" [src/kernel/optimizer.h:66]   --->   Operation 304 'select' 'select_ln588' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_46 : Operation 305 [1/1] (1.12ns) (out node of the LUT)   --->   "%p_Val2_17 = select i1 %icmp_ln585, i16 %trunc_ln586, i16 %select_ln588" [src/kernel/optimizer.h:66]   --->   Operation 305 'select' 'p_Val2_17' <Predicate = (!icmp_ln49)> <Delay = 1.12> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_46 : Operation 306 [1/1] (0.52ns)   --->   "%add_ln591 = add i12 -13, %F2" [src/kernel/optimizer.h:66]   --->   Operation 306 'add' 'add_ln591' <Predicate = (!icmp_ln49 & !icmp_ln591)> <Delay = 0.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 307 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_18)   --->   "%sext_ln591 = sext i12 %add_ln591 to i32" [src/kernel/optimizer.h:66]   --->   Operation 307 'sext' 'sext_ln591' <Predicate = (!icmp_ln49 & !icmp_ln591)> <Delay = 0.00>
+ST_46 : Operation 308 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_18)   --->   "%p_Result_8 = call i1 @_ssdm_op_BitSelect.i1.i54.i32(i54 %p_Val2_s, i32 %sext_ln591) nounwind" [src/kernel/optimizer.h:66]   --->   Operation 308 'bitselect' 'p_Result_8' <Predicate = (!icmp_ln49 & !icmp_ln591)> <Delay = 0.00>
+ST_46 : Operation 309 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_18)   --->   "%qb = select i1 %icmp_ln591, i1 %p_Result_29, i1 %p_Result_8" [src/kernel/optimizer.h:66]   --->   Operation 309 'select' 'qb' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_46 : Operation 310 [1/1] (0.00ns)   --->   "%p_Result_31 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_17, i32 15)" [src/kernel/optimizer.h:66]   --->   Operation 310 'bitselect' 'p_Result_31' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 311 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_18)   --->   "%zext_ln415 = zext i1 %qb to i16" [src/kernel/optimizer.h:66]   --->   Operation 311 'zext' 'zext_ln415' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 312 [1/1] (0.60ns) (out node of the LUT)   --->   "%p_Val2_18 = add i16 %p_Val2_17, %zext_ln415" [src/kernel/optimizer.h:66]   --->   Operation 312 'add' 'p_Val2_18' <Predicate = (!icmp_ln49)> <Delay = 0.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 313 [1/1] (0.00ns)   --->   "%tmp_24 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_18, i32 15)" [src/kernel/optimizer.h:66]   --->   Operation 313 'bitselect' 'tmp_24' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 314 [1/1] (0.62ns)   --->   "%icmp_ln578 = icmp slt i12 %F2, 12" [src/kernel/optimizer.h:66]   --->   Operation 314 'icmp' 'icmp_ln578' <Predicate = (!icmp_ln49)> <Delay = 0.62> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 315 [1/1] (0.60ns)   --->   "%icmp45 = icmp sgt i10 %tmp_25, 0" [src/kernel/optimizer.h:66]   --->   Operation 315 'icmp' 'icmp45' <Predicate = (!icmp_ln49)> <Delay = 0.60> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 316 [1/1] (0.52ns)   --->   "%pos1 = add i12 4, %F2" [src/kernel/optimizer.h:66]   --->   Operation 316 'add' 'pos1' <Predicate = (!icmp_ln49)> <Delay = 0.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 317 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_ones_3)   --->   "%sext_ln618 = sext i12 %pos1 to i32" [src/kernel/optimizer.h:66]   --->   Operation 317 'sext' 'sext_ln618' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 318 [1/1] (0.52ns)   --->   "%pos2 = add i12 5, %F2" [src/kernel/optimizer.h:66]   --->   Operation 318 'add' 'pos2' <Predicate = (!icmp_ln49)> <Delay = 0.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 319 [1/1] (0.00ns)   --->   "%sext_ln619 = sext i12 %pos2 to i32" [src/kernel/optimizer.h:66]   --->   Operation 319 'sext' 'sext_ln619' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 320 [1/1] (0.62ns)   --->   "%icmp_ln621 = icmp slt i12 %pos1, 54" [src/kernel/optimizer.h:66]   --->   Operation 320 'icmp' 'icmp_ln621' <Predicate = (!icmp_ln49)> <Delay = 0.62> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 321 [1/1] (0.00ns)   --->   "%tmp_27 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos1, i32 11)" [src/kernel/optimizer.h:66]   --->   Operation 321 'bitselect' 'tmp_27' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 322 [1/1] (0.12ns)   --->   "%xor_ln621_1 = xor i1 %tmp_27, true" [src/kernel/optimizer.h:66]   --->   Operation 322 'xor' 'xor_ln621_1' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 323 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_ones_3)   --->   "%zext_ln623 = zext i32 %sext_ln618 to i54" [src/kernel/optimizer.h:66]   --->   Operation 323 'zext' 'zext_ln623' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 324 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_ones_3)   --->   "%ashr_ln623 = ashr i54 %p_Val2_s, %zext_ln623" [src/kernel/optimizer.h:66]   --->   Operation 324 'ashr' 'ashr_ln623' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 325 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_ones_3)   --->   "%lD = trunc i54 %ashr_ln623 to i1" [src/kernel/optimizer.h:66]   --->   Operation 325 'trunc' 'lD' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 326 [1/1] (0.00ns) (grouped into LUT with out node Range1_all_ones_3)   --->   "%and_ln621 = and i1 %lD, %xor_ln621_1" [src/kernel/optimizer.h:66]   --->   Operation 326 'and' 'and_ln621' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 327 [1/1] (1.12ns) (out node of the LUT)   --->   "%Range1_all_ones_3 = and i1 %and_ln621, %icmp_ln621" [src/kernel/optimizer.h:66]   --->   Operation 327 'and' 'Range1_all_ones_3' <Predicate = (!icmp_ln49)> <Delay = 1.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 328 [1/1] (0.00ns)   --->   "%tmp_28 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos2, i32 11)" [src/kernel/optimizer.h:66]   --->   Operation 328 'bitselect' 'tmp_28' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 329 [1/1] (0.62ns)   --->   "%icmp_ln631 = icmp slt i12 %pos2, 54" [src/kernel/optimizer.h:66]   --->   Operation 329 'icmp' 'icmp_ln631' <Predicate = (!icmp_ln49)> <Delay = 0.62> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 330 [1/1] (0.00ns)   --->   "%zext_ln635 = zext i32 %sext_ln619 to i54" [src/kernel/optimizer.h:66]   --->   Operation 330 'zext' 'zext_ln635' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_46 : Operation 331 [1/1] (1.12ns)   --->   "%Range2_V_1 = lshr i54 %p_Val2_s, %zext_ln635" [src/kernel/optimizer.h:66]   --->   Operation 331 'lshr' 'Range2_V_1' <Predicate = (!icmp_ln49)> <Delay = 1.12> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 332 [1/1] (0.62ns)   --->   "%icmp_ln642 = icmp eq i12 %pos2, 54" [src/kernel/optimizer.h:66]   --->   Operation 332 'icmp' 'icmp_ln642' <Predicate = (!icmp_ln49)> <Delay = 0.62> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 333 [1/1] (0.99ns)   --->   "%Range1_all_zeros_1 = icmp eq i54 %p_Val2_s, 0" [src/kernel/optimizer.h:66]   --->   Operation 333 'icmp' 'Range1_all_zeros_1' <Predicate = (!icmp_ln49)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 334 [1/1] (0.00ns) (grouped into LUT with out node and_ln642)   --->   "%xor_ln639_1 = xor i1 %icmp_ln631, true" [src/kernel/optimizer.h:66]   --->   Operation 334 'xor' 'xor_ln639_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 335 [1/1] (0.00ns) (grouped into LUT with out node and_ln642)   --->   "%or_ln639 = or i1 %tmp_27, %xor_ln639_1" [src/kernel/optimizer.h:66]   --->   Operation 335 'or' 'or_ln639' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 336 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln642 = and i1 %icmp_ln642, %or_ln639" [src/kernel/optimizer.h:66]   --->   Operation 336 'and' 'and_ln642' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 2.00>
+ST_47 : Operation 337 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_19)   --->   "%sext_ln581cast = trunc i32 %sext_ln581 to i16" [src/kernel/optimizer.h:66]   --->   Operation 337 'trunc' 'sext_ln581cast' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_47 : Operation 338 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_19)   --->   "%shl_ln604 = shl i16 %trunc_ln583, %sext_ln581cast" [src/kernel/optimizer.h:66]   --->   Operation 338 'shl' 'shl_ln604' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 339 [1/1] (0.00ns) (grouped into LUT with out node and_ln603_2)   --->   "%xor_ln416_5 = xor i1 %tmp_24, true" [src/kernel/optimizer.h:66]   --->   Operation 339 'xor' 'xor_ln416_5' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 340 [1/1] (0.00ns) (grouped into LUT with out node select_ln403)   --->   "%select_ln582 = select i1 %icmp_ln582, i16 %trunc_ln583, i16 0" [src/kernel/optimizer.h:66]   --->   Operation 340 'select' 'select_ln582' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 341 [1/1] (0.00ns) (grouped into LUT with out node and_ln578)   --->   "%xor_ln582 = xor i1 %icmp_ln582, true" [src/kernel/optimizer.h:66]   --->   Operation 341 'xor' 'xor_ln582' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 342 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln578 = and i1 %QUAN_INC, %xor_ln582" [src/kernel/optimizer.h:66]   --->   Operation 342 'and' 'and_ln578' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 343 [1/1] (0.12ns)   --->   "%and_ln403 = and i1 %and_ln578, %p_Result_31" [src/kernel/optimizer.h:66]   --->   Operation 343 'and' 'and_ln403' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 344 [1/1] (0.24ns) (out node of the LUT)   --->   "%select_ln403 = select i1 %and_ln403, i16 %p_Val2_18, i16 %select_ln582" [src/kernel/optimizer.h:66]   --->   Operation 344 'select' 'select_ln403' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 345 [1/1] (0.00ns) (grouped into LUT with out node select_ln403_1)   --->   "%xor_ln403 = xor i1 %p_Result_31, true" [src/kernel/optimizer.h:66]   --->   Operation 345 'xor' 'xor_ln403' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 346 [1/1] (0.00ns) (grouped into LUT with out node select_ln403_1)   --->   "%and_ln403_1 = and i1 %and_ln578, %xor_ln403" [src/kernel/optimizer.h:66]   --->   Operation 346 'and' 'and_ln403_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 347 [1/1] (0.24ns) (out node of the LUT)   --->   "%select_ln403_1 = select i1 %and_ln403_1, i16 %p_Val2_18, i16 %select_ln403" [src/kernel/optimizer.h:66]   --->   Operation 347 'select' 'select_ln403_1' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 348 [1/1] (0.12ns)   --->   "%and_ln603 = and i1 %icmp_ln578, %icmp_ln603" [src/kernel/optimizer.h:66]   --->   Operation 348 'and' 'and_ln603' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 349 [1/1] (0.84ns) (out node of the LUT)   --->   "%p_Val2_19 = select i1 %and_ln603, i16 %shl_ln604, i16 %select_ln403_1" [src/kernel/optimizer.h:66]   --->   Operation 349 'select' 'p_Val2_19' <Predicate = (!icmp_ln49)> <Delay = 0.84> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 350 [1/1] (0.00ns) (grouped into LUT with out node and_ln603_2)   --->   "%and_ln403_2 = and i1 %and_ln403, %xor_ln416_5" [src/kernel/optimizer.h:66]   --->   Operation 350 'and' 'and_ln403_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 351 [1/1] (0.00ns) (grouped into LUT with out node and_ln603_2)   --->   "%and_ln603_1 = and i1 %icmp_ln578, %icmp_ln603" [src/kernel/optimizer.h:66]   --->   Operation 351 'and' 'and_ln603_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 352 [1/1] (0.00ns) (grouped into LUT with out node and_ln603_2)   --->   "%xor_ln603 = xor i1 %and_ln603_1, true" [src/kernel/optimizer.h:66]   --->   Operation 352 'xor' 'xor_ln603' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 353 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln603_2 = and i1 %and_ln403_2, %xor_ln603" [src/kernel/optimizer.h:66]   --->   Operation 353 'and' 'and_ln603_2' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 354 [1/1] (0.00ns)   --->   "%p_Result_32 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_19, i32 15)" [src/kernel/optimizer.h:66]   --->   Operation 354 'bitselect' 'p_Result_32' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_47 : Operation 355 [1/1] (0.12ns)   --->   "%xor_ln631 = xor i1 %tmp_28, true" [src/kernel/optimizer.h:66]   --->   Operation 355 'xor' 'xor_ln631' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 356 [1/1] (0.00ns) (grouped into LUT with out node select_ln631)   --->   "%and_ln631 = and i1 %icmp_ln631, %xor_ln631" [src/kernel/optimizer.h:66]   --->   Operation 356 'and' 'and_ln631' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 357 [1/1] (0.00ns) (grouped into LUT with out node Range2_all_ones)   --->   "%r_V_2 = lshr i54 -1, %zext_ln635" [src/kernel/optimizer.h:66]   --->   Operation 357 'lshr' 'r_V_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 358 [1/1] (1.05ns) (out node of the LUT)   --->   "%Range2_all_ones = icmp eq i54 %Range2_V_1, %r_V_2" [src/kernel/optimizer.h:66]   --->   Operation 358 'icmp' 'Range2_all_ones' <Predicate = (!icmp_ln49)> <Delay = 1.05> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 359 [1/1] (0.27ns) (out node of the LUT)   --->   "%select_ln631 = select i1 %and_ln631, i1 %Range2_all_ones, i1 %xor_ln631" [src/kernel/optimizer.h:66]   --->   Operation 359 'select' 'select_ln631' <Predicate = (!icmp_ln49)> <Delay = 0.27> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 360 [1/1] (0.12ns)   --->   "%and_ln639 = and i1 %icmp_ln631, %xor_ln621_1" [src/kernel/optimizer.h:66]   --->   Operation 360 'and' 'and_ln639' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 361 [1/1] (0.00ns) (grouped into LUT with out node select_ln639)   --->   "%Range1_all_ones_2 = and i1 %select_ln631, %Range1_all_ones_3" [src/kernel/optimizer.h:66]   --->   Operation 361 'and' 'Range1_all_ones_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 362 [1/1] (0.99ns)   --->   "%icmp_ln641 = icmp eq i54 %Range2_V_1, 0" [src/kernel/optimizer.h:66]   --->   Operation 362 'icmp' 'icmp_ln641' <Predicate = (!icmp_ln49)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 363 [1/1] (0.12ns)   --->   "%Range1_all_zeros = xor i1 %Range1_all_ones_3, true" [src/kernel/optimizer.h:66]   --->   Operation 363 'xor' 'Range1_all_zeros' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 364 [1/1] (0.00ns) (grouped into LUT with out node xor_ln658)   --->   "%and_ln641 = and i1 %icmp_ln641, %Range1_all_zeros" [src/kernel/optimizer.h:66]   --->   Operation 364 'and' 'and_ln641' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 365 [1/1] (0.00ns) (grouped into LUT with out node select_ln642_1)   --->   "%or_ln645 = or i1 %Range1_all_zeros_1, %xor_ln621_1" [src/kernel/optimizer.h:66]   --->   Operation 365 'or' 'or_ln645' <Predicate = (!icmp_ln49 & !and_ln642)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 366 [1/1] (0.00ns) (grouped into LUT with out node select_ln639)   --->   "%select_ln642 = select i1 %and_ln642, i1 %Range1_all_ones_3, i1 %xor_ln621_1" [src/kernel/optimizer.h:66]   --->   Operation 366 'select' 'select_ln642' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 367 [1/1] (0.27ns) (out node of the LUT)   --->   "%select_ln639 = select i1 %and_ln639, i1 %Range1_all_ones_2, i1 %select_ln642" [src/kernel/optimizer.h:66]   --->   Operation 367 'select' 'select_ln639' <Predicate = (!icmp_ln49)> <Delay = 0.27> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 368 [1/1] (0.27ns) (out node of the LUT)   --->   "%select_ln642_1 = select i1 %and_ln642, i1 %Range1_all_zeros, i1 %or_ln645" [src/kernel/optimizer.h:66]   --->   Operation 368 'select' 'select_ln642_1' <Predicate = (!icmp_ln49)> <Delay = 0.27> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 369 [1/1] (0.00ns) (grouped into LUT with out node xor_ln658)   --->   "%select_ln639_1 = select i1 %and_ln639, i1 %and_ln641, i1 %select_ln642_1" [src/kernel/optimizer.h:66]   --->   Operation 369 'select' 'select_ln639_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 370 [1/1] (0.00ns) (grouped into LUT with out node xor_ln658)   --->   "%deleted_zeros = select i1 %and_ln603_2, i1 %select_ln639, i1 %select_ln639_1" [src/kernel/optimizer.h:66]   --->   Operation 370 'select' 'deleted_zeros' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 371 [1/1] (0.00ns) (grouped into LUT with out node or_ln652_2)   --->   "%xor_ln652_2 = xor i1 %and_ln403, true" [src/kernel/optimizer.h:66]   --->   Operation 371 'xor' 'xor_ln652_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 372 [1/1] (0.00ns) (grouped into LUT with out node or_ln652_2)   --->   "%or_ln652_3 = or i1 %tmp_24, %xor_ln652_2" [src/kernel/optimizer.h:66]   --->   Operation 372 'or' 'or_ln652_3' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 373 [1/1] (0.12ns) (out node of the LUT)   --->   "%or_ln652_2 = or i1 %and_ln603, %or_ln652_3" [src/kernel/optimizer.h:66]   --->   Operation 373 'or' 'or_ln652_2' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 374 [1/1] (0.00ns) (grouped into LUT with out node deleted_ones_2)   --->   "%xor_ln652_1 = xor i1 %select_ln631, true" [src/kernel/optimizer.h:66]   --->   Operation 374 'xor' 'xor_ln652_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 375 [1/1] (0.00ns) (grouped into LUT with out node deleted_ones_2)   --->   "%or_ln652 = or i1 %or_ln652_2, %xor_ln652_1" [src/kernel/optimizer.h:66]   --->   Operation 375 'or' 'or_ln652' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 376 [1/1] (0.00ns) (grouped into LUT with out node deleted_ones_2)   --->   "%and_ln652 = and i1 %select_ln639, %or_ln652_2" [src/kernel/optimizer.h:66]   --->   Operation 376 'and' 'and_ln652' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 377 [1/1] (0.00ns) (grouped into LUT with out node deleted_ones_2)   --->   "%tmp_29 = call i1 @_ssdm_op_BitSelect.i1.i12.i32(i12 %pos1, i32 11)" [src/kernel/optimizer.h:66]   --->   Operation 377 'bitselect' 'tmp_29' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_47 : Operation 378 [1/1] (0.00ns) (grouped into LUT with out node deleted_ones_2)   --->   "%or_ln652_1 = or i1 %tmp_29, %Range1_all_zeros" [src/kernel/optimizer.h:66]   --->   Operation 378 'or' 'or_ln652_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 379 [1/1] (0.27ns) (out node of the LUT)   --->   "%deleted_ones_2 = select i1 %or_ln652, i1 %and_ln652, i1 %or_ln652_1" [src/kernel/optimizer.h:66]   --->   Operation 379 'select' 'deleted_ones_2' <Predicate = (!icmp_ln49)> <Delay = 0.27> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 380 [1/1] (0.00ns) (grouped into LUT with out node select_ln557)   --->   "%and_ln654 = and i1 %and_ln603_2, %select_ln639" [src/kernel/optimizer.h:66]   --->   Operation 380 'and' 'and_ln654' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 381 [1/1] (0.00ns) (grouped into LUT with out node select_ln557)   --->   "%empty_60 = xor i1 %and_ln654, true" [src/kernel/optimizer.h:66]   --->   Operation 381 'xor' 'empty_60' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 382 [1/1] (0.12ns)   --->   "%xor_ln621 = xor i1 %icmp_ln621, true" [src/kernel/optimizer.h:66]   --->   Operation 382 'xor' 'xor_ln621' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 383 [1/1] (0.00ns) (grouped into LUT with out node and_ln659)   --->   "%or_ln557 = or i1 %deleted_ones_2, %xor_ln621" [src/kernel/optimizer.h:66]   --->   Operation 383 'or' 'or_ln557' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 384 [1/1] (0.00ns) (grouped into LUT with out node and_ln621_3)   --->   "%and_ln621_2 = and i1 %p_Result_32, %xor_ln621" [src/kernel/optimizer.h:66]   --->   Operation 384 'and' 'and_ln621_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 385 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln621_3 = and i1 %and_ln621_2, %p_Result_29" [src/kernel/optimizer.h:66]   --->   Operation 385 'and' 'and_ln621_3' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 386 [1/1] (0.00ns) (grouped into LUT with out node select_ln557)   --->   "%and_ln557 = and i1 %icmp_ln621, %p_Result_29" [src/kernel/optimizer.h:66]   --->   Operation 386 'and' 'and_ln557' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 387 [1/1] (0.27ns) (out node of the LUT)   --->   "%select_ln557 = select i1 %and_ln557, i1 %empty_60, i1 %and_ln621_3" [src/kernel/optimizer.h:66]   --->   Operation 387 'select' 'select_ln557' <Predicate = (!icmp_ln49)> <Delay = 0.27> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_47 : Operation 388 [1/1] (0.27ns) (out node of the LUT)   --->   "%xor_ln658 = xor i1 %deleted_zeros, true" [src/kernel/optimizer.h:66]   --->   Operation 388 'xor' 'xor_ln658' <Predicate = (!icmp_ln49)> <Delay = 0.27> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 389 [1/1] (0.00ns) (grouped into LUT with out node overflow_2)   --->   "%and_ln658 = and i1 %icmp_ln621, %xor_ln658" [src/kernel/optimizer.h:66]   --->   Operation 389 'and' 'and_ln658' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 390 [1/1] (0.00ns) (grouped into LUT with out node overflow_2)   --->   "%or_ln658 = or i1 %p_Result_32, %and_ln658" [src/kernel/optimizer.h:66]   --->   Operation 390 'or' 'or_ln658' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 391 [1/1] (0.00ns) (grouped into LUT with out node overflow_2)   --->   "%xor_ln658_1 = xor i1 %p_Result_29, true" [src/kernel/optimizer.h:66]   --->   Operation 391 'xor' 'xor_ln658_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 392 [1/1] (0.12ns) (out node of the LUT)   --->   "%overflow_2 = and i1 %or_ln658, %xor_ln658_1" [src/kernel/optimizer.h:66]   --->   Operation 392 'and' 'overflow_2' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 393 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln659 = and i1 %p_Result_32, %or_ln557" [src/kernel/optimizer.h:66]   --->   Operation 393 'and' 'and_ln659' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 2.03>
+ST_48 : Operation 394 [1/1] (0.00ns) (grouped into LUT with out node underflow_2)   --->   "%xor_ln659 = xor i1 %and_ln659, true" [src/kernel/optimizer.h:66]   --->   Operation 394 'xor' 'xor_ln659' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 395 [1/1] (0.12ns) (out node of the LUT)   --->   "%underflow_2 = and i1 %select_ln557, %xor_ln659" [src/kernel/optimizer.h:66]   --->   Operation 395 'and' 'underflow_2' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 396 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_6)   --->   "%or_ln340_6 = or i1 %underflow_2, %overflow_2" [src/kernel/optimizer.h:66]   --->   Operation 396 'or' 'or_ln340_6' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 397 [1/1] (0.00ns) (grouped into LUT with out node and_ln340_1)   --->   "%xor_ln340 = xor i1 %select_ln557, true" [src/kernel/optimizer.h:66]   --->   Operation 397 'xor' 'xor_ln340' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 398 [1/1] (0.00ns) (grouped into LUT with out node and_ln340_1)   --->   "%or_ln340_9 = or i1 %overflow_2, %xor_ln340" [src/kernel/optimizer.h:66]   --->   Operation 398 'or' 'or_ln340_9' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 399 [1/1] (0.00ns) (grouped into LUT with out node and_ln340_1)   --->   "%or_ln340_10 = or i1 %or_ln340_9, %and_ln659" [src/kernel/optimizer.h:66]   --->   Operation 399 'or' 'or_ln340_10' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 400 [1/1] (0.00ns) (grouped into LUT with out node select_ln571_1)   --->   "%or_ln571 = or i1 %icmp_ln571, %underflow_2" [src/kernel/optimizer.h:66]   --->   Operation 400 'or' 'or_ln571' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 401 [1/1] (0.00ns) (grouped into LUT with out node empty_61)   --->   "%sel_tmp57_demorgan = or i1 %icmp_ln571, %icmp45" [src/kernel/optimizer.h:66]   --->   Operation 401 'or' 'sel_tmp57_demorgan' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 402 [1/1] (0.00ns) (grouped into LUT with out node and_ln340_1)   --->   "%xor_ln571 = xor i1 %icmp_ln571, true" [src/kernel/optimizer.h:66]   --->   Operation 402 'xor' 'xor_ln571' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 403 [1/1] (0.00ns) (grouped into LUT with out node and_ln340_1)   --->   "%and_ln340 = and i1 %or_ln340_10, %xor_ln571" [src/kernel/optimizer.h:66]   --->   Operation 403 'and' 'and_ln340' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 404 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln340_1 = and i1 %and_ln340, %icmp45" [src/kernel/optimizer.h:66]   --->   Operation 404 'and' 'and_ln340_1' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 405 [1/1] (0.00ns)   --->   "%tmp_1 = call i35 @_ssdm_op_BitConcatenate.i35.i23.i12(i23 %r_V_3, i12 0)" [src/kernel/optimizer.h:68]   --->   Operation 405 'bitconcatenate' 'tmp_1' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_48 : Operation 406 [1/1] (0.00ns)   --->   "%sext_ln728_1 = sext i35 %tmp_1 to i36" [src/kernel/optimizer.h:68]   --->   Operation 406 'sext' 'sext_ln728_1' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_48 : Operation 407 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_6)   --->   "%select_ln340_5 = select i1 %or_ln340_6, i16 32767, i16 %p_Val2_19" [src/kernel/optimizer.h:66]   --->   Operation 407 'select' 'select_ln340_5' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_48 : Operation 408 [1/1] (0.00ns) (grouped into LUT with out node select_ln571_1)   --->   "%select_ln571 = select i1 %icmp_ln571, i16 0, i16 -32768" [src/kernel/optimizer.h:66]   --->   Operation 408 'select' 'select_ln571' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_48 : Operation 409 [1/1] (0.24ns) (out node of the LUT)   --->   "%select_ln571_1 = select i1 %or_ln571, i16 %select_ln571, i16 %p_Val2_19" [src/kernel/optimizer.h:66]   --->   Operation 409 'select' 'select_ln571_1' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_48 : Operation 410 [1/1] (0.24ns) (out node of the LUT)   --->   "%empty_61 = select i1 %sel_tmp57_demorgan, i16 %select_ln571_1, i16 %p_Val2_19" [src/kernel/optimizer.h:66]   --->   Operation 410 'select' 'empty_61' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_48 : Operation 411 [1/1] (0.24ns) (out node of the LUT)   --->   "%select_ln340_6 = select i1 %and_ln340_1, i16 %select_ln340_5, i16 %empty_61" [src/kernel/optimizer.h:66]   --->   Operation 411 'select' 'select_ln340_6' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_48 : Operation 412 [1/1] (0.00ns)   --->   "%sext_ln1148 = sext i16 %select_ln340_6 to i36" [src/kernel/optimizer.h:68]   --->   Operation 412 'sext' 'sext_ln1148' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_48 : Operation 413 [40/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 413 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 1.17>
+ST_49 : Operation 414 [39/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 414 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 1.17>
+ST_50 : Operation 415 [38/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 415 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 1.17>
+ST_51 : Operation 416 [37/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 416 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 1.17>
+ST_52 : Operation 417 [36/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 417 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 1.17>
+ST_53 : Operation 418 [35/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 418 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 1.17>
+ST_54 : Operation 419 [34/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 419 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 1.17>
+ST_55 : Operation 420 [33/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 420 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 1.17>
+ST_56 : Operation 421 [32/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 421 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 1.17>
+ST_57 : Operation 422 [31/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 422 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 1.17>
+ST_58 : Operation 423 [30/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 423 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 1.17>
+ST_59 : Operation 424 [29/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 424 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 59> <Delay = 1.17>
+ST_60 : Operation 425 [28/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 425 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 60> <Delay = 1.17>
+ST_61 : Operation 426 [27/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 426 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 61> <Delay = 1.17>
+ST_62 : Operation 427 [26/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 427 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 63 <SV = 62> <Delay = 1.17>
+ST_63 : Operation 428 [25/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 428 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 63> <Delay = 1.17>
+ST_64 : Operation 429 [24/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 429 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 64> <Delay = 1.17>
+ST_65 : Operation 430 [23/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 430 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 65> <Delay = 1.17>
+ST_66 : Operation 431 [22/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 431 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 66> <Delay = 1.17>
+ST_67 : Operation 432 [21/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 432 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 67> <Delay = 1.17>
+ST_68 : Operation 433 [20/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 433 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 68> <Delay = 1.17>
+ST_69 : Operation 434 [19/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 434 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 70 <SV = 69> <Delay = 1.17>
+ST_70 : Operation 435 [18/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 435 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 71 <SV = 70> <Delay = 1.17>
+ST_71 : Operation 436 [17/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 436 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 72 <SV = 71> <Delay = 1.17>
+ST_72 : Operation 437 [16/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 437 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 73 <SV = 72> <Delay = 1.17>
+ST_73 : Operation 438 [15/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 438 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 74 <SV = 73> <Delay = 1.17>
+ST_74 : Operation 439 [14/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 439 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 75 <SV = 74> <Delay = 1.17>
+ST_75 : Operation 440 [13/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 440 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 76 <SV = 75> <Delay = 1.17>
+ST_76 : Operation 441 [12/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 441 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 77 <SV = 76> <Delay = 1.17>
+ST_77 : Operation 442 [11/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 442 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 78 <SV = 77> <Delay = 1.17>
+ST_78 : Operation 443 [10/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 443 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 79 <SV = 78> <Delay = 1.17>
+ST_79 : Operation 444 [9/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 444 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 80 <SV = 79> <Delay = 1.17>
+ST_80 : Operation 445 [8/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 445 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 81 <SV = 80> <Delay = 1.17>
+ST_81 : Operation 446 [7/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 446 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 82 <SV = 81> <Delay = 1.17>
+ST_82 : Operation 447 [6/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 447 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 83 <SV = 82> <Delay = 1.17>
+ST_83 : Operation 448 [5/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 448 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 84 <SV = 83> <Delay = 1.17>
+ST_84 : Operation 449 [4/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 449 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 85 <SV = 84> <Delay = 1.17>
+ST_85 : Operation 450 [3/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 450 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 86 <SV = 85> <Delay = 1.17>
+ST_86 : Operation 451 [2/2] (1.15ns)   --->   "%temp3_V = load i16* %params_V_addr, align 2" [src/kernel/optimizer.h:67]   --->   Operation 451 'load' 'temp3_V' <Predicate = (!icmp_ln49)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_86 : Operation 452 [2/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 452 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 87 <SV = 86> <Delay = 1.17>
+ST_87 : Operation 453 [1/2] (1.15ns)   --->   "%temp3_V = load i16* %params_V_addr, align 2" [src/kernel/optimizer.h:67]   --->   Operation 453 'load' 'temp3_V' <Predicate = (!icmp_ln49)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_87 : Operation 454 [1/40] (1.17ns)   --->   "%sdiv_ln1148 = sdiv i36 %sext_ln728_1, %sext_ln1148" [src/kernel/optimizer.h:68]   --->   Operation 454 'sdiv' 'sdiv_ln1148' <Predicate = (!icmp_ln49)> <Delay = 1.17> <Core = "DivnS">   --->   Core 23 'DivnS' <Latency = 39> <II = 1> <Delay = 1.17> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 88 <SV = 87> <Delay = 2.07>
+ST_88 : Operation 455 [1/1] (0.00ns)   --->   "%lhs_V_1 = call i28 @_ssdm_op_BitConcatenate.i28.i16.i12(i16 %temp3_V, i12 0)" [src/kernel/optimizer.h:68]   --->   Operation 455 'bitconcatenate' 'lhs_V_1' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 456 [1/1] (0.00ns)   --->   "%sext_ln728_2 = sext i28 %lhs_V_1 to i37" [src/kernel/optimizer.h:68]   --->   Operation 456 'sext' 'sext_ln728_2' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 457 [1/1] (0.00ns)   --->   "%sext_ln1193 = sext i36 %sdiv_ln1148 to i37" [src/kernel/optimizer.h:68]   --->   Operation 457 'sext' 'sext_ln1193' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 458 [1/1] (0.66ns)   --->   "%ret_V_1 = sub i37 %sext_ln728_2, %sext_ln1193" [src/kernel/optimizer.h:68]   --->   Operation 458 'sub' 'ret_V_1' <Predicate = (!icmp_ln49)> <Delay = 0.66> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 459 [1/1] (0.00ns)   --->   "%p_Result_33 = call i1 @_ssdm_op_BitSelect.i1.i37.i32(i37 %ret_V_1, i32 36)" [src/kernel/optimizer.h:68]   --->   Operation 459 'bitselect' 'p_Result_33' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 460 [1/1] (0.00ns)   --->   "%p_Val2_24 = call i16 @_ssdm_op_PartSelect.i16.i37.i32.i32(i37 %ret_V_1, i32 12, i32 27)" [src/kernel/optimizer.h:68]   --->   Operation 460 'partselect' 'p_Val2_24' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 461 [1/1] (0.00ns) (grouped into LUT with out node carry_6)   --->   "%p_Result_34 = call i1 @_ssdm_op_BitSelect.i1.i37.i32(i37 %ret_V_1, i32 27)" [src/kernel/optimizer.h:68]   --->   Operation 461 'bitselect' 'p_Result_34' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 462 [1/1] (0.00ns)   --->   "%tmp_32 = call i1 @_ssdm_op_BitSelect.i1.i37.i32(i37 %ret_V_1, i32 11)" [src/kernel/optimizer.h:68]   --->   Operation 462 'bitselect' 'tmp_32' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 463 [1/1] (0.00ns)   --->   "%zext_ln415_3 = zext i1 %tmp_32 to i16" [src/kernel/optimizer.h:68]   --->   Operation 463 'zext' 'zext_ln415_3' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 464 [1/1] (0.60ns)   --->   "%p_Val2_25 = add i16 %p_Val2_24, %zext_ln415_3" [src/kernel/optimizer.h:68]   --->   Operation 464 'add' 'p_Val2_25' <Predicate = (!icmp_ln49)> <Delay = 0.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 465 [1/1] (0.00ns) (grouped into LUT with out node carry_6)   --->   "%tmp_33 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_25, i32 15)" [src/kernel/optimizer.h:68]   --->   Operation 465 'bitselect' 'tmp_33' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 466 [1/1] (0.00ns) (grouped into LUT with out node carry_6)   --->   "%xor_ln416_6 = xor i1 %tmp_33, true" [src/kernel/optimizer.h:68]   --->   Operation 466 'xor' 'xor_ln416_6' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 467 [1/1] (0.12ns) (out node of the LUT)   --->   "%carry_6 = and i1 %p_Result_34, %xor_ln416_6" [src/kernel/optimizer.h:68]   --->   Operation 467 'and' 'carry_6' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 468 [1/1] (0.00ns)   --->   "%p_Result_35 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_25, i32 15)" [src/kernel/optimizer.h:68]   --->   Operation 468 'bitselect' 'p_Result_35' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 469 [1/1] (0.00ns)   --->   "%tmp_35 = call i8 @_ssdm_op_PartSelect.i8.i37.i32.i32(i37 %ret_V_1, i32 29, i32 36)" [src/kernel/optimizer.h:68]   --->   Operation 469 'partselect' 'tmp_35' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 470 [1/1] (0.58ns)   --->   "%Range2_all_ones_4 = icmp eq i8 %tmp_35, -1" [src/kernel/optimizer.h:68]   --->   Operation 470 'icmp' 'Range2_all_ones_4' <Predicate = (!icmp_ln49)> <Delay = 0.58> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 471 [1/1] (0.00ns)   --->   "%tmp_36 = call i9 @_ssdm_op_PartSelect.i9.i37.i32.i32(i37 %ret_V_1, i32 28, i32 36)" [src/kernel/optimizer.h:68]   --->   Operation 471 'partselect' 'tmp_36' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 472 [1/1] (0.59ns)   --->   "%Range1_all_ones_4 = icmp eq i9 %tmp_36, -1" [src/kernel/optimizer.h:68]   --->   Operation 472 'icmp' 'Range1_all_ones_4' <Predicate = (!icmp_ln49)> <Delay = 0.59> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 473 [1/1] (0.59ns)   --->   "%Range1_all_zeros_2 = icmp eq i9 %tmp_36, 0" [src/kernel/optimizer.h:68]   --->   Operation 473 'icmp' 'Range1_all_zeros_2' <Predicate = (!icmp_ln49)> <Delay = 0.59> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 474 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_7)   --->   "%deleted_zeros_1 = select i1 %carry_6, i1 %Range1_all_ones_4, i1 %Range1_all_zeros_2" [src/kernel/optimizer.h:68]   --->   Operation 474 'select' 'deleted_zeros_1' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_88 : Operation 475 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_4)   --->   "%tmp_37 = call i1 @_ssdm_op_BitSelect.i1.i37.i32(i37 %ret_V_1, i32 28)" [src/kernel/optimizer.h:68]   --->   Operation 475 'bitselect' 'tmp_37' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+ST_88 : Operation 476 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_4)   --->   "%xor_ln779_2 = xor i1 %tmp_37, true" [src/kernel/optimizer.h:68]   --->   Operation 476 'xor' 'xor_ln779_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 477 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_4)   --->   "%and_ln779 = and i1 %Range2_all_ones_4, %xor_ln779_2" [src/kernel/optimizer.h:68]   --->   Operation 477 'and' 'and_ln779' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 478 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_4)   --->   "%deleted_ones_3 = select i1 %carry_6, i1 %and_ln779, i1 %Range1_all_ones_4" [src/kernel/optimizer.h:68]   --->   Operation 478 'select' 'deleted_ones_3' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_88 : Operation 479 [1/1] (0.12ns)   --->   "%and_ln781_2 = and i1 %carry_6, %Range1_all_ones_4" [src/kernel/optimizer.h:68]   --->   Operation 479 'and' 'and_ln781_2' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 480 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_7)   --->   "%xor_ln785_4 = xor i1 %deleted_zeros_1, true" [src/kernel/optimizer.h:68]   --->   Operation 480 'xor' 'xor_ln785_4' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 481 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_7)   --->   "%or_ln785_2 = or i1 %p_Result_35, %xor_ln785_4" [src/kernel/optimizer.h:68]   --->   Operation 481 'or' 'or_ln785_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 482 [1/1] (0.12ns)   --->   "%xor_ln785_5 = xor i1 %p_Result_33, true" [src/kernel/optimizer.h:68]   --->   Operation 482 'xor' 'xor_ln785_5' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 483 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_7)   --->   "%overflow_3 = and i1 %or_ln785_2, %xor_ln785_5" [src/kernel/optimizer.h:68]   --->   Operation 483 'and' 'overflow_3' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 484 [1/1] (0.27ns) (out node of the LUT)   --->   "%and_ln786_4 = and i1 %p_Result_35, %deleted_ones_3" [src/kernel/optimizer.h:68]   --->   Operation 484 'and' 'and_ln786_4' <Predicate = (!icmp_ln49)> <Delay = 0.27> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 485 [1/1] (0.00ns) (grouped into LUT with out node underflow_3)   --->   "%or_ln786_2 = or i1 %and_ln781_2, %and_ln786_4" [src/kernel/optimizer.h:68]   --->   Operation 485 'or' 'or_ln786_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 486 [1/1] (0.00ns) (grouped into LUT with out node underflow_3)   --->   "%xor_ln786_2 = xor i1 %or_ln786_2, true" [src/kernel/optimizer.h:68]   --->   Operation 486 'xor' 'xor_ln786_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 487 [1/1] (0.12ns) (out node of the LUT)   --->   "%underflow_3 = and i1 %p_Result_33, %xor_ln786_2" [src/kernel/optimizer.h:68]   --->   Operation 487 'and' 'underflow_3' <Predicate = (!icmp_ln49)> <Delay = 0.12> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 488 [1/1] (0.27ns) (out node of the LUT)   --->   "%or_ln340_7 = or i1 %underflow_3, %overflow_3" [src/kernel/optimizer.h:68]   --->   Operation 488 'or' 'or_ln340_7' <Predicate = (!icmp_ln49)> <Delay = 0.27> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 89 <SV = 88> <Delay = 1.64>
+ST_89 : Operation 489 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_7)   --->   "%or_ln340_11 = or i1 %and_ln786_4, %xor_ln785_5" [src/kernel/optimizer.h:68]   --->   Operation 489 'or' 'or_ln340_11' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_89 : Operation 490 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_7)   --->   "%or_ln340_8 = or i1 %or_ln340_11, %and_ln781_2" [src/kernel/optimizer.h:68]   --->   Operation 490 'or' 'or_ln340_8' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_89 : Operation 491 [1/1] (0.24ns) (out node of the LUT)   --->   "%select_ln340_2 = select i1 %or_ln340_7, i16 32767, i16 %p_Val2_25" [src/kernel/optimizer.h:68]   --->   Operation 491 'select' 'select_ln340_2' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_89 : Operation 492 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_7)   --->   "%select_ln388_2 = select i1 %underflow_3, i16 -32768, i16 %p_Val2_25" [src/kernel/optimizer.h:68]   --->   Operation 492 'select' 'select_ln388_2' <Predicate = (!icmp_ln49)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_89 : Operation 493 [1/1] (0.24ns) (out node of the LUT)   --->   "%select_ln340_7 = select i1 %or_ln340_8, i16 %select_ln340_2, i16 %select_ln388_2" [src/kernel/optimizer.h:68]   --->   Operation 493 'select' 'select_ln340_7' <Predicate = (!icmp_ln49)> <Delay = 0.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_89 : Operation 494 [1/1] (1.15ns)   --->   "store i16 %select_ln340_7, i16* %params_V_addr, align 2" [src/kernel/optimizer.h:68]   --->   Operation 494 'store' <Predicate = (!icmp_ln49)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_89 : Operation 495 [1/1] (0.00ns)   --->   "br label %1" [src/kernel/optimizer.h:49]   --->   Operation 495 'br' <Predicate = (!icmp_ln49)> <Delay = 0.00>
+
+State 90 <SV = 2> <Delay = 0.00>
+ST_90 : Operation 496 [1/1] (0.00ns)   --->   "ret void" [src/kernel/optimizer.h:72]   --->   Operation 496 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.899ns.
+
+ <State 1>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', src/kernel/optimizer.h:49) [6]  (0.603 ns)
+
+ <State 2>: 1.16ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', src/kernel/optimizer.h:49) [6]  (0 ns)
+	'getelementptr' operation ('grads_V_addr', src/kernel/optimizer.h:59) [47]  (0 ns)
+	'load' operation ('temp2.V', src/kernel/optimizer.h:59) on array 'grads_V' [48]  (1.16 ns)
+
+ <State 3>: 1.69ns
+The critical path consists of the following:
+	'load' operation ('temp2.V', src/kernel/optimizer.h:59) on array 'grads_V' [48]  (1.16 ns)
+	'mul' operation of DSP[50] ('r.V', src/kernel/optimizer.h:60) [50]  (0.535 ns)
+
+ <State 4>: 1.16ns
+The critical path consists of the following:
+	'load' operation ('temp.V', src/kernel/optimizer.h:55) on array 'h_V' [15]  (1.16 ns)
+
+ <State 5>: 1.69ns
+The critical path consists of the following:
+	'load' operation ('temp.V', src/kernel/optimizer.h:55) on array 'h_V' [15]  (1.16 ns)
+	'mul' operation of DSP[17] ('r.V', src/kernel/optimizer.h:56) [17]  (0.535 ns)
+
+ <State 6>: 0.535ns
+The critical path consists of the following:
+	'mul' operation of DSP[17] ('r.V', src/kernel/optimizer.h:56) [17]  (0.535 ns)
+
+ <State 7>: 0.535ns
+The critical path consists of the following:
+	'mul' operation of DSP[17] ('r.V', src/kernel/optimizer.h:56) [17]  (0.535 ns)
+
+ <State 8>: 0.73ns
+The critical path consists of the following:
+	'mul' operation of DSP[17] ('r.V', src/kernel/optimizer.h:56) [17]  (0 ns)
+	'add' operation ('__Val2__', src/kernel/optimizer.h:56) [23]  (0.608 ns)
+	'xor' operation ('xor_ln416_2', src/kernel/optimizer.h:56) [25]  (0 ns)
+	'and' operation ('carry', src/kernel/optimizer.h:56) [26]  (0.122 ns)
+
+ <State 9>: 2.12ns
+The critical path consists of the following:
+	'and' operation ('and_ln781', src/kernel/optimizer.h:56) [35]  (0.122 ns)
+	'or' operation ('or_ln786', src/kernel/optimizer.h:56) [41]  (0 ns)
+	'xor' operation ('xor_ln786', src/kernel/optimizer.h:56) [42]  (0 ns)
+	'and' operation ('underflow', src/kernel/optimizer.h:56) [43]  (0.122 ns)
+	'or' operation ('or_ln340', src/kernel/optimizer.h:56) [44]  (0 ns)
+	'select' operation ('select_ln340', src/kernel/optimizer.h:56) [54]  (0.243 ns)
+	'select' operation ('select_ln340_3', src/kernel/optimizer.h:56) [56]  (0 ns)
+	'add' operation ('ret.V', src/kernel/optimizer.h:60) [60]  (0.663 ns)
+	'add' operation ('__Val2__', src/kernel/optimizer.h:60) [66]  (0.608 ns)
+	'xor' operation ('xor_ln416', src/kernel/optimizer.h:60) [68]  (0 ns)
+	'and' operation ('carry', src/kernel/optimizer.h:60) [69]  (0.122 ns)
+	blocking operation 0.243 ns on control path)
+
+ <State 10>: 2.42ns
+The critical path consists of the following:
+	'and' operation ('and_ln781_1', src/kernel/optimizer.h:60) [78]  (0.122 ns)
+	'or' operation ('or_ln786_1', src/kernel/optimizer.h:60) [84]  (0 ns)
+	'xor' operation ('xor_ln786_1', src/kernel/optimizer.h:60) [85]  (0 ns)
+	'and' operation ('underflow', src/kernel/optimizer.h:60) [86]  (0.122 ns)
+	'or' operation ('or_ln340_3', src/kernel/optimizer.h:60) [87]  (0 ns)
+	'select' operation ('select_ln340_1', src/kernel/optimizer.h:60) [90]  (0.243 ns)
+	'select' operation ('tmp.V', src/kernel/optimizer.h:60) [92]  (0.243 ns)
+	'sub' operation ('tmp.V', src/kernel/optimizer.h:65) [96]  (0.608 ns)
+	'select' operation ('tmp.V', src/kernel/optimizer.h:65) [97]  (0.243 ns)
+	'cttz' operation ('l', src/kernel/optimizer.h:65) [100]  (0.84 ns)
+
+ <State 11>: 2.31ns
+The critical path consists of the following:
+	'sub' operation ('sub_ln944', src/kernel/optimizer.h:65) [101]  (0.669 ns)
+	'add' operation ('lsb_index', src/kernel/optimizer.h:65) [103]  (0.669 ns)
+	'icmp' operation ('icmp_ln947', src/kernel/optimizer.h:65) [105]  (0.848 ns)
+	'and' operation ('a', src/kernel/optimizer.h:65) [112]  (0 ns)
+	'or' operation ('or_ln949', src/kernel/optimizer.h:65) [118]  (0 ns)
+	blocking operation 0.122 ns on control path)
+
+ <State 12>: 2.19ns
+The critical path consists of the following:
+	'shl' operation ('shl_ln958', src/kernel/optimizer.h:65) [128]  (0 ns)
+	'select' operation ('m', src/kernel/optimizer.h:65) [129]  (0 ns)
+	'add' operation ('m', src/kernel/optimizer.h:65) [131]  (1.05 ns)
+	'select' operation ('select_ln964', src/kernel/optimizer.h:65) [135]  (0.303 ns)
+	'add' operation ('add_ln964', src/kernel/optimizer.h:65) [138]  (0.838 ns)
+
+ <State 13>: 1.54ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_7', src/kernel/optimizer.h:66) [143]  (1.54 ns)
+
+ <State 14>: 1.95ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_7', src/kernel/optimizer.h:66) [143]  (1.54 ns)
+	'select' operation ('select_ln66', src/kernel/optimizer.h:66) [144]  (0.411 ns)
+
+ <State 15>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 16>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 17>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 18>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 19>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 20>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 21>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 22>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 23>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 24>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 25>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 26>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 27>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 28>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 29>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 30>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 31>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 32>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 33>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 34>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 35>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 36>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 37>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 38>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 39>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 40>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 41>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 42>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 43>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 44>: 2.05ns
+The critical path consists of the following:
+	'dsqrt' operation ('v', src/kernel/optimizer.h:66) [145]  (2.05 ns)
+
+ <State 45>: 2.19ns
+The critical path consists of the following:
+	'sub' operation ('F2', src/kernel/optimizer.h:66) [158]  (0.526 ns)
+	'icmp' operation ('QUAN_INC', src/kernel/optimizer.h:66) [159]  (0.629 ns)
+	'select' operation ('tmp70_cast_cast', src/kernel/optimizer.h:66) [202]  (0.278 ns)
+	'add' operation ('empty_59', src/kernel/optimizer.h:66) [203]  (0.756 ns)
+
+ <State 46>: 2.36ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln585', src/kernel/optimizer.h:66) [166]  (0.629 ns)
+	'select' operation ('__Val2__', src/kernel/optimizer.h:66) [176]  (1.13 ns)
+	'add' operation ('__Val2__', src/kernel/optimizer.h:66) [184]  (0.608 ns)
+
+ <State 47>: 2.01ns
+The critical path consists of the following:
+	'lshr' operation ('r.V', src/kernel/optimizer.h:66) [225]  (0 ns)
+	'icmp' operation ('Range2_all_ones', src/kernel/optimizer.h:66) [226]  (1.05 ns)
+	'select' operation ('select_ln631', src/kernel/optimizer.h:66) [227]  (0.278 ns)
+	'and' operation ('Range1_all_ones', src/kernel/optimizer.h:66) [229]  (0 ns)
+	'select' operation ('select_ln639', src/kernel/optimizer.h:66) [240]  (0.278 ns)
+	'select' operation ('deleted_zeros', src/kernel/optimizer.h:66) [243]  (0 ns)
+	'xor' operation ('xor_ln658', src/kernel/optimizer.h:66) [261]  (0.278 ns)
+	'and' operation ('and_ln658', src/kernel/optimizer.h:66) [262]  (0 ns)
+	'or' operation ('or_ln658', src/kernel/optimizer.h:66) [263]  (0 ns)
+	'and' operation ('overflow', src/kernel/optimizer.h:66) [265]  (0.122 ns)
+
+ <State 48>: 2.03ns
+The critical path consists of the following:
+	'xor' operation ('xor_ln659', src/kernel/optimizer.h:66) [267]  (0 ns)
+	'and' operation ('underflow', src/kernel/optimizer.h:66) [268]  (0.122 ns)
+	'or' operation ('or_ln571', src/kernel/optimizer.h:66) [273]  (0 ns)
+	'select' operation ('select_ln571_1', src/kernel/optimizer.h:66) [284]  (0.243 ns)
+	'select' operation ('empty_61', src/kernel/optimizer.h:66) [285]  (0.243 ns)
+	'select' operation ('select_ln340_6', src/kernel/optimizer.h:66) [286]  (0.243 ns)
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 49>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 50>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 51>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 52>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 53>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 54>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 55>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 56>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 57>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 58>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 59>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 60>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 61>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 62>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 63>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 64>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 65>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 66>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 67>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 68>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 69>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 70>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 71>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 72>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 73>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 74>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 75>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 76>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 77>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 78>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 79>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 80>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 81>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 82>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 83>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 84>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 85>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 86>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 87>: 1.18ns
+The critical path consists of the following:
+	'sdiv' operation ('sdiv_ln1148', src/kernel/optimizer.h:68) [288]  (1.18 ns)
+
+ <State 88>: 2.07ns
+The critical path consists of the following:
+	'sub' operation ('ret.V', src/kernel/optimizer.h:68) [292]  (0.666 ns)
+	'add' operation ('__Val2__', src/kernel/optimizer.h:68) [298]  (0.608 ns)
+	'xor' operation ('xor_ln416_6', src/kernel/optimizer.h:68) [300]  (0 ns)
+	'and' operation ('carry', src/kernel/optimizer.h:68) [301]  (0.122 ns)
+	'select' operation ('deleted_ones', src/kernel/optimizer.h:68) [312]  (0 ns)
+	'and' operation ('and_ln786_4', src/kernel/optimizer.h:68) [318]  (0.278 ns)
+	'or' operation ('or_ln786_2', src/kernel/optimizer.h:68) [319]  (0 ns)
+	'xor' operation ('xor_ln786_2', src/kernel/optimizer.h:68) [320]  (0 ns)
+	'and' operation ('underflow', src/kernel/optimizer.h:68) [321]  (0.122 ns)
+	'or' operation ('or_ln340_7', src/kernel/optimizer.h:68) [322]  (0.278 ns)
+
+ <State 89>: 1.64ns
+The critical path consists of the following:
+	'select' operation ('select_ln340_2', src/kernel/optimizer.h:68) [325]  (0.243 ns)
+	'select' operation ('select_ln340_7', src/kernel/optimizer.h:68) [327]  (0.243 ns)
+	'store' operation ('store_ln68', src/kernel/optimizer.h:68) of variable 'select_ln340_7', src/kernel/optimizer.h:68 on array 'params_V' [328]  (1.16 ns)
+
+ <State 90>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

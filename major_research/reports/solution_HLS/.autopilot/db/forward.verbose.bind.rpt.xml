@@ -1,0 +1,54 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'forward'" level="0">
+<item name = "Date">Thu Jan  7 00:23:07 2021
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">final</item>
+<item name = "Solution">solution_final</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcvu9p-flgb2104-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.426 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">317992, 317992, 1.059 ms, 1.059 ms, 317992, 317992, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_generic_tanh_double_s_fu_1076">generic_tanh_double_s, 96, 96, 0.320 us, 0.320 us, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">320, 320, 2, 1, 1, 320, yes</column>
+<column name="- Loop 2">320, 320, 2, 1, 1, 320, yes</column>
+<column name="- Loop 3">320, 320, 2, 1, 1, 320, yes</column>
+<column name="- Loop 4">315520, 315520, 986, -, -, 320, no</column>
+<column name=" + Loop 4.1">970, 970, 14, 3, 1, 320, yes</column>
+<column name="- Loop 5">1503, 1503, 228, 4, 1, 320, yes</column>
+<column name="- Loop 6">320, 320, 2, 1, 1, 320, yes</column>
+<column name="- Loop 7">320, 320, 2, 1, 1, 320, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

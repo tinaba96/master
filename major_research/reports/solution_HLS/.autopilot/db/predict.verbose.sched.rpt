@@ -1,0 +1,250 @@
+
+
+================================================================
+== Vivado HLS Report for 'predict'
+================================================================
+* Date:           Thu Jan  7 00:23:09 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        final
+* Solution:       solution_final
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 2.426 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |   Latency (cycles)  |   Latency (absolute)  |       Interval      | Pipeline|
+    |    min   |    max   |    min    |    max    |    min   |    max   |   Type  |
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |  47699746|  47699746| 0.159 sec | 0.159 sec |  47699746|  47699746|   none  |
+    +----------+----------+-----------+-----------+----------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+----------+----------+----------+-----------+-----------+------+----------+
+        |          |   Latency (cycles)  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|    min   |    max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+----------+----------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       320|       320|         1|          1|          1|   320|    yes   |
+        |- Loop 2  |  23849550|  23849550|    317994|          -|          -|    75|    no    |
+        |- Loop 3  |       320|       320|         1|          1|          1|   320|    yes   |
+        |- Loop 4  |  23849550|  23849550|    317994|          -|          -|    75|    no    |
+        +----------+----------+----------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+  * Pipeline-1: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 1, States = { 2 }
+  Pipeline-1 : II = 1, D = 1, States = { 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 2 
+3 --> 4 
+4 --> 5 6 
+5 --> 4 
+6 --> 7 6 
+7 --> 8 
+8 --> 9 
+9 --> 8 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.60>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %wxo_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)"   --->   Operation 10 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%h_next_V = alloca [320 x i16], align 2" [src/kernel/cnn.h:520]   --->   Operation 11 'alloca' 'h_next_V' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%c_next_V = alloca [320 x i16], align 2" [src/kernel/cnn.h:521]   --->   Operation 12 'alloca' 'c_next_V' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %wxf_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:486]   --->   Operation 13 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %wxg_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:487]   --->   Operation 14 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %wxi_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:488]   --->   Operation 15 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %who_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:489]   --->   Operation 16 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %whf_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:490]   --->   Operation 17 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %whg_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:491]   --->   Operation 18 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %whi_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:492]   --->   Operation 19 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %who_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:493]   --->   Operation 20 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %wxf2_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:495]   --->   Operation 21 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %wxg2_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:496]   --->   Operation 22 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %wxi2_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:497]   --->   Operation 23 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %wxo2_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:498]   --->   Operation 24 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %whf2_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:499]   --->   Operation 25 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %whg2_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:500]   --->   Operation 26 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %whi2_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:501]   --->   Operation 27 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([102400 x i16]* %who2_V, [1 x i8]* @p_str1, [11 x i8]* @p_str59, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [5 x i8]* @p_str60, [5 x i8]* @p_str61, [1 x i8]* @p_str1)" [src/kernel/cnn.h:502]   --->   Operation 28 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.60ns)   --->   "br label %.preheader529" [src/kernel/cnn.h:522]   --->   Operation 29 'br' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 1.15>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%i_0 = phi i9 [ %i, %_ZrsILi32ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit2.i.i.i.i72 ], [ 0, %arrayctor.loop1.preheader ]"   --->   Operation 30 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str113)"   --->   Operation 31 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.59ns)   --->   "%icmp_ln522 = icmp eq i9 %i_0, -192" [src/kernel/cnn.h:522]   --->   Operation 32 'icmp' 'icmp_ln522' <Predicate = true> <Delay = 0.59> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 320, i64 320, i64 320)"   --->   Operation 33 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.51ns)   --->   "%i = add i9 %i_0, 1" [src/kernel/cnn.h:522]   --->   Operation 34 'add' 'i' <Predicate = true> <Delay = 0.51> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "br i1 %icmp_ln522, label %.preheader528.preheader, label %_ZrsILi32ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit2.i.i.i.i72" [src/kernel/cnn.h:522]   --->   Operation 35 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln524 = zext i9 %i_0 to i64" [src/kernel/cnn.h:524]   --->   Operation 36 'zext' 'zext_ln524' <Predicate = (!icmp_ln522)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%h_next_V_addr = getelementptr [320 x i16]* %h_next_V, i64 0, i64 %zext_ln524" [src/kernel/cnn.h:524]   --->   Operation 37 'getelementptr' 'h_next_V_addr' <Predicate = (!icmp_ln522)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (1.15ns)   --->   "store i16 0, i16* %h_next_V_addr, align 2" [src/kernel/cnn.h:524]   --->   Operation 38 'store' <Predicate = (!icmp_ln522)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%c_next_V_addr = getelementptr [320 x i16]* %c_next_V, i64 0, i64 %zext_ln524" [src/kernel/cnn.h:525]   --->   Operation 39 'getelementptr' 'c_next_V_addr' <Predicate = (!icmp_ln522)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (1.15ns)   --->   "store i16 0, i16* %c_next_V_addr, align 2" [src/kernel/cnn.h:525]   --->   Operation 40 'store' <Predicate = (!icmp_ln522)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "br label %.preheader529" [src/kernel/cnn.h:522]   --->   Operation 41 'br' <Predicate = (!icmp_ln522)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.60>
+ST_3 : Operation 42 [1/1] (0.60ns)   --->   "br label %.preheader528" [src/kernel/cnn.h:532]   --->   Operation 42 'br' <Predicate = true> <Delay = 0.60>
+
+State 4 <SV = 3> <Delay = 1.20>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%t_0 = phi i7 [ %t, %0 ], [ 0, %.preheader528.preheader ]"   --->   Operation 43 'phi' 't_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.59ns)   --->   "%icmp_ln532 = icmp eq i7 %t_0, -53" [src/kernel/cnn.h:532]   --->   Operation 44 'icmp' 'icmp_ln532' <Predicate = true> <Delay = 0.59> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%empty_65 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 75, i64 75, i64 75)"   --->   Operation 45 'speclooptripcount' 'empty_65' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (0.40ns)   --->   "%t = add i7 %t_0, 1" [src/kernel/cnn.h:532]   --->   Operation 46 'add' 't' <Predicate = true> <Delay = 0.40> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "br i1 %icmp_ln532, label %.preheader527.preheader, label %0" [src/kernel/cnn.h:532]   --->   Operation 47 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [2/2] (1.20ns)   --->   "call fastcc void @forward([24320 x i16]* %cnn_lstm_f_V, i7 %t_0, [24320 x i16]* %cnn_lstm_g_V, i7 %t_0, [24320 x i16]* %cnn_lstm_i_V, i7 %t_0, [24320 x i16]* %cnn_lstm_o_V, i7 %t_0, [194560 x i16]* %cnn_lstm_cache_V, i7 %t_0, i8 111, i7 %t_0, [24000 x i16]* %x_V, [48000 x i16]* %y_V, [320 x i16]* %h_next_V, [320 x i16]* %c_next_V, [102400 x i16]* %wxf_V, [102400 x i16]* %wxg_V, [102400 x i16]* %wxi_V, [102400 x i16]* %wxo_V, [102400 x i16]* %whf_V, [102400 x i16]* %whg_V, [102400 x i16]* %whi_V, [102400 x i16]* %who_V, [320 x i16]* %bf_V, [320 x i16]* %bg_V, [320 x i16]* %bi_V, [320 x i16]* %bo_V)" [src/kernel/cnn.h:537]   --->   Operation 48 'call' <Predicate = (!icmp_ln532)> <Delay = 1.20> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 49 [1/1] (0.60ns)   --->   "br label %.preheader527"   --->   Operation 49 'br' <Predicate = (icmp_ln532)> <Delay = 0.60>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 50 [1/2] (0.00ns)   --->   "call fastcc void @forward([24320 x i16]* %cnn_lstm_f_V, i7 %t_0, [24320 x i16]* %cnn_lstm_g_V, i7 %t_0, [24320 x i16]* %cnn_lstm_i_V, i7 %t_0, [24320 x i16]* %cnn_lstm_o_V, i7 %t_0, [194560 x i16]* %cnn_lstm_cache_V, i7 %t_0, i8 111, i7 %t_0, [24000 x i16]* %x_V, [48000 x i16]* %y_V, [320 x i16]* %h_next_V, [320 x i16]* %c_next_V, [102400 x i16]* %wxf_V, [102400 x i16]* %wxg_V, [102400 x i16]* %wxi_V, [102400 x i16]* %wxo_V, [102400 x i16]* %whf_V, [102400 x i16]* %whg_V, [102400 x i16]* %whi_V, [102400 x i16]* %who_V, [320 x i16]* %bf_V, [320 x i16]* %bg_V, [320 x i16]* %bi_V, [320 x i16]* %bo_V)" [src/kernel/cnn.h:537]   --->   Operation 50 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "br label %.preheader528" [src/kernel/cnn.h:532]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 1.15>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%i2_0 = phi i9 [ %i_1, %_ZrsILi32ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit2.i.i.i.i35 ], [ 0, %.preheader527.preheader ]"   --->   Operation 52 'phi' 'i2_0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str114)"   --->   Operation 53 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 54 [1/1] (0.59ns)   --->   "%icmp_ln543 = icmp eq i9 %i2_0, -192" [src/kernel/cnn.h:543]   --->   Operation 54 'icmp' 'icmp_ln543' <Predicate = true> <Delay = 0.59> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 55 [1/1] (0.00ns)   --->   "%empty_66 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 320, i64 320, i64 320)"   --->   Operation 55 'speclooptripcount' 'empty_66' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 56 [1/1] (0.51ns)   --->   "%i_1 = add i9 %i2_0, 1" [src/kernel/cnn.h:543]   --->   Operation 56 'add' 'i_1' <Predicate = true> <Delay = 0.51> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 57 [1/1] (0.00ns)   --->   "br i1 %icmp_ln543, label %.preheader.preheader, label %_ZrsILi32ELb0EEN11ap_int_baseIXT_EXT0_EE5RTypeIXT_EXT0_EE4arg1ERKS1_i.exit2.i.i.i.i35" [src/kernel/cnn.h:543]   --->   Operation 57 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%zext_ln545 = zext i9 %i2_0 to i64" [src/kernel/cnn.h:545]   --->   Operation 58 'zext' 'zext_ln545' <Predicate = (!icmp_ln543)> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%h_next_V_addr_1 = getelementptr [320 x i16]* %h_next_V, i64 0, i64 %zext_ln545" [src/kernel/cnn.h:545]   --->   Operation 59 'getelementptr' 'h_next_V_addr_1' <Predicate = (!icmp_ln543)> <Delay = 0.00>
+ST_6 : Operation 60 [1/1] (1.15ns)   --->   "store i16 0, i16* %h_next_V_addr_1, align 2" [src/kernel/cnn.h:545]   --->   Operation 60 'store' <Predicate = (!icmp_ln543)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%c_next_V_addr_1 = getelementptr [320 x i16]* %c_next_V, i64 0, i64 %zext_ln545" [src/kernel/cnn.h:546]   --->   Operation 61 'getelementptr' 'c_next_V_addr_1' <Predicate = (!icmp_ln543)> <Delay = 0.00>
+ST_6 : Operation 62 [1/1] (1.15ns)   --->   "store i16 0, i16* %c_next_V_addr_1, align 2" [src/kernel/cnn.h:546]   --->   Operation 62 'store' <Predicate = (!icmp_ln543)> <Delay = 1.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 320> <RAM>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "br label %.preheader527" [src/kernel/cnn.h:543]   --->   Operation 63 'br' <Predicate = (!icmp_ln543)> <Delay = 0.00>
+
+State 7 <SV = 5> <Delay = 0.60>
+ST_7 : Operation 64 [1/1] (0.60ns)   --->   "br label %.preheader" [src/kernel/cnn.h:551]   --->   Operation 64 'br' <Predicate = true> <Delay = 0.60>
+
+State 8 <SV = 6> <Delay = 1.20>
+ST_8 : Operation 65 [1/1] (0.00ns)   --->   "%t3_0 = phi i7 [ %t_1, %1 ], [ 0, %.preheader.preheader ]"   --->   Operation 65 'phi' 't3_0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 66 [1/1] (0.59ns)   --->   "%icmp_ln551 = icmp eq i7 %t3_0, -53" [src/kernel/cnn.h:551]   --->   Operation 66 'icmp' 'icmp_ln551' <Predicate = true> <Delay = 0.59> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.59> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 67 [1/1] (0.00ns)   --->   "%empty_67 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 75, i64 75, i64 75)"   --->   Operation 67 'speclooptripcount' 'empty_67' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 68 [1/1] (0.40ns)   --->   "%t_1 = add i7 %t3_0, 1" [src/kernel/cnn.h:551]   --->   Operation 68 'add' 't_1' <Predicate = true> <Delay = 0.40> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 69 [1/1] (0.00ns)   --->   "br i1 %icmp_ln551, label %2, label %1" [src/kernel/cnn.h:551]   --->   Operation 69 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 70 [2/2] (1.20ns)   --->   "call fastcc void @forward([24320 x i16]* %cnn_lstm2_f_V, i7 %t3_0, [24320 x i16]* %cnn_lstm2_g_V, i7 %t3_0, [24320 x i16]* %cnn_lstm2_i_V, i7 %t3_0, [24320 x i16]* %cnn_lstm2_o_V, i7 %t3_0, [194560 x i16]* %cnn_lstm2_cache_V, i7 %t3_0, i8 116, i7 %t3_0, [24000 x i16]* %x_V, [48000 x i16]* %y_V, [320 x i16]* %h_next_V, [320 x i16]* %c_next_V, [102400 x i16]* %wxf2_V, [102400 x i16]* %wxg2_V, [102400 x i16]* %wxi2_V, [102400 x i16]* %wxo2_V, [102400 x i16]* %whf2_V, [102400 x i16]* %whg2_V, [102400 x i16]* %whi2_V, [102400 x i16]* %who2_V, [320 x i16]* %bf2_V, [320 x i16]* %bg2_V, [320 x i16]* %bi2_V, [320 x i16]* %bo2_V)" [src/kernel/cnn.h:556]   --->   Operation 70 'call' <Predicate = (!icmp_ln551)> <Delay = 1.20> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 71 [1/1] (0.00ns)   --->   "ret void" [src/kernel/cnn.h:565]   --->   Operation 71 'ret' <Predicate = (icmp_ln551)> <Delay = 0.00>
+
+State 9 <SV = 7> <Delay = 0.00>
+ST_9 : Operation 72 [1/2] (0.00ns)   --->   "call fastcc void @forward([24320 x i16]* %cnn_lstm2_f_V, i7 %t3_0, [24320 x i16]* %cnn_lstm2_g_V, i7 %t3_0, [24320 x i16]* %cnn_lstm2_i_V, i7 %t3_0, [24320 x i16]* %cnn_lstm2_o_V, i7 %t3_0, [194560 x i16]* %cnn_lstm2_cache_V, i7 %t3_0, i8 116, i7 %t3_0, [24000 x i16]* %x_V, [48000 x i16]* %y_V, [320 x i16]* %h_next_V, [320 x i16]* %c_next_V, [102400 x i16]* %wxf2_V, [102400 x i16]* %wxg2_V, [102400 x i16]* %wxi2_V, [102400 x i16]* %wxo2_V, [102400 x i16]* %whf2_V, [102400 x i16]* %whg2_V, [102400 x i16]* %whi2_V, [102400 x i16]* %who2_V, [320 x i16]* %bf2_V, [320 x i16]* %bg2_V, [320 x i16]* %bi2_V, [320 x i16]* %bo2_V)" [src/kernel/cnn.h:556]   --->   Operation 72 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 73 [1/1] (0.00ns)   --->   "br label %.preheader" [src/kernel/cnn.h:551]   --->   Operation 73 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.899ns.
+
+ <State 1>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', src/kernel/cnn.h:522) [64]  (0.603 ns)
+
+ <State 2>: 1.16ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', src/kernel/cnn.h:522) [64]  (0 ns)
+	'getelementptr' operation ('h_next_V_addr', src/kernel/cnn.h:524) [72]  (0 ns)
+	'store' operation ('store_ln524', src/kernel/cnn.h:524) of constant 0 on array 'h_next.V', src/kernel/cnn.h:520 [73]  (1.16 ns)
+
+ <State 3>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('t') with incoming values : ('t', src/kernel/cnn.h:532) [80]  (0.603 ns)
+
+ <State 4>: 1.2ns
+The critical path consists of the following:
+	'phi' operation ('t') with incoming values : ('t', src/kernel/cnn.h:532) [80]  (0 ns)
+	'call' operation ('call_ln537', src/kernel/cnn.h:537) to 'forward' [86]  (1.2 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 1.16ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', src/kernel/cnn.h:543) [91]  (0 ns)
+	'getelementptr' operation ('h_next_V_addr_1', src/kernel/cnn.h:545) [99]  (0 ns)
+	'store' operation ('store_ln545', src/kernel/cnn.h:545) of constant 0 on array 'h_next.V', src/kernel/cnn.h:520 [100]  (1.16 ns)
+
+ <State 7>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('t') with incoming values : ('t', src/kernel/cnn.h:551) [107]  (0.603 ns)
+
+ <State 8>: 1.2ns
+The critical path consists of the following:
+	'phi' operation ('t') with incoming values : ('t', src/kernel/cnn.h:551) [107]  (0 ns)
+	'call' operation ('call_ln556', src/kernel/cnn.h:556) to 'forward' [113]  (1.2 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
