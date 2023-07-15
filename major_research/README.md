@@ -7,11 +7,12 @@
 There are so many DNA sequences that people have to work on. One of the genome analysis that people have to face is to find the function of DNA from a DNA sequence. Recently, Machine Learning has been used to find the function of DNA from a DNA sequence. However, training a machine learning model for DNA sequences takes much time due to the size of the dataset.
 Since DNA sequence can be represented by the bit-width of two, FPGA has a substantial advantage of processing these kinds data because FPGA can construct a dedicated state machine. Also, FPGA can be a useful resource for processing fast by pipelining. 
 
-
+- - - 
 ## Objectives
 - - - 
 The purpose of this research is to accelerate a training of a deep learning for genome data by implementing on multi-FPGA. The main focus of our research is an optimization using AWS EC2 F1 instance in AWS cloud service which has multiple FPGA. By changing the size of instances, we can optimize the training time as well as instance usage fee depending on a user’s needs.
 
+- - - 
 ## Approach
 - - -
 - DanQ: Target Hybrid (CNN & RNN) Model for genomics data
@@ -47,6 +48,7 @@ My implementation can change the instance size by saving the parameters which ar
 
 ![image](https://github.com/tinaba96/master/assets/57109730/1c169898-44f5-4ec8-ae9e-3fc82d9764bf)
 
+- - - 
 ## Result & Conclusion
 - - -
 - FPGA Implemetaion
@@ -64,8 +66,11 @@ Comparing a case of using 8 FPGAs for all time and a case in which we optimized 
 ![image](https://github.com/tinaba96/master/assets/57109730/bd51c099-913d-4744-a838-b8bdf598d4b7)
 
 
-# How To
+
 - - - 
+- - - 
+
+# How To
 
 In each `/src` files, there are `/host` and `/kernel`. `/host` is the implementation for running in CPU and `/kernel` is the implementation for running in FPGA.
 To exectue in FPGA, I used High Level Synthesis so that I can mainly use C++ to implement. 
