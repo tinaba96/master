@@ -1,7 +1,8 @@
-This the researches master research at JAIST
 # Researches in Japan Advanced Institute of Science and Technology
 
+- - -
 ## Major Research
+- - -
 ### Optimized-FDanQ: Implementation of Hybrid Neural Network "DanQ" on Cloud Multi-FPGA and its Optimization under Given Costs
 
 There are so many DNA sequences that people have to work on. One of the genome analysis that people have to face is to find the function of DNA from a DNA sequence. Recently, Machine Learning has been used to find the function of DNA from a DNA sequence. However, training a machine learning model for DNA sequences takes much time due to the size of the dataset. Besides, since DNA sequences are represented by four types of the base, which are Adenine, Guanine, Thymine, and Cytosine, it can be represented by the bit-width of two. FPGA has a substantial ad- vantage of processing these kinds of string operations because FPGA can construct a dedicated state machine. Also, FPGA can be a useful resource for processing fast by pipelining.
@@ -17,8 +18,9 @@ Also, my implementations can change the resource size during the execution to op
 
 For more detials, see [here](https://github.com/tinaba96/master/tree/master/major_research)
 
-
+- - -
 ## Minor Research
+- - - 
 ### Low-Complexity Quantization of decoding using Viterbi Algorithm
 
 I proposed to quantize the probability-domain implementation of the Viterbi algorithm decoder in order to decrease the memory utilization when I implement on hardware such as FPGA. I first implemented the viterbi decoder for the convolutional encoder using floating point without using the toolbox from MATLAB to compare with the quantized version. Next, I used uniform quantization for the channel to quantize from 106 level to 2 level.  
