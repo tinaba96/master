@@ -1,19 +1,19 @@
 trellis = poly2trellis(3, {'1+x+x^2', '1+x^2'})
 
-%x = ones(100,1);
+x = ones(100,1);
 data = randi([0 1],10,1);
-%data
+data
 
 code = convenc(data,trellis);
-%code
+code
 
-%code = convenc(ones(100,1),trellis);
-%tb = 2;
-%decoded = vitdec(code,trellis,tb,'trunc','hard');
-%decoded
-%isequal(decoded, data)
+code = convenc(ones(100,1),trellis);
+tb = 2;
+decoded = vitdec(code,trellis,tb,'trunc','hard');
+decoded
+isequal(decoded, data)
 
-%code([1,2])
+code([1,2])
 
 A = cell(40,1);
 
@@ -189,7 +189,7 @@ function forward = Viterbi(code)
 
 
 
-        %1st node
+        1st node
         if(code([4+2*i-1, 4+2*1]) == [0,0] );
             if(A{4*(i+1)+1}.Data >= A{4*i+1}.Data);
                 A{4*(i+1)+1} = dlnode(A{4*i+1}.Data)
@@ -230,7 +230,7 @@ function forward = Viterbi(code)
 
 
 
-        %from 2nd node
+        from 2nd node
         if(code([4+2*i-1, 4+2*1]) == [0,1] );
             if(A{4*(i+1)+1}.Data >= A{4*i+1}.Data + 1);
                 A{4*(i+1)+1} = dlnode(A{4*i+1}.Data + 1)
@@ -270,7 +270,7 @@ function forward = Viterbi(code)
         end
 
 
-        % from 3rd node
+        from 3rd node
         if(code([4+2*i-1, 4+2*1]) == [1,0] );
             if(A{4*(i+1)+1}.Data >= A{4*i+1}.Data + 1);
                 A{4*(i+1)+1} = dlnode(A{4*i+1}.Data + 1)
@@ -309,7 +309,7 @@ function forward = Viterbi(code)
 
         end
 
-        %from 4th node
+        from 4th node
         if(code([4+2*i-1, 4+2*1]) == [1,1] );
             if(A{4*(i+1)+1}.Data >= A{4*i+1}.Data + 2);
                 A{4*(i+1)+1} = dlnode(A{4*i+1}.Data + 2)

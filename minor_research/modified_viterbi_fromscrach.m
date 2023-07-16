@@ -1,6 +1,5 @@
 clear
 
-
 N = 10
 
 S = zeros(4, N+3)
@@ -24,6 +23,9 @@ code = [1,0,0,0,0,1,1,0,1,0,1,0,0,0,0,1,1,0,1,0]
 codex = [1,-1,-1,-1,-1,1,1,-1,1,-1,1,-1,-1,-1,-1,1,1,-1,1,-1]
 
 codex = code 
+
+
+
 
 code_noise = awgn(codex, 2/3)
 
@@ -90,9 +92,13 @@ if(c==1)
 else
     tb_new1 = [tb3]
 end
-output = tb_new1 
-output2 = cell2mat(output)
+out = tb_new1 ;
+output = cell2mat(out)
     
-nErrors = biterr(code, output2)
+nErrors = biterr(code, output);
+
+BER = nErrors / 20;
 
 %decoded = vitdec(code,trellis,tb,'trunc','hard');
+
+
