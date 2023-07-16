@@ -1,5 +1,5 @@
 # Master Research
-# Optimized-FDanQ: Implementation of Hybrid Neural Network "DanQ" on Cloud Multi-FPGA and its Optimization under Given Costs
+# Low-Complexity Quantization of decoding using Viterbi Algorithm
 
 - - -
 ## Background
