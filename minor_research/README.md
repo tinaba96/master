@@ -1,4 +1,4 @@
-# Master Research
+# Master Research (Minor)
 # Low-Complexity Quantization of decoding using Viterbi Algorithm
 
 - - -
