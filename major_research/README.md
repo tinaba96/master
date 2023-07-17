@@ -125,7 +125,7 @@ https://www.xilinx.com/htmldocs/xilinx2019_1/sdaccel_doc/yrc1534452173645.html
 
 :::note   
 OpenCL is a programming framework that can be used for CPUs, GPUs and FPGA implementation. In the context of FPGA, OpenCL enables developers to write code that targets FPGA devices, allowing them to take advantage of the parallel processing capabilities of FPGAs for accelerated computing.  
-:::
+:::  
 
 
 ### BUild Process using SDAccel
