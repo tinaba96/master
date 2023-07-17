@@ -109,21 +109,22 @@ ex)
 
 
 
-build and generate xclbin file
-
-source /usr/local/bin/sdaccel.sh
 
 
 ## SDAccel
-### Whtat is SDAccel
+### What is SDAccel
 SDAccel is a software development environment provided by Xilinx for designing and deploying applications on Xilinx FPGA (Field-Programmable Gate Array) devices. It is part of the Xilinx Vitis unified software platform, which enables developers to target and optimize their applications for Xilinx FPGAs, SoCs (System-on-Chips), and ACAPs (Adaptive Compute Acceleration Platforms).
 
 SDAccel provides a high-level programming model that allows developers to design their applications using OpenCL, C, C++, or RTL (Register Transfer Level) languages. It includes a set of development tools and libraries that assist in the design, simulation, optimization, and deployment of FPGA-based applications.
 
+```
+source /usr/local/bin/sdaccel.sh
+```
+
 https://www.xilinx.com/htmldocs/xilinx2019_1/sdaccel_doc/yrc1534452173645.html
 
-:::note info
-OpenCL is a programming framework that can be used for CPUs, GPUs and FPGA implementation. In the context of FPGA, OpenCL enables developers to write code that targets FPGA devices, allowing them to take advantage of the parallel processing capabilities of FPGAs for accelerated computing.
+:::note info  
+OpenCL is a programming framework that can be used for CPUs, GPUs and FPGA implementation. In the context of FPGA, OpenCL enables developers to write code that targets FPGA devices, allowing them to take advantage of the parallel processing capabilities of FPGAs for accelerated computing.  
 :::
 
 
