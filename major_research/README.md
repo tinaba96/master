@@ -236,3 +236,5 @@ Here is the example of the execution report.
 https://github.com/tinaba96/master/blob/master/major_research/reports/profile_summary.html
 
 
+For using F1 Instance in AWS, please refer to [this](https://github.com/aws/aws-fpga/tree/master/SDAccel)
+
