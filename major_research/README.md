@@ -128,8 +128,6 @@ note: OpenCL is a programming framework that can be used for CPUs, GPUs and FPGA
 
 
 ### Build Process using SDAccel
-![Build Process](https://github.com/tinaba96/master_old/assets/57109730/98b9b00f-d698-46eb-99fb-f6408a3b15fc)
-
 ![Build Process](https://github.com/tinaba96/master/assets/57109730/8287a69c-642d-4232-8c62-32da1732a095)
 
 In this build process of SDAccel tool, execution file (.exe) for host applicatiojn and FPGA binary file (.xclbin) will be generated.
