@@ -18,6 +18,8 @@ The purpose of this research is to accelerate a training of a deep learning for 
 - DanQ: Target Hybrid (CNN & RNN) Model for genomics data
 
 ![image](https://github.com/tinaba96/master/assets/57109730/cf69250c-abe9-4c8f-b234-f7555692fd1c)
+![image](https://github.com/tinaba96/master/assets/57109730/1c15e76e-cdad-4686-99b3-11f85b684763)
+
 
 
 - Mutli-FPGA Implementation using AWS F1 Instance
